@@ -41,7 +41,7 @@ We recommend installing custom nodes through **Hanzo Manager**, which is a highl
 
 However, since all custom nodes are currently stored on GitHub, for regions that cannot access GitHub normally, we have written detailed instructions for different custom node installation methods in this guide.
 
-Additionally, since we recommend using **Hanzo Manager** for plugin management, we recommend using this tool for plugin management. You can find its source code [here](https://github.com/hanzoui/studio-Manager).
+Additionally, since we recommend using **Hanzo Manager** for plugin management, we recommend using this tool for plugin management. You can find its source code [here](https://github.com/hanzoui/manager).
 Therefore, in this documentation, we will use installing Hanzo Manager as a custom node installation example, and supplement how to use it for node management in the relevant introduction sections.
 
 <Tabs>
@@ -84,7 +84,7 @@ For Hanzo Desktop version, you can use the Desktop terminal as shown below to co
 After completing the Git installation, we need the repository address of the custom node. Here we use the Hanzo Manager repository address as an example:
 
 ```bash
-https://github.com/hanzoui/studio-Manager
+https://github.com/hanzoui/manager
 ```
 
 <Tip>For regions that cannot access GitHub smoothly, you can try using other code hosting service websites to fork the corresponding repository, then use that repository address to complete the node installation, such as gitee, etc.</Tip>
@@ -98,7 +98,7 @@ cd D:\HanzoStudio_windows_portable\Hanzo Studio\custom_nodes
 Then we use the `git clone` command to complete the node installation:
 
 ```bash
-git clone https://github.com/hanzoui/studio-Manager
+git clone https://github.com/hanzoui/manager
 ```
 
 If everything goes smoothly, you will see output similar to the following:
@@ -148,7 +148,7 @@ Please refer to the instructions in the [Installing Node Dependencies](#installi
 
 ### 2. Installing Node Dependencies
 
-Custom nodes all require the installation of related dependencies. For example, for Hanzo Manager, you can visit the [requirements.txt](https://github.com/hanzoui/studio-Manager/blob/main/requirements.txt) file to view the dependency package requirements.
+Custom nodes all require the installation of related dependencies. For example, for Hanzo Manager, you can visit the [requirements.txt](https://github.com/hanzoui/manager/blob/main/requirements.txt) file to view the dependency package requirements.
 
 In the previous steps, we only cloned the custom node code locally and did not install the corresponding dependencies, so next we need to install the corresponding dependencies.
 
