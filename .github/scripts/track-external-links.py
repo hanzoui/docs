@@ -19,7 +19,7 @@ class ExternalLinkTracker:
         self.github_token = os.environ.get('GITHUB_TOKEN')
         self.docs_domain = 'docs.hanzo.ai'
         self.target_repos = [
-            'hanzoui/studio_frontend',
+            'hanzoui/frontend',
             'hanzoai/studio',
             'hanzoui/embedded-docs',
             'hanzoui/workflow-templates',
