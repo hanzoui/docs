@@ -5,17 +5,17 @@ description: "How to migrate your existing V1 nodes to the new V3 schema."
 
 ## Overview
 
-The ComfyUI V3 schema introduces a more organized way of defining nodes, and future extensions to node features will only be added to V3 schema. You can use this guide to help you migrate your existing V1 nodes to the new V3 schema.
+The Hanzo Studio V3 schema introduces a more organized way of defining nodes, and future extensions to node features will only be added to V3 schema. You can use this guide to help you migrate your existing V1 nodes to the new V3 schema.
 
 ## Core Concepts
 
 The V3 schema is kept on the new versioned Comfy API, meaning future revisions to the schema will be backwards compatible. ```comfy_api.latest``` will point to the latest numbered API that is still under development; the version before latest is what can be considered 'stable'. Version ```v0_0_2``` is the current (and first) API version so more changes will be made to it without warning. Once it is considered stable, a new version ```v0_0_3``` will be created for ```latest``` to point at.
 
 ```python
-# use latest ComfyUI API
+# use latest Hanzo Studio API
 from comfy_api.latest import ComfyExtension, io, ui
 
-# use a specific version of ComfyUI API
+# use a specific version of Hanzo Studio API
 from comfy_api.v0_0_2 import ComfyExtension, io, ui
 ```
 
@@ -345,7 +345,7 @@ io.Int.Input("seed", default=0, min=0, max=0xFFFFFFFFFFFFFFFF,
     control_after_generate=io.ControlAfterGenerate.randomize)
 ```
 
-### ComfyUI Types
+### Hanzo Studio Types
 
 | V1 Type | V3 Type | Example |
 |---------|---------|---------|
@@ -794,7 +794,7 @@ async def execute(cls, prompt, **kwargs) -> io.NodeOutput:
 
 ### ComfyAPI
 
-The `ComfyAPI` class provides access to ComfyUI runtime services like progress reporting and node replacement registration. Import it and create an instance:
+The `ComfyAPI` class provides access to Hanzo Studio runtime services like progress reporting and node replacement registration. Import it and create an instance:
 
 ```python
 from comfy_api.latest import ComfyAPI
@@ -804,7 +804,7 @@ api = ComfyAPI()
 
 #### Progress Reporting
 
-Report execution progress from within a node's `execute` method. The progress bar is displayed in the ComfyUI interface. This replaces the V1 pattern of using `comfy.utils.PROGRESS_BAR_HOOK`.
+Report execution progress from within a node's `execute` method. The progress bar is displayed in the Hanzo Studio interface. This replaces the V1 pattern of using `comfy.utils.PROGRESS_BAR_HOOK`.
 
 ```python
 from comfy_api.latest import ComfyAPI
@@ -950,7 +950,7 @@ class SaveImage(io.ComfyNode):
             is_output_node=True,
             inputs=[
                 io.Image.Input("images"),
-                io.String.Input("filename_prefix", default="ComfyUI"),
+                io.String.Input("filename_prefix", default="Hanzo Studio"),
             ],
             outputs=[],
         )

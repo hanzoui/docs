@@ -1,28 +1,28 @@
 ## 添加外部模型路径
 
-如果你想要在 `ComfyUI/models` 之外管理你的模型文件，可能出于以下原因:
+如果你想要在 `Hanzo Studio/models` 之外管理你的模型文件，可能出于以下原因:
 
-- 你有多个 ComfyUI 实例，你想要让这些实例共享模型文件，从而减少磁盘占用
+- 你有多个 Hanzo Studio 实例，你想要让这些实例共享模型文件，从而减少磁盘占用
 - 你有多个不同的类型的 GUI 程序，如：WebUI, 你想要他们共用模型文件
 - 模型文件无法被识别或读取到
 
 我们提供了通过 `extra_model_paths.yaml` 配置文件来添加额外模型搜索路径的方法。
 
-### 不同 ComfyUI 版本配置文件位置
+### 不同 Hanzo Studio 版本配置文件位置
 
 <Tabs>
   <Tab title="Portable 及自部署">
-  对于[便携版](/zh-CN/installation/comfyui_portable_windows)和[手动安装](/zh-CN/installation/manual_install)的 ComfyUI版本，你可以在 ComfyUI 的根目录下找到 `extra_model_paths.yaml.example` 的示例文件
+  对于[便携版](/zh-CN/installation/hanzo_studio_portable_windows)和[手动安装](/zh-CN/installation/manual_install)的 Hanzo Studio版本，你可以在 Hanzo Studio 的根目录下找到 `extra_model_paths.yaml.example` 的示例文件
   ```
-  ComfyUI/extra_model_paths.yaml.example
+  Hanzo Studio/extra_model_paths.yaml.example
   ```
-  复制并重命名为 `extra_model_paths.yaml` 来使用, 并保持在 ComfyUI 的根目录下, 路径应该是 `ComfyUI/extra_model_paths.yaml`
+  复制并重命名为 `extra_model_paths.yaml` 来使用, 并保持在 Hanzo Studio 的根目录下, 路径应该是 `Hanzo Studio/extra_model_paths.yaml`
 
-  你也可以在 [这里](https://github.com/comfyanonymous/ComfyUI/blob/master/extra_model_paths.yaml.example) 找到配置示例文件
+  你也可以在 [这里](https://github.com/hanzoai/studio/blob/master/extra_model_paths.yaml.example) 找到配置示例文件
 
   </Tab>
-  <Tab title="ComfyUI Desktop">
-  如果你使用的是 ComfyUI 桌面应用程序，你可以参考下图打开额外模型的配置文件：
+  <Tab title="Hanzo Desktop">
+  如果你使用的是 Hanzo Studio 桌面应用程序，你可以参考下图打开额外模型的配置文件：
 
   ![Open Config File](/images/zh/desktop/extra_model_paths.jpg)
 
@@ -31,12 +31,12 @@
   <Tabs>
     <Tab title="Windows">
       ```
-      C:\Users\YourUsername\AppData\Roaming\ComfyUI\extra_models_config.yaml
+      C:\Users\YourUsername\AppData\Roaming\Hanzo Studio\extra_models_config.yaml
       ```
     </Tab>
     <Tab title="macOS">
       ```
-      ~/Library/Application Support/ComfyUI/extra_models_config.yaml
+      ~/Library/Application Support/Hanzo Studio/extra_models_config.yaml
       ```
     </Tab>
   </Tabs>
@@ -47,7 +47,7 @@
 
 ### 配置示例
 
-比如，你需要额外让 ComfyUI 识别的模型文件位于下面的文件夹:
+比如，你需要额外让 Hanzo Studio 识别的模型文件位于下面的文件夹:
 
 ```
 📁 YOUR_PATH/
@@ -62,7 +62,7 @@
   |       └── xxxxx.safetensors
 ```
 
-那么你可以进行如下的配置来让 ComfyUI 识别到你设备上的模型路径
+那么你可以进行如下的配置来让 Hanzo Studio 识别到你设备上的模型路径
 
 ```
 my_custom_config:
@@ -87,12 +87,12 @@ my_custom_config:
   对于桌面版，请在原有配置路径下新增配置，而不覆盖掉安装过程中自动生成的路径配置，请在修改前备份对应的文件，这样在你配置错误时可以及时恢复
 </Warning>
 
-或者你也可以参考默认的 [extra_model_paths.yaml.example](https://github.com/comfyanonymous/ComfyUI/blob/master/extra_model_paths.yaml.example) 来配置，保存之后， 需要 **重启 ComfyUI** 才能生效。
+或者你也可以参考默认的 [extra_model_paths.yaml.example](https://github.com/hanzoai/studio/blob/master/extra_model_paths.yaml.example) 来配置，保存之后， 需要 **重启 Hanzo Studio** 才能生效。
 
 下面是完整的原始的配置配置示例:
 
 ```yaml
-#Rename this to extra_model_paths.yaml and ComfyUI will load it
+#Rename this to extra_model_paths.yaml and Hanzo Studio will load it
 
 
 #config for a1111 ui
@@ -144,13 +144,13 @@ a111:
 
 ### 添加额外自定义节点路径
 
-除了添加外部模型之外，你同样可以添加不在 ComfyUI 默认路径下的自定义节点路径
+除了添加外部模型之外，你同样可以添加不在 Hanzo Studio 默认路径下的自定义节点路径
 
 <Tip>
-  请注意，这并不会改变自定义节点的默认安装路径，只是在启动 ComfyUI 时会增加额外的路径搜索，你仍旧需要在对应的环境中完成自定义节点的依赖的安装，来保证其运行环境的完整性。
+  请注意，这并不会改变自定义节点的默认安装路径，只是在启动 Hanzo Studio 时会增加额外的路径搜索，你仍旧需要在对应的环境中完成自定义节点的依赖的安装，来保证其运行环境的完整性。
 </Tip>
 
-下面是一个简单的配置示例（Mac 系统），请根据你的实际情况进行修改，并新增到对应的配置文件中，保存后需要 **重启 ComfyUI** 才能生效:
+下面是一个简单的配置示例（Mac 系统），请根据你的实际情况进行修改，并新增到对应的配置文件中，保存后需要 **重启 Hanzo Studio** 才能生效:
 
 ```yaml
 my_custom_nodes:

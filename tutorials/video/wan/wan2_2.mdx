@@ -1,6 +1,6 @@
 ---
-title: "Wan2.2 Video Generation ComfyUI Official Native Workflow Example"
-description: "Official usage guide for Alibaba Cloud Tongyi Wanxiang 2.2 video generation model in ComfyUI"
+title: "Wan2.2 Video Generation Hanzo Studio Official Native Workflow Example"
+description: "Official usage guide for Alibaba Cloud Tongyi Wanxiang 2.2 video generation model in Hanzo Studio"
 sidebarTitle: Wan2.2
 ---
 
@@ -9,7 +9,7 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/S45XQXFOutM?si=Qvfco7Cyr_3akZ3Hv"
-  title="ComfyUI Selection Toolbox New Features"
+  title="Hanzo Studio Selection Toolbox New Features"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -40,12 +40,12 @@ The Wan2.2 series models are based on the Apache 2.0 open source license and sup
 
 ## ComfyOrg Wan2.2 Live Streams
 
-For ComfyUI Wan2.2 usage, we have conducted live streams, which you can view to learn how to use them.
+For Hanzo Studio Wan2.2 usage, we have conducted live streams, which you can view to learn how to use them.
 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/Z0yo16LzReA?si=I-BlUfktxqt9URQk"
-  title="ComfyUI Wan2.2 Live Streams"
+  title="Hanzo Studio Wan2.2 Live Streams"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -53,7 +53,7 @@ For ComfyUI Wan2.2 usage, we have conducted live streams, which you can view to 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/z62QLQ3XqSA?si=yUenvPa9Q4-VX28M"
-  title="ComfyUI Wan2.2 Deep Dive"
+  title="Hanzo Studio Wan2.2 Deep Dive"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -61,13 +61,13 @@ For ComfyUI Wan2.2 usage, we have conducted live streams, which you can view to 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/0fyZhXga8P8?si=PMv9xQLP32wP8Ni9"
-  title="ComfyUI Wan2.2 Deep Dive #2"
+  title="Hanzo Studio Wan2.2 Deep Dive #2"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
 
 
-This tutorial will use the [🤗 Comfy-Org/Wan_2.2_ComfyUI_Repackaged](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged) version.
+This tutorial will use the [🤗 hanzoui/Wan_2.2_Hanzo Studio_Repackaged](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged) version.
 
 <UpdateReminder/>
 
@@ -76,40 +76,40 @@ This tutorial will use the [🤗 Comfy-Org/Wan_2.2_ComfyUI_Repackaged](https://h
 ## Wan2.2 TI2V 5B Hybrid Version Workflow Example
 
 <Tip>
-  The Wan2.2 5B version should fit well on 8GB vram with the ComfyUI native offloading.
+  The Wan2.2 5B version should fit well on 8GB vram with the Hanzo Studio native offloading.
 </Tip>
 
 ### 1. Download Workflow File
 
-Please update your ComfyUI to the latest version, and through the menu `Workflow` -> `Browse Templates` -> `Video`, find "Wan2.2 5B video generation" to load the workflow.
+Please update your Hanzo Studio to the latest version, and through the menu `Workflow` -> `Browse Templates` -> `Video`, find "Wan2.2 5B video generation" to load the workflow.
 
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/wan_2_2_5B_t2v.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/wan_2_2_5B_t2v.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wan2_2_5B_ti2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wan2_2_5B_ti2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow File</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wan2_2_5B_ti2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wan2_2_5B_ti2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
 ### 2. Manually Download Models
 
 **Diffusion Model**
-- [wan2.2_ti2v_5B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors)
+- [wan2.2_ti2v_5B_fp16.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors)
 
 **VAE**
-- [wan2.2_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors)
+- [wan2.2_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors)
 
 **Text Encoder**   
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   └───wan2.2_ti2v_5B_fp16.safetensors
@@ -134,39 +134,39 @@ ComfyUI/
 
 ### 1. Workflow File
 
-Please update your ComfyUI to the latest version, and through the menu `Workflow` -> `Browse Templates` -> `Video`, find "Wan2.2 14B T2V" to load the workflow.
+Please update your Hanzo Studio to the latest version, and through the menu `Workflow` -> `Browse Templates` -> `Video`, find "Wan2.2 14B T2V" to load the workflow.
 
-Or update your ComfyUI to the latest version, then download the following video and drag it into ComfyUI to load the workflow.
+Or update your Hanzo Studio to the latest version, then download the following video and drag it into Hanzo Studio to load the workflow.
 
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/wan_2_2_14B_t2v.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/wan_2_2_14B_t2v.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wan2_2_14B_t2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wan2_2_14B_t2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow File</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wan2_2_14B_t2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wan2_2_14B_t2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
 ### 2. Manually Download Models
 
 **Diffusion Model**
-- [wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors)
-- [wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors)
+- [wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors)
+- [wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors)
 
 **VAE**
-- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
+- [wan_2.1_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
 
 **Text Encoder**   
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   ├─── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
@@ -192,40 +192,40 @@ ComfyUI/
 
 ### 1. Workflow File
 
-Please update your ComfyUI to the latest version, and through the menu `Workflow` -> `Browse Templates` -> `Video`, find "Wan2.2 14B I2V" to load the workflow.
+Please update your Hanzo Studio to the latest version, and through the menu `Workflow` -> `Browse Templates` -> `Video`, find "Wan2.2 14B I2V" to load the workflow.
 
-Or update your ComfyUI to the latest version, then download the following video and drag it into ComfyUI to load the workflow.
+Or update your Hanzo Studio to the latest version, then download the following video and drag it into Hanzo Studio to load the workflow.
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/wan_2_2_14B_i2v.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/wan_2_2_14B_i2v.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wan2_2_14B_i2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wan2_2_14B_i2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow File</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wan2_2_14B_i2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wan2_2_14B_i2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
 You can use the following image as input:
-![Input Image](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/input.jpg)
+![Input Image](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/input.jpg)
 
 ### 2. Manually Download Models
 
 **Diffusion Model**
-- [wan2.2_i2v_high_noise_14B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp16.safetensors)
-- [wan2.2_i2v_low_noise_14B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp16.safetensors)
+- [wan2.2_i2v_high_noise_14B_fp16.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp16.safetensors)
+- [wan2.2_i2v_low_noise_14B_fp16.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp16.safetensors)
 
 **VAE**
-- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
+- [wan_2.1_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
 
 **Text Encoder**   
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   ├─── wan2.2_i2v_low_noise_14B_fp16.safetensors
@@ -253,25 +253,25 @@ The first and last frame workflow uses the same model locations as the I2V secti
 
 ### 1. Workflow and Input Material Preparation
 
-Download the video or the JSON workflow below and open it in ComfyUI.
+Download the video or the JSON workflow below and open it in Hanzo Studio.
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/wan22_14B_flf2v.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/wan22_14B_flf2v.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wan2_2_14B_flf2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wan2_2_14B_flf2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wan2_2_14B_flf2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wan2_2_14B_flf2v&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
 Download the following images as input materials:
 
-![Input Material](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/wan22_14B_flf2v_start_image.png)
-![Input Material](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/2.2/wan22_14B_flf2v_end_image.png)
+![Input Material](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/wan22_14B_flf2v_start_image.png)
+![Input Material](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/2.2/wan22_14B_flf2v_end_image.png)
 
 ### 2. Follow the Steps
 
@@ -294,10 +294,10 @@ Download the following images as input materials:
 - [QuantStack/Wan2.2 GGUFs](https://huggingface.co/collections/QuantStack/wan22-ggufs-6887ec891bdea453a35b95f3)
 
 **Custom Node**
-[City96/ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)
+[City96/Hanzo Studio-GGUF](https://github.com/city96/Hanzo Studio-GGUF)
 
 ### WanVideoWrapper
-[Kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)
+[Kijai/Hanzo Studio-WanVideoWrapper](https://github.com/kijai/Hanzo Studio-WanVideoWrapper)
 
 **Wan2.2 models**
 [Kijai/WanVideo_comfy_fp8_scaled](https://hf-mirror.com/Kijai/WanVideo_comfy_fp8_scaled)

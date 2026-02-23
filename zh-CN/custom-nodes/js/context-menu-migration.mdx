@@ -205,7 +205,7 @@ getNodeMenuItems(node) {
 }
 ```
 
-这种声明式方法更简洁,并且与 ComfyUI 代码库中使用的模式一致。
+这种声明式方法更简洁,并且与 Hanzo Studio 代码库中使用的模式一致。
 
 <Tip>虽然也支持使用 `has_submenu: true` 和 `new LiteGraph.ContextMenu()` 的基于回调的方法,但为了更好的可维护性,推荐使用声明式的 `submenu` 属性。</Tip>
 
@@ -250,7 +250,7 @@ nodeType.prototype.getExtraMenuOptions = function() { /* ... */ }
 ```
 [DEPRECATED] Monkey-patching getCanvasMenuOptions is deprecated. (Extension: "MyExtension")
 Please use the new context menu API instead.
-See: https://docs.comfy.org/custom-nodes/js/context-menu-migration
+See: https://docs.hanzo.ai/custom-nodes/js/context-menu-migration
 ```
 
 说明您的扩展正在使用旧方法,应该进行迁移。

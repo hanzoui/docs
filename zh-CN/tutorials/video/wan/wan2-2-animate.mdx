@@ -1,5 +1,5 @@
 ---
-title: "Wan2.2 Animate ComfyUI 原生工作流"
+title: "Wan2.2 Animate Hanzo Studio 原生工作流"
 description: "统一的人物动画和替换框架，具有精确的运动和表情复制。"
 sidebarTitle: "Wan2.2 Animate"
 ---
@@ -24,7 +24,7 @@ Wan-Animate 是由 WAN 团队开发的一个统一的人物动画和替换框架
 <iframe
   className="w-full aspect-video rounded-xl"
  src="https://www.youtube.com/embed/5kb-rP0m5BA?si=lbIYkCP5akkG2N6D" 
- title="Wan 2.2 Animate in ComfyUI with Flipping Sigmas / September 19th, 2025" frameborder="0" 
+ title="Wan 2.2 Animate in Hanzo Studio with Flipping Sigmas / September 19th, 2025" frameborder="0" 
  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
  referrerpolicy="strict-origin-when-cross-origin" 
  allowfullscreen>
@@ -32,52 +32,52 @@ Wan-Animate 是由 WAN 团队开发的一个统一的人物动画和替换框架
 
 <UpdateReminder/>
 
-## Wan2.2 Animate ComfyUI 原生工作流
+## Wan2.2 Animate Hanzo Studio 原生工作流
 
 ### 1. 下载工作流文件
 
-下载以下工作流文件并将其拖入 ComfyUI 以加载工作流。
+下载以下工作流文件并将其拖入 Hanzo Studio 以加载工作流。
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wan2_2_14B_animate.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wan2_2_14B_animate.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wan2_2_14B_animate&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wan2_2_14B_animate&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Comfy Cloud 上运行</p>
 </a>
 
 下载以下素材作为输入：
 
 **参考图像：**
-![Reference_Image](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/wan2.2_animate/ref_image.png)
+![Reference_Image](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/wan2.2_animate/ref_image.png)
 
 **输入视频**
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/wan2.2_animate/original_video.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/wan2.2_animate/original_video.mp4"
 ></video>
 
 ### 2. 模型链接
 
 **diffusion_models**       
 - [Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors](https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Wan22Animate/Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors) 这是来自 Kijai 仓库的模型
-- [wan2.2_animate_14B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_animate_14B_bf16.safetensors) 原始模型权重
+- [wan2.2_animate_14B_bf16.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_animate_14B_bf16.safetensors) 原始模型权重
 
 **clip_visions**
-- [clip_vision_h.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors)
+- [clip_vision_h.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors)
 
 **loras**
 - [lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors](https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors) 这是一个 4 步的加速 lora
 - []
 **vae**
-- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
+- [wan_2.1_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
 
 **text_encoders**   
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   ├─── Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
@@ -94,12 +94,12 @@ ComfyUI/
 
 ### 3. 安装自定义节点
 
-下载以下工作流文件并将其拖入 ComfyUI 以加载工作流，如果你已安装 [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager)，你可以直接点击 `Install missing nodes` 按钮来安装缺失的节点。
+下载以下工作流文件并将其拖入 Hanzo Studio 以加载工作流，如果你已安装 [Hanzo Manager](https://github.com/hanzoui/studio-Manager)，你可以直接点击 `Install missing nodes` 按钮来安装缺失的节点。
 
 我们需要安装以下自定义节点：
 
-- [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
-- [ComfyUI-comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
+- [Hanzo Studio-KJNodes](https://github.com/kijai/Hanzo Studio-KJNodes)
+- [Hanzo Studio-hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux)
 
 如果你不知道如何安装自定义节点，请参阅 [如何安装自定义节点](/zh-CN/installation/install_custom_node)
 
@@ -117,8 +117,8 @@ Wan2.2 animate 有两种模式：Mix 和 Move
 1. 确保所有模型都已正确加载
 2. 如需要，更新提示词
 3. 上传参考图像，此图像中的角色将是目标角色
-4. 你可以使用我们提供的视频作为首次输入视频，[comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux) 中的 **DWPose Estimator** 节点将预处理输入视频以生成姿态和面部控制视频
-5. `Points Editor` 来自 [KJNodes](https://github.com/kijai/ComfyUI-KJNodes/)，默认情况下此节点不会加载输入视频的第一帧，你需要运行一次工作流或手动上传第一帧
+4. 你可以使用我们提供的视频作为首次输入视频，[hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux) 中的 **DWPose Estimator** 节点将预处理输入视频以生成姿态和面部控制视频
+5. `Points Editor` 来自 [KJNodes](https://github.com/kijai/Hanzo Studio-KJNodes/)，默认情况下此节点不会加载输入视频的第一帧，你需要运行一次工作流或手动上传第一帧
     - 在 `Points Editor` 节点下方，我们添加了关于此节点如何工作以及如何编辑的说明，请参阅它
 6. 对于 "Video Extend" 组，它是为了扩展输出视频长度
     - 每个 `Video Extend` 将扩展另外 77 帧（约 4.8125 秒）

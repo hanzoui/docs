@@ -1,5 +1,5 @@
 ---
-title: "Qwen-Image-Edit ComfyUI 原生工作流示例"
+title: "Qwen-Image-Edit Hanzo Studio 原生工作流示例"
 description: "Qwen-Image-Edit 是 Qwen-Image 的图像编辑版本，基于20B模型进一步训练，支持精准文字编辑和语义/外观双重编辑能力。"
 sidebarTitle: "Qwen-Image-Edit"
 ---
@@ -25,39 +25,39 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 <iframe
   className="w-full aspect-video rounded-xl"
  src="https://www.youtube.com/embed/TZIijn-tvoc?si=Vb-ZNwTvJC67_UEE" 
- title="Qwen-Image Edit in ComfyUI - Image Editing Model / August 19th, 2025" frameborder="0" 
+ title="Qwen-Image Edit in Hanzo Studio - Image Editing Model / August 19th, 2025" frameborder="0" 
  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
  referrerpolicy="strict-origin-when-cross-origin" 
  allowfullscreen>
  </iframe>
 
-## Qwen-Image-Edit ComfyUI 原生工作流示例
+## Qwen-Image-Edit Hanzo Studio 原生工作流示例
 
 <UpdateReminder />
 
 ### 1. 工作流文件
 
-更新 ComfyUI 后你可以从模板中找到工作流文件，或者将下面的工作流拖入 ComfyUI 中加载
-![Qwen-image 文生图工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-edit/qwen_image_edit.png)
+更新 Hanzo Studio 后你可以从模板中找到工作流文件，或者将下面的工作流拖入 Hanzo Studio 中加载
+![Qwen-image 文生图工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-edit/qwen_image_edit.png)
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image_edit.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_qwen_image_edit.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=image_qwen_image_edit&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
-    <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 ComfyUI Cloud 上运行</p>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=image_qwen_image_edit&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+    <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Hanzo Studio Cloud 上运行</p>
 </a>
 
 下载下面的图片作为输入
-![Qwen-image 文生图工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-edit/input.png)
+![Qwen-image 文生图工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-edit/input.png)
 
 ### 2. 模型下载
 
-所有模型都可在 [Comfy-Org/Qwen-Image_ComfyUI](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main) 或  [Comfy-Org/Qwen-Image-Edit_ComfyUI](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) 找到
+所有模型都可在 [hanzoui/Qwen-Image_Hanzo Studio](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/tree/main) 或  [hanzoui/Qwen-Image-Edit_Hanzo Studio](https://huggingface.co/hanzoui/Qwen-Image-Edit_Hanzo Studio) 找到
 
 **Diffusion model**
 
-- [qwen_image_edit_fp8_e4m3fn.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors)
+- [qwen_image_edit_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Edit_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors)
 
 **LoRA**
 
@@ -65,16 +65,16 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 **Text encoder**
 
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
 
 **VAE**
 
-- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors)
+- [qwen_image_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/vae/qwen_image_vae.safetensors)
 
 Model Storage Location
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   └── qwen_image_edit_fp8_e4m3fn.safetensors

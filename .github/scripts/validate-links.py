@@ -158,7 +158,7 @@ def fix_missing_leading_slash(file_path: str, content: str) -> Tuple[str, bool]:
         doc_patterns = [
             'zh-CN/', 'tutorials/', 'built-in-nodes/', 'interface/', 'installation/', 
             'development/', 'custom-nodes/', 'troubleshooting/', 'registry/', 'specs/',
-            'get_started/', 'changelog/', 'comfy-cli/', 'snippets/', 'community/'
+            'get_started/', 'changelog/', 'hanzo-cli/', 'snippets/', 'community/'
         ]
         
         return any(link.startswith(pattern) for pattern in doc_patterns)

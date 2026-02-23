@@ -1,13 +1,13 @@
 ---
-title: "ComfyUI 视频放大"
-description: "学习如何在 ComfyUI 中使用本地模型和合作伙伴节点进行视频放大"
+title: "Hanzo Studio 视频放大"
+description: "学习如何在 Hanzo Studio 中使用本地模型和合作伙伴节点进行视频放大"
 sidebarTitle: "视频放大"
 ---
 
-本指南介绍 ComfyUI 中的视频放大工作流，包括本地模型和合作伙伴节点选项，适用于各种使用场景。
+本指南介绍 Hanzo Studio 中的视频放大工作流，包括本地模型和合作伙伴节点选项，适用于各种使用场景。
 
-<Card title="The Complete AI Upscaling Handbook" icon="book" href="https://blog.comfy.org/p/upscaling-in-comfyui">
-  如需更全面的深入分析、基准测试和视觉对比，请参阅 ComfyUI 博客上的完整文章。
+<Card title="The Complete AI Upscaling Handbook" icon="book" href="https://blog.hanzo.ai/p/upscaling-in-comfyui">
+  如需更全面的深入分析、基准测试和视觉对比，请参阅 Hanzo Studio 博客上的完整文章。
 </Card>
 
 ## TL;DR
@@ -45,16 +45,16 @@ sidebarTitle: "视频放大"
 **Topaz** 也能有效放大，但有时可能比预期更具创意性。这使其特别适合可以接受风格化外观的电影素材。
 
 <CardGroup cols={2}>
-  <Card title="SeedVR2 - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.comfy.org/4khbzjY">
+  <Card title="SeedVR2 - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.hanzo.ai/4khbzjY">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="SeedVR2 - 保守放大（开源）" icon="cloud" href="https://links.comfy.org/4tm2RoI">
+  <Card title="SeedVR2 - 保守放大（开源）" icon="cloud" href="https://links.hanzo.ai/4tm2RoI">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="HitPaw - 一体化方案" icon="cloud" href="https://links.comfy.org/4kthLWs">
+  <Card title="HitPaw - 一体化方案" icon="cloud" href="https://links.hanzo.ai/4kthLWs">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.comfy.org/4tlbyQj">
+  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.hanzo.ai/4tlbyQj">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
 </CardGroup>
@@ -66,13 +66,13 @@ sidebarTitle: "视频放大"
 **HitPaw** 也相对较快。在 **Topaz** 中，Fast 和 Creative 模式的渲染速度相似，因此通常建议使用 **Creative** 模式以获得更好的视觉效果而不牺牲时间。
 
 <CardGroup cols={2}>
-  <Card title="FlashVSR - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.comfy.org/4khbzjY">
+  <Card title="FlashVSR - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.hanzo.ai/4khbzjY">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="HitPaw - 一体化方案" icon="cloud" href="https://links.comfy.org/4kthLWs">
+  <Card title="HitPaw - 一体化方案" icon="cloud" href="https://links.hanzo.ai/4kthLWs">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.comfy.org/4tlbyQj">
+  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.hanzo.ai/4tlbyQj">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
 </CardGroup>
@@ -84,10 +84,10 @@ sidebarTitle: "视频放大"
 一个有用的工作流技巧是先运行 **修复或清理步骤**，然后放大到 **1080p**，最后逐步放大到 **4K**。这种分步方法通常能带来更好的稳定性和细节。
 
 <CardGroup cols={2}>
-  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.comfy.org/4tlbyQj">
+  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.hanzo.ai/4tlbyQj">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="Wan 2.2 Upscale - 创意放大" icon="cloud" href="https://links.comfy.org/3NVEu1b">
+  <Card title="Wan 2.2 Upscale - 创意放大" icon="cloud" href="https://links.hanzo.ai/3NVEu1b">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
 </CardGroup>
@@ -97,13 +97,13 @@ sidebarTitle: "视频放大"
 **SeedVR2** 在档案修复方面表现尤为出色。它在增强清晰度的同时保留源素材的原始结构和细节，避免引入人工或夸张的特征。
 
 <CardGroup cols={2}>
-  <Card title="SeedVR2 - 保守放大（开源）" icon="cloud" href="https://links.comfy.org/4tm2RoI">
+  <Card title="SeedVR2 - 保守放大（开源）" icon="cloud" href="https://links.hanzo.ai/4tm2RoI">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="SeedVR2 - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.comfy.org/4khbzjY">
+  <Card title="SeedVR2 - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.hanzo.ai/4khbzjY">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="Fast GAN - 传统放大" icon="cloud" href="https://links.comfy.org/46wNZtS">
+  <Card title="Fast GAN - 传统放大" icon="cloud" href="https://links.hanzo.ai/46wNZtS">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
 </CardGroup>
@@ -113,13 +113,13 @@ sidebarTitle: "视频放大"
 **Topaz、SeedVR2 和 HitPaw** 在 CGI 和 3D 渲染素材上都表现出色。它们产生干净、锐利的结果，并保持对合成图像至关重要的清晰边缘。
 
 <CardGroup cols={2}>
-  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.comfy.org/4tlbyQj">
+  <Card title="Topaz Astra - 创意放大" icon="cloud" href="https://links.hanzo.ai/4tlbyQj">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="SeedVR2 - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.comfy.org/4khbzjY">
+  <Card title="SeedVR2 - 保守放大（WaveSpeed API）" icon="cloud" href="https://links.hanzo.ai/4khbzjY">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
-  <Card title="HitPaw - 一体化方案" icon="cloud" href="https://links.comfy.org/4kthLWs">
+  <Card title="HitPaw - 一体化方案" icon="cloud" href="https://links.hanzo.ai/4kthLWs">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
 </CardGroup>
@@ -131,7 +131,7 @@ sidebarTitle: "视频放大"
 **推荐**：Topaz Starlight Fast、Fast GAN
 
 <CardGroup cols={2}>
-  <Card title="Fast GAN - 传统放大" icon="cloud" href="https://links.comfy.org/46wNZtS">
+  <Card title="Fast GAN - 传统放大" icon="cloud" href="https://links.hanzo.ai/46wNZtS">
     在 Comfy Cloud 上试用或下载工作流
   </Card>
 </CardGroup>
@@ -171,7 +171,7 @@ sidebarTitle: "视频放大"
 
 ## 开始使用 Topaz Video Enhance
 
-1. 将 ComfyUI 更新到最新版本。
+1. 将 Hanzo Studio 更新到最新版本。
 2. 在节点列表中搜索 `Topaz Video Enhance` 节点。
 3. 连接视频输入并配置设置。
 4. 运行工作流。

@@ -1,5 +1,5 @@
 ---
-title: "Flux.1 Krea Dev ComfyUI Workflow Tutorial"
+title: "Flux.1 Krea Dev Hanzo Studio Workflow Tutorial"
 description: "Best open-source FLUX model developed by Black Forest Labs in collaboration with Krea, focusing on unique aesthetic style and natural details, avoiding AI look, providing exceptional realism and image quality."
 sidebarTitle: "Flux.1 Krea Dev"
 ---
@@ -20,20 +20,20 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 **Model License**
 This model is released under the [flux-1-dev-non-commercial-license](https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/blob/main/LICENSE.md)
 
-## Flux.1 Krea Dev ComfyUI Workflow
+## Flux.1 Krea Dev Hanzo Studio Workflow
 
 <UpdateReminder />
 
 #### 1. Workflow Files
 
-Download the image or JSON below and drag it into ComfyUI to load the corresponding workflow
-![Flux Krea Dev Workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/flux/krea/flux1_krea_dev.png)
+Download the image or JSON below and drag it into Hanzo Studio to load the corresponding workflow
+![Flux Krea Dev Workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/main/flux/krea/flux1_krea_dev.png)
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/flux1_krea_dev.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/flux1_krea_dev.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=flux1_krea_dev&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=flux1_krea_dev&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
@@ -42,7 +42,7 @@ Download the image or JSON below and drag it into ComfyUI to load the correspond
 Please download the following model files:
 **Diffusion model**
 
-- [flux1-krea-dev_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/FLUX.1-Krea-dev_ComfyUI/blob/main/split_files/diffusion_models/flux1-krea-dev_fp8_scaled.safetensors)
+- [flux1-krea-dev_fp8_scaled.safetensors](https://huggingface.co/hanzoui/FLUX.1-Krea-dev_Hanzo Studio/blob/main/split_files/diffusion_models/flux1-krea-dev_fp8_scaled.safetensors)
 
 If you want to pursue higher quality and have enough VRAM, you can try the original model weights
 
@@ -55,16 +55,16 @@ The `flux1-dev.safetensors` file requires agreeing to the [black-forest-labs/FLU
 If you have used Flux related workflows before, the following models are the same and don't need to be downloaded again
 
 **Text encoders**
-- [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true)
-- [t5xxl_fp16.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true) Recommended when your VRAM is greater than 32GB.
-- [t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors)  For Low VRAM
+- [clip_l.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/clip_l.safetensors?download=true)
+- [t5xxl_fp16.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true) Recommended when your VRAM is greater than 32GB.
+- [t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors)  For Low VRAM
 
 **VAE**
 - [ae.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors?download=true)
 
 File save location:
 ```
-ComfyUI/
+Hanzo Studio/
 ├── models/
 │   ├── diffusion_models/
 │   │   └── flux1-krea-dev_fp8_scaled.safetensors or flux1-krea-dev.safetensors
@@ -84,7 +84,7 @@ ComfyUI/
 
 Please refer to the image below to ensure all model files have been loaded correctly
 
-![ComfyUI Flux Krea Dev Workflow](/images/tutorial/flux/flux_1_krea_dev_guide.jpg)
+![Hanzo Studio Flux Krea Dev Workflow](/images/tutorial/flux/flux_1_krea_dev_guide.jpg)
 
 1. Ensure that `flux1-krea-dev_fp8_scaled.safetensors` or `flux1-krea-dev.safetensors` is loaded in the `Load Diffusion Model` node
     - `flux1-krea-dev_fp8_scaled.safetensors` is recommended for low VRAM users

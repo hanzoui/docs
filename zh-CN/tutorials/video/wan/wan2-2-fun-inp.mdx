@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI Wan2.2 Fun Inp 首尾帧视频生成示例"
-description: "本文介绍了如何在 ComfyUI 中完成 Wan2.2 Fun Inp 首尾帧视频生成示例"
+title: "Hanzo Studio Wan2.2 Fun Inp 首尾帧视频生成示例"
+description: "本文介绍了如何在 Hanzo Studio 中完成 Wan2.2 Fun Inp 首尾帧视频生成示例"
 sidebarTitle: "Wan2.2 Fun Inp"
 ---
 
@@ -23,12 +23,12 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 ## ComfyOrg Wan2.2 Fun InP & Control Youtube 直播回放
 
-对于 ComfyUI Wan2.2 的使用，我们有进行了直播，你可以查看这些回放了解如何使用
+对于 Hanzo Studio Wan2.2 的使用，我们有进行了直播，你可以查看这些回放了解如何使用
 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="//player.bilibili.com/player.html?isOutside=true&aid=115027747082114&bvid=BV1DVbrzdEFR&cid=31697013072&p=1&autoplay=0"
-  title="ComfyUI Selection Toolbox New Features"
+  title="Hanzo Studio Selection Toolbox New Features"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -55,40 +55,40 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/wan2.2_fun_inp/wan2.2_14B_fun_inp.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/wan2.2_fun_inp/wan2.2_14B_fun_inp.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wan2_2_14B_fun_inpaint.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wan2_2_14B_fun_inpaint.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wan2_2_14B_fun_inpaint&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wan2_2_14B_fun_inpaint&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28A745', color: '#FFFFFF', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
 使用下面的素材作为首尾帧
 
-![Wan2.2 Fun Control ComfyUI 工作流起始帧素材](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/wan2.2_fun_inp/start_image.png)
-![Wan2.2 Fun Control ComfyUI 工作流起始帧素材](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/wan2.2_fun_inp/end_image.png)
+![Wan2.2 Fun Control Hanzo Studio 工作流起始帧素材](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/wan2.2_fun_inp/start_image.png)
+![Wan2.2 Fun Control Hanzo Studio 工作流起始帧素材](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/wan2.2_fun_inp/end_image.png)
 
 ### 2. 手动下载模型
 
 **Diffusion Model**
-- [wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors)
-- [wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors)
+- [wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors)
+- [wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors)
 
 **Lightning LoRA (可选，用于加速)**
-- [wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors)
-- [wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors)
+- [wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors)
+- [wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors)
 
 **VAE**
-- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
+- [wan_2.1_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.2_Hanzo Studio_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
 
 **Text Encoder**   
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   ├─── wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors

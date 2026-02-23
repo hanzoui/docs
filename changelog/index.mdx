@@ -1,6 +1,6 @@
 ---
 title: "Changelog"
-description: "Track ComfyUI's latest features, improvements, and bug fixes. For detailed release notes, see the [Github releases](https://github.com/comfyanonymous/ComfyUI/releases) page."
+description: "Track Hanzo Studio's latest features, improvements, and bug fixes. For detailed release notes, see the [Github releases](https://github.com/hanzoai/studio/releases) page."
 icon: "clock-rotate-left"
 ---
 
@@ -62,13 +62,13 @@ icon: "clock-rotate-left"
 - Fixed LTXV2 text encoder lowvram compatibility
 - Fixed fp8 processing issues
 - Fixed MPO format images to use first frame only
-- Conditional comfy-kitchen CUDA support based on PyTorch version
+- Conditional hanzo-kitchen CUDA support based on PyTorch version
 
 **Other**
 - Added OOM memory summary for debugging
 - Mahiro CFG display name update
 - Workflow templates updated to v0.7.67
-- Code refactoring and cleanup (CLIP preprocessing, comfy-kitchen integration)
+- Code refactoring and cleanup (CLIP preprocessing, hanzo-kitchen integration)
 </Update>
 <Update label="v0.7.0" description="December 31, 2025">
 **System Requirements**
@@ -81,8 +81,8 @@ icon: "clock-rotate-left"
 - Added VACE context handling in context windows
 
 **Updates**
-- ComfyUI Frontend updated to v1.35.9
-- ComfyUI Manager updated to v4.0.4
+- Hanzo Frontend updated to v1.35.9
+- Hanzo Manager updated to v4.0.4
 - Workflow templates updated to v0.7.64
 
 **New Nodes**
@@ -157,7 +157,7 @@ icon: "clock-rotate-left"
 **Workflow &  Enhancements**
 - Context windows fixes and enhanced temporal processing
 - Kling API @image reference format
-- ComfyUI-Manager pip installation support
+- Hanzo Manager pip installation support
 
 **Frontend Improvements**
 - Improve frontend load/startup time significantly
@@ -191,7 +191,7 @@ icon: "clock-rotate-left"
 **Note: for Desktop users**
 - If you have not turned off the auto-update, please wait for the latest Desktop release, it will auto-update to the latest version.
 - If you are using the Desktop and **if you also turn off the auto-update**, the Desktop might not be able to auto-update for the latest version this time.
-- Please download the latest Desktop version from [here](https://www.comfy.org/download) to get the latest features.
+- Please download the latest Desktop version from [here](https://hanzo.ai/download) to get the latest features.
 </Update>
 <Update label="v0.3.76" description="December 2, 2025">
 
@@ -208,7 +208,7 @@ icon: "clock-rotate-left"
 - Merge 3D animation node into 3D node
 
 **Lora Trainer**
-- Support multi-resolution for ComfyUI native LoRA trainer
+- Support multi-resolution for Hanzo Studio native LoRA trainer
 - Support Z-Image LoRA training
 
 **Performance & model support**
@@ -274,7 +274,7 @@ icon: "clock-rotate-left"
 - **HunyuanV3D Schema Migration**: Updated Hunyuan3D nodes to V3 schema for improved performance and compatibility
 
 **API Node Expansions**
-- **New Topaz API Nodes**: Added support for Topaz video enhancement workflows directly within ComfyUI
+- **New Topaz API Nodes**: Added support for Topaz video enhancement workflows directly within Hanzo Studio
 - **Nano Banana Pro Integration**: Expanded API node collection with Nano Banana Pro for enhanced processing capabilities
 - **Kling Lip Sync Improvements**: Fixed audio format conversion issues in KlingLipSyncAudioToVideoNode, ensuring proper MP3 format handling
 
@@ -467,7 +467,7 @@ icon: "clock-rotate-left"
 <Update label="v0.3.61" description="September 30, 2025">
 
 **API Node**
-- **Rodin3D Gen-2**: Rodin's most powerful image-to-3D tool, is now live in ComfyUI!
+- **Rodin3D Gen-2**: Rodin's most powerful image-to-3D tool, is now live in Hanzo Studio!
 - **WAN Image-to-Image**: Wan2.5 Image-to-Image API node, support image editing.
 
 **Enhanced Audio Capabilities**
@@ -570,10 +570,10 @@ This release focuses on Wan2.2 S2V related video workflow capabilities and model
 
 **Node Model Patch Improvements**
 
-This focused update improves the core node model patching system that underpins ComfyUI's flexible architecture:
+This focused update improves the core node model patching system that underpins Hanzo Studio's flexible architecture:
 
 **Core Infrastructure Enhancement**
-- **Node Model Patch Updates**: Enhanced nodes_model_patch.py with improvements to the underlying model patching mechanism, making ComfyUI extensions for Qwen-Image ControlNet easier
+- **Node Model Patch Updates**: Enhanced nodes_model_patch.py with improvements to the underlying model patching mechanism, making Hanzo Studio extensions for Qwen-Image ControlNet easier
 
 **Workflow Benefits**
 - **Enhanced Stability**: Core model patching improvements contribute to more reliable node execution and model handling across different workflow configurations
@@ -583,7 +583,7 @@ This focused update improves the core node model patching system that underpins 
 
 **Audio Workflow Integration & Enhanced Performance Optimizations**
 
-This release adds ComfyUI audio processing capabilities and includes performance improvements and model compatibility updates:
+This release adds Hanzo Studio audio processing capabilities and includes performance improvements and model compatibility updates:
 
 **Audio Processing Updates**
 - **Wav2vec2 Audio Encoder**: Added native wav2vec2 implementation as an audio encoder model, enabling audio-to-embedding workflows for multimodal applications
@@ -618,7 +618,7 @@ This release adds ComfyUI audio processing capabilities and includes performance
 
 **Enhanced Model Support & Qwen Image ControlNet Integration**
 
-This release significantly expands ControlNet capabilities and improves model compatibility, making ComfyUI workflows more versatile and reliable:
+This release significantly expands ControlNet capabilities and improves model compatibility, making Hanzo Studio workflows more versatile and reliable:
 
 **Qwen ControlNet Ecosystem**
 - **Diffsynth ControlNet Support**: Added support for Qwen Diffsynth ControlNets with Canny and depth conditioning, enabling precise edge and depth-based image control
@@ -637,7 +637,7 @@ This release significantly expands ControlNet capabilities and improves model co
 - **EasyCache & LazyCache**: Implemented advanced caching systems for improved workflow execution performance
 
 **Platform & Development Improvements**
-- **Python 3.13 Support**: Full compatibility with Python 3.13, keeping ComfyUI current with latest Python developments
+- **Python 3.13 Support**: Full compatibility with Python 3.13, keeping Hanzo Studio current with latest Python developments
 - **Frontend Update**: Updated to v1.25.10 with improved navigation and user interface enhancements
 - **Elementwise Fusions**: Added performance optimizations through elementwise operations fusion
 - **Navigation Mode Rollback**: Rolled back navigation default to traditional legacy mode, avoiding user experience issues caused by default enabled standard navigation mode. Users can still enable standard navigation mode in settings
@@ -657,7 +657,7 @@ This release significantly expands ControlNet capabilities and improves model co
 - **SDPA Backend Optimization**: Improved Scaled Dot Product Attention backend settings for better performance
 
 **Multimedia Node Support**
-- **Audio Recording Node**: New native audio recording node, now you can record audio directly in ComfyUI
+- **Audio Recording Node**: New native audio recording node, now you can record audio directly in Hanzo Studio
 - **Audio Video Integration**: Complete audio-video dependency integration
 
 **API Node Support Updates**
@@ -689,7 +689,7 @@ This release significantly expands ControlNet capabilities and improves model co
 
 **Model Integration & Performance Enhancements**
 
-This release expands ComfyUI's model ecosystem with enhanced Qwen support, async API capabilities, and stability improvements for complex workflows:
+This release expands Hanzo Studio's model ecosystem with enhanced Qwen support, async API capabilities, and stability improvements for complex workflows:
 
 **Qwen Model Ecosystem**
 - **Qwen Image Model Support**: Improved integration including proper LoRA loading and model merging capabilities for sophisticated vision workflows
@@ -749,7 +749,7 @@ This release brings user experience improvements and model support that enhance 
 **Workflow Benefits**
 - **Faster Iteration**: Recently used items API enables quicker workflow assembly and modification
 - **Enhanced Creativity**: Qwen vision models open new possibilities for image understanding and manipulation workflows
-- **Video Production**: Veo3 integration transforms ComfyUI into a comprehensive multimedia creation platform
+- **Video Production**: Veo3 integration transforms Hanzo Studio into a comprehensive multimedia creation platform
 - **Reliability**: Memory optimizations and device management fixes ensure stable operation with complex workflows
 - **Performance**: Optimized VRAM usage allows for more ambitious projects on systems with limited resources
 

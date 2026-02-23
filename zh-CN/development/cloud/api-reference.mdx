@@ -8,13 +8,13 @@ import WebSocketProgress from '/snippets/zh/cloud/websocket-progress.mdx'
 import DownloadOutputs from '/snippets/zh/cloud/download-outputs.mdx'
 
 <Warning>
-  **实验性 API：** 此 API 处于实验阶段，可能会发生变化。端点、请求/响应格式和行为可能会在未事先通知的情况下进行修改。部分端点为兼容本地 ComfyUI 而保留，但可能具有不同的语义（例如，某些字段会被忽略）。
+  **实验性 API：** 此 API 处于实验阶段，可能会发生变化。端点、请求/响应格式和行为可能会在未事先通知的情况下进行修改。部分端点为兼容本地 Hanzo Studio 而保留，但可能具有不同的语义（例如，某些字段会被忽略）。
 </Warning>
 
 本页面提供了常见 Comfy Cloud API 操作的完整示例。
 
 <Note>
-  **需要订阅：** 通过 API 运行工作流需要有效的 Comfy Cloud 订阅。请查看[定价方案](https://www.comfy.org/cloud/pricing?utm_source=docs&utm_campaign=cloud-api)了解详情。
+  **需要订阅：** 通过 API 运行工作流需要有效的 Comfy Cloud 订阅。请查看[定价方案](https://hanzo.ai/cloud/pricing?utm_source=docs&utm_campaign=cloud-api)了解详情。
 </Note>
 
 ## 设置
@@ -24,13 +24,13 @@ import DownloadOutputs from '/snippets/zh/cloud/download-outputs.mdx'
 <CodeGroup>
 ```bash curl
 export COMFY_CLOUD_API_KEY="your-api-key"
-export BASE_URL="https://cloud.comfy.org"
+export BASE_URL="https://cloud.hanzo.ai"
 ```
 
 ```typescript TypeScript
 import { readFile, writeFile } from "fs/promises";
 
-const BASE_URL = "https://cloud.comfy.org";
+const BASE_URL = "https://cloud.hanzo.ai";
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
 function getHeaders(): HeadersInit {
@@ -49,7 +49,7 @@ import time
 import asyncio
 import aiohttp
 
-BASE_URL = "https://cloud.comfy.org"
+BASE_URL = "https://cloud.hanzo.ai"
 API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 
 def get_headers():
@@ -294,7 +294,7 @@ def submit_workflow(workflow: dict) -> str:
     """Submit a workflow and return the prompt_id (job ID).
     
     Args:
-        workflow: ComfyUI workflow in API format
+        workflow: Hanzo Studio workflow in API format
         
     Returns:
         prompt_id for tracking the job
@@ -326,7 +326,7 @@ print(f"Submitted job: {prompt_id}")
 如果您的工作流包含[合作伙伴节点](/zh-CN/tutorials/api-nodes/overview)（调用外部 AI 服务的节点，如 Flux Pro、Ideogram 等），您必须在请求体的 `extra_data` 字段中包含您的 Comfy API 密钥。
 
 <Note>
-  在浏览器中运行工作流时，ComfyUI 前端会自动将您的 API 密钥打包到 `extra_data` 中。本节仅适用于直接调用 API 的情况。
+  在浏览器中运行工作流时，Hanzo Studio 前端会自动将您的 API 密钥打包到 `extra_data` 中。本节仅适用于直接调用 API 的情况。
 </Note>
 
 <CodeGroup>
@@ -371,8 +371,8 @@ def submit_workflow_with_partner_nodes(workflow: dict, api_key: str) -> str:
     """提交使用合作伙伴节点的工作流。
     
     Args:
-        workflow: API 格式的 ComfyUI 工作流
-        api_key: 来自 platform.comfy.org 的 API 密钥
+        workflow: API 格式的 Hanzo Studio 工作流
+        api_key: 来自 platform.hanzo.ai 的 API 密钥
         
     Returns:
         用于跟踪任务的 prompt_id
@@ -396,7 +396,7 @@ prompt_id = submit_workflow_with_partner_nodes(workflow, API_KEY)
 </CodeGroup>
 
 <Info>
-  在 [platform.comfy.org](https://platform.comfy.org/login) 生成您的 API 密钥。此密钥与 Cloud API 身份验证（`X-API-Key` 请求头）使用的是同一个密钥。
+  在 [platform.hanzo.ai](https://platform.hanzo.ai/login) 生成您的 API 密钥。此密钥与 Cloud API 身份验证（`X-API-Key` 请求头）使用的是同一个密钥。
 </Info>
 
 ### 修改工作流输入
@@ -558,7 +558,7 @@ print("Job completed!")
 
 #### 二进制消息（预览图像）
 
-在图像生成过程中，ComfyUI 会发送包含预览图像的**二进制 WebSocket 帧**。这些是原始二进制数据（不是 JSON）：
+在图像生成过程中，Hanzo Studio 会发送包含预览图像的**二进制 WebSocket 帧**。这些是原始二进制数据（不是 JSON）：
 
 | 二进制类型 | 值 | 描述 |
 |------------|-----|------|
@@ -627,7 +627,7 @@ print("Job completed!")
 
 <CodeGroup>
 ```typescript TypeScript
-const BASE_URL = "https://cloud.comfy.org";
+const BASE_URL = "https://cloud.hanzo.ai";
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
 function getHeaders(): HeadersInit {
@@ -648,7 +648,7 @@ async function waitForCompletion(
   promptId: string,
   timeout: number = 300000
 ): Promise<Record<string, any>> {
-  const wsUrl = `wss://cloud.comfy.org/ws?clientId=${crypto.randomUUID()}&token=${API_KEY}`;
+  const wsUrl = `wss://cloud.hanzo.ai/ws?clientId=${crypto.randomUUID()}&token=${API_KEY}`;
   const outputs: Record<string, any> = {};
 
   return new Promise((resolve, reject) => {
@@ -750,7 +750,7 @@ import asyncio
 import aiohttp
 import uuid
 
-BASE_URL = "https://cloud.comfy.org"
+BASE_URL = "https://cloud.hanzo.ai"
 API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 
 def get_headers():

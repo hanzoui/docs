@@ -1,5 +1,5 @@
 ---
-title: "Wan ATI ComfyUI Native Workflow Tutorial"
+title: "Wan ATI Hanzo Studio Native Workflow Tutorial"
 description: "Using trajectory control for video generation."
 sidebarTitle: "WAN2l1 ATI"
 ---
@@ -25,15 +25,15 @@ Project URL: [https://github.com/bytedance/ATI](https://github.com/bytedance/ATI
 
 ### 1. Workflow Download 
 
-Download the video below and drag it into ComfyUI to load the corresponding workflow
+Download the video below and drag it into Hanzo Studio to load the corresponding workflow
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/ati/wan_ati.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/ati/wan_ati.mp4"
 ></video>
 
 We will use the following image as input:
-![v2v-input](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/video/wan/ati/input.jpg)
+![v2v-input](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/video/wan/ati/input.jpg)
 
 ### 2. Model Download
 
@@ -43,18 +43,18 @@ If you haven't successfully downloaded the model files from the workflow, you ca
 - [Wan2_1-I2V-ATI-14B_fp8_e4m3fn.safetensors](https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-ATI-14B_fp8_e4m3fn.safetensors)
 
 **VAE**
-- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true)
+- [wan_2.1_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true)
 
 **Text encoders**   Chose one of following model
-- [umt5_xxl_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors?download=true)
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true)
+- [umt5_xxl_fp16.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors?download=true)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true)
 
 **clip_vision**
-- [clip_vision_h.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors)
+- [clip_vision_h.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors)
 
 File save location
 ```
-ComfyUI/
+Hanzo Studio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   └───Wan2_1-I2V-ATI-14B_fp8_e4m3fn.safetensors
@@ -77,7 +77,7 @@ Please follow the numbered steps in the image to ensure smooth execution of the 
 3. Ensure the `Load VAE` node has loaded the `wan_2.1_vae.safetensors` model
 4. Ensure the `Load CLIP Vision` node has loaded the `clip_vision_h.safetensors` model
 5. Upload the provided input image in the `Load Image` node
-6. Trajectory editing: Currently there is no corresponding trajectory editor in ComfyUI yet, you can use the following link to complete trajectory editing
-    - [Online Trajectory Editing Tool](https://comfyui-wiki.github.io/Trajectory-Annotation-Tool/)
+6. Trajectory editing: Currently there is no corresponding trajectory editor in Hanzo Studio yet, you can use the following link to complete trajectory editing
+    - [Online Trajectory Editing Tool](https://hanzo-studio-wiki.github.io/Trajectory-Annotation-Tool/)
 7. If you need to modify the prompts (positive and negative), please make changes in the `CLIP Text Encoder` node numbered `5`
 8. Click the `Run` button, or use the shortcut `Ctrl(cmd) + Enter` to execute video generation

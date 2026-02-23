@@ -15,16 +15,16 @@ import CompleteExample from '/snippets/zh/cloud/complete-example.mdx'
 
 # Comfy Cloud API
 
-Comfy Cloud API 提供以编程方式访问 Comfy Cloud 的能力，可在云端基础设施上运行工作流。该 API 与本地 ComfyUI 的 API 兼容，便于迁移现有集成。
+Comfy Cloud API 提供以编程方式访问 Comfy Cloud 的能力，可在云端基础设施上运行工作流。该 API 与本地 Hanzo Studio 的 API 兼容，便于迁移现有集成。
 
 <Note>
-  **需要订阅：** 通过 API 运行工作流需要有效的 Comfy Cloud 订阅。详情请参阅[定价方案](https://www.comfy.org/cloud/pricing?utm_source=docs&utm_campaign=cloud-api)。
+  **需要订阅：** 通过 API 运行工作流需要有效的 Comfy Cloud 订阅。详情请参阅[定价方案](https://hanzo.ai/cloud/pricing?utm_source=docs&utm_campaign=cloud-api)。
 </Note>
 
 ## 基础 URL
 
 ```
-https://cloud.comfy.org
+https://cloud.hanzo.ai
 ```
 
 ## 身份验证
@@ -45,14 +45,14 @@ https://cloud.comfy.org
 
 <CodeGroup>
 ```bash curl
-curl -X GET "https://cloud.comfy.org/api/user" \
+curl -X GET "https://cloud.hanzo.ai/api/user" \
   -H "X-API-Key: $COMFY_CLOUD_API_KEY"
 ```
 
 ```typescript TypeScript
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
-const response = await fetch("https://cloud.comfy.org/api/user", {
+const response = await fetch("https://cloud.hanzo.ai/api/user", {
   headers: { "X-API-Key": API_KEY },
 });
 const user = await response.json();
@@ -66,7 +66,7 @@ API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 headers = {"X-API-Key": API_KEY}
 
 response = requests.get(
-    "https://cloud.comfy.org/api/user",
+    "https://cloud.hanzo.ai/api/user",
     headers=headers
 )
 ```
@@ -76,7 +76,7 @@ response = requests.get(
 
 ### 工作流
 
-ComfyUI 工作流是描述节点图的 JSON 对象。API 接受"API 格式"的工作流（以节点 ID 为键，包含 class_type、inputs 等），该格式由 ComfyUI 前端的"Save (API Format)"选项导出。
+Hanzo Studio 工作流是描述节点图的 JSON 对象。API 接受"API 格式"的工作流（以节点 ID 为键，包含 class_type、inputs 等），该格式由 Hanzo Studio 前端的"Save (API Format)"选项导出。
 
 ### 任务
 
@@ -98,17 +98,17 @@ ComfyUI 工作流是描述节点图的 JSON 对象。API 接受"API 格式"的�
 
 <CodeGroup>
 ```bash curl
-curl -X POST "https://cloud.comfy.org/api/prompt" \
+curl -X POST "https://cloud.hanzo.ai/api/prompt" \
   -H "X-API-Key: $COMFY_CLOUD_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"prompt": '"$(cat workflow_api.json)"'}'
 ```
 
 ```typescript TypeScript
-const BASE_URL = "https://cloud.comfy.org";
+const BASE_URL = "https://cloud.hanzo.ai";
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
-// 加载您的工作流（从 ComfyUI 以 API 格式导出）
+// 加载您的工作流（从 Hanzo Studio 以 API 格式导出）
 const workflow = JSON.parse(await Deno.readTextFile("workflow_api.json"));
 
 // 提交工作流
@@ -127,13 +127,13 @@ import os
 import requests
 import json
 
-BASE_URL = "https://cloud.comfy.org"
+BASE_URL = "https://cloud.hanzo.ai"
 API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 
 def get_headers():
     return {"X-API-Key": API_KEY, "Content-Type": "application/json"}
 
-# 加载您的工作流（从 ComfyUI 以 API 格式导出）
+# 加载您的工作流（从 Hanzo Studio 以 API 格式导出）
 with open("workflow_api.json") as f:
     workflow = json.load(f)
 
@@ -177,7 +177,7 @@ print(f"Job submitted: {prompt_id}")
   "9": {
     "images": [
       {
-        "filename": "ComfyUI_00001_.png",
+        "filename": "Hanzo Studio_00001_.png",
         "subfolder": "",
         "type": "output"
       }

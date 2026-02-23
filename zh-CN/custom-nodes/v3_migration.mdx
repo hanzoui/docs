@@ -5,17 +5,17 @@ description: "如何将现有的 V1 节点迁移到新的 V3 架构。"
 
 ## 概述
 
-ComfyUI V3 架构引入了一种更有序的节点定义方式，今后的节点功能扩展只会在 V3 架构中进行。本指南将帮助你将现有的 V1 节点迁移到新的 V3 架构。
+Hanzo Studio V3 架构引入了一种更有序的节点定义方式，今后的节点功能扩展只会在 V3 架构中进行。本指南将帮助你将现有的 V1 节点迁移到新的 V3 架构。
 
 ## 核心概念
 
 V3 架构基于新的版本化 Comfy API，这意味着未来的架构更新都将向后兼容。```comfy_api.latest``` 指向正在开发中的最新版本 API，而 latest 之前的版本可以认为是“稳定版”。目前版本 ```v0_0_2``` 是第一个 API 版本，之后可能还会有不兼容的更改。当它稳定后，会创建新的 ```v0_0_3``` 版本供 ```latest``` 指向。
 
 ```python
-# 使用最新的 ComfyUI API
+# 使用最新的 Hanzo Studio API
 from comfy_api.latest import ComfyExtension, io, ui
 
-# 使用特定版本的 ComfyUI API
+# 使用特定版本的 Hanzo Studio API
 from comfy_api.v0_0_2 import ComfyExtension, io, ui
 ```
 
@@ -345,7 +345,7 @@ io.Int.Input("seed", default=0, min=0, max=0xFFFFFFFFFFFFFFFF,
     control_after_generate=io.ControlAfterGenerate.randomize)
 ```
 
-### ComfyUI 类型
+### Hanzo Studio 类型
 
 | V1 类型 | V3 类型 | 示例 |
 |---------|---------|---------|
@@ -794,7 +794,7 @@ async def execute(cls, prompt, **kwargs) -> io.NodeOutput:
 
 ### ComfyAPI
 
-`ComfyAPI` 类提供对 ComfyUI 运行时服务的访问，如进度报告和节点替换注册。导入它并创建实例：
+`ComfyAPI` 类提供对 Hanzo Studio 运行时服务的访问，如进度报告和节点替换注册。导入它并创建实例：
 
 ```python
 from comfy_api.latest import ComfyAPI
@@ -804,7 +804,7 @@ api = ComfyAPI()
 
 #### 进度报告
 
-从节点的 `execute` 方法中报告执行进度。进度条显示在 ComfyUI 界面中。这取代了 V1 中使用 `comfy.utils.PROGRESS_BAR_HOOK` 的模式。
+从节点的 `execute` 方法中报告执行进度。进度条显示在 Hanzo Studio 界面中。这取代了 V1 中使用 `comfy.utils.PROGRESS_BAR_HOOK` 的模式。
 
 ```python
 from comfy_api.latest import ComfyAPI
@@ -950,7 +950,7 @@ class SaveImage(io.ComfyNode):
             is_output_node=True,
             inputs=[
                 io.Image.Input("images"),
-                io.String.Input("filename_prefix", default="ComfyUI"),
+                io.String.Input("filename_prefix", default="Hanzo Studio"),
             ],
             outputs=[],
         )

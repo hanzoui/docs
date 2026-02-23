@@ -6,7 +6,7 @@
     },
     "mintlify": {
       "command": "npx",
-      "args": ["-y", "@mintlify/mcp", "docs.comfy.org"]
+      "args": ["-y", "@mintlify/mcp", "docs.hanzo.ai"]
     }
   }
 }

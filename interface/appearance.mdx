@@ -1,23 +1,23 @@
 ---
-title: "Customizing ComfyUI Appearance"
-description: "Learn how to customize the appearance of ComfyUI using color palettes and advanced CSS options"
+title: "Customizing Hanzo Studio Appearance"
+description: "Learn how to customize the appearance of Hanzo Studio using color palettes and advanced CSS options"
 sidebarTitle: "Appearance"
 icon: "paintbrush"
 ---
 
 import UserDirectory from "/snippets/install/user-directory.mdx"
 
-ComfyUI offers flexible appearance customization options that allow you to personalize the interface to your preferences.
+Hanzo Studio offers flexible appearance customization options that allow you to personalize the interface to your preferences.
 
 ## Color Palette System
 
-The primary way to customize ComfyUI's appearance is through the built-in color palette system.
+The primary way to customize Hanzo Studio's appearance is through the built-in color palette system.
 
 ![Color Palette](/images/interface/setting/appearance/color-palette.jpg)
 
 This allows you to:
 
-1. Switch ComfyUI themes
+1. Switch Hanzo Studio themes
 2. Export the currently selected theme as JSON format
 3. Load custom theme configuration from JSON file
 4. Delete custom theme configuration
@@ -32,7 +32,7 @@ The color palette allows you to modify many specific properties. Here are some o
 
 <Tip>
   1. The JSON comments below are for illustration only. Do not copy the content below for modification as it will cause the theme to malfunction.
-  2. Since we are still iterating frequently, the content below may change with ComfyUI frontend updates. If you need to modify, please export the theme configuration from settings and then modify it.
+  2. Since we are still iterating frequently, the content below may change with Hanzo Studio frontend updates. If you need to modify, please export the theme configuration from settings and then modify it.
 </Tip>
 
 ```json
@@ -87,7 +87,7 @@ The color palette allows you to modify many specific properties. Here are some o
       "BADGE_FG_COLOR": "#FFF",      // Badge foreground color
       "BADGE_BG_COLOR": "#0F1F0F"    // Badge background color
     },
-    "comfy_base": {                  // ComfyUI base interface configuration
+    "comfy_base": {                  // Hanzo Studio base interface configuration
       "fg-color": "#fff",            // Foreground color
       "bg-color": "#202020",         // Background color
       "comfy-menu-bg": "#353535",    // Menu background color
@@ -114,7 +114,7 @@ The color palette allows you to modify many specific properties. Here are some o
 
 ### Background Image
 
-- **Requirements**: ComfyUI frontend version 1.20.5 or newer
+- **Requirements**: Hanzo Studio frontend version 1.20.5 or newer
 - **Function**: Set a custom background image for the canvas to provide a more personalized workspace. You can upload images or use web images to set the background for the canvas.
 
 ![Set Background Image](/images/interface/setting/appearance/set-as-bg.jpg)
@@ -172,19 +172,19 @@ For cases where the color palette doesn't provide enough control, you can use cu
 
 ### Requirements
 
-- ComfyUI frontend version 1.20.5 or newer
+- Hanzo Studio frontend version 1.20.5 or newer
 
 ### Setting Up user.css
 
-1. Create a file named `user.css` in your ComfyUI user directory (same location as your workflows and settings - see location details below)
+1. Create a file named `user.css` in your Hanzo Studio user directory (same location as your workflows and settings - see location details below)
 2. Add your custom CSS rules to this file
-3. Restart ComfyUI or refresh the page to apply changes
+3. Restart Hanzo Studio or refresh the page to apply changes
 
 ### User Directory Location
 
 <UserDirectory/>
 
-After finding the above folder location, please copy the corresponding CSS file to the corresponding user directory, such as the default user folder being `ComfyUI/user/default`, then restart ComfyUI or refresh the page to apply changes.
+After finding the above folder location, please copy the corresponding CSS file to the corresponding user directory, such as the default user folder being `Hanzo Studio/user/default`, then restart Hanzo Studio or refresh the page to apply changes.
 
 ### user.css Examples and Related Instructions
 

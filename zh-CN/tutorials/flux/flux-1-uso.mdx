@@ -1,5 +1,5 @@
 ---
-title: "字节跳动 USO ComfyUI 原生工作流示例"
+title: "字节跳动 USO Hanzo Studio 原生工作流示例"
 description: "使用字节跳动 USO 模型实现统一风格和主体驱动生成"
 sidebarTitle: "字节跳动 USO"
 ---
@@ -20,54 +20,54 @@ USO 支持三种主要方法：
 - [GitHub](https://github.com/bytedance/USO)
 - [模型权重](https://huggingface.co/bytedance-research/USO)
 
-## 字节跳动 USO ComfyUI 原生工作流
+## 字节跳动 USO Hanzo Studio 原生工作流
 
 <UpdateReminder/>
 
 ### 1. 工作流和输入
 
-下载下方图像并拖拽到 ComfyUI 中以加载对应的工作流。
+下载下方图像并拖拽到 Hanzo Studio 中以加载对应的工作流。
 
-![工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/flux/bytedance-uso/bytedance-uso.png)
+![工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/flux/bytedance-uso/bytedance-uso.png)
 
 <a 
 className="prose"
 target='_blank'
-href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/flux1_dev_uso_reference_image_gen.json"
+href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/flux1_dev_uso_reference_image_gen.json"
 style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}
 >
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=flux1_dev_uso_reference_image_gen&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=flux1_dev_uso_reference_image_gen&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Comfy Cloud 上运行</p>
 </a>
 
 使用下面的图片作为输入
 
-![输入图像](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/flux/bytedance-uso/input.png)
+![输入图像](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/flux/bytedance-uso/input.png)
 
 ### 2. 模型链接
 
 **checkpoints**
 
-- [flux1-dev-fp8.safetensors](https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors)
+- [flux1-dev-fp8.safetensors](https://huggingface.co/hanzoui/flux1-dev/resolve/main/flux1-dev-fp8.safetensors)
 
 **loras**
 
-- [uso-flux1-dit-lora-v1.safetensors](https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/loras/uso-flux1-dit-lora-v1.safetensors)
+- [uso-flux1-dit-lora-v1.safetensors](https://huggingface.co/hanzoui/USO_1.0_Repackaged/resolve/main/split_files/loras/uso-flux1-dit-lora-v1.safetensors)
 
 **model_patches**
 
-- [uso-flux1-projector-v1.safetensors](https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/model_patches/uso-flux1-projector-v1.safetensors)
+- [uso-flux1-projector-v1.safetensors](https://huggingface.co/hanzoui/USO_1.0_Repackaged/resolve/main/split_files/model_patches/uso-flux1-projector-v1.safetensors)
 
 **clip_visions**
-- [sigclip_vision_patch14_384.safetensors](https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors)
+- [sigclip_vision_patch14_384.safetensors](https://huggingface.co/hanzoui/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors)
 
 请下载所有模型并将它们放置在以下目录中：
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 checkpoints/
 │   │   └── flux1-dev-fp8.safetensors

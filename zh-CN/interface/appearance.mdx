@@ -1,21 +1,21 @@
 ---
-title: "ComfyUI 外观设置"
-description: "ComfyUI 外观设置选项的详细说明"
+title: "Hanzo Studio 外观设置"
+description: "Hanzo Studio 外观设置选项的详细说明"
 sidebarTitle: "外观"
 icon: "palette"
 ---
 
 import UserDirectory from "/snippets/zh/install/user-directory.mdx"
 
-这部分的设置主要用于自定义 ComfyUI 的外观，包括色彩主题、背景图片、节点样式等。
+这部分的设置主要用于自定义 Hanzo Studio 的外观，包括色彩主题、背景图片、节点样式等。
 
 ## 色彩主题
 
-自定义 ComfyUI 外观的主要方式是通过内置的调色板系统。
+自定义 Hanzo Studio 外观的主要方式是通过内置的调色板系统。
 
 ![色彩主题](/images/interface/setting/appearance/color-palette.jpg)
 
-1. 切换 ComfyUI 主题
+1. 切换 Hanzo Studio 主题
 2. 将当前选中的主题导出为 JSON 格式
 3. 从Json文件中载入自定义主题配置
 4. 删除自定义主题配置
@@ -30,7 +30,7 @@ import UserDirectory from "/snippets/zh/install/user-directory.mdx"
 
 <Tip>
   1. 下面的 JSON 注释只是为了注释说明，实际使用请不要复制下面的内容进行修改，否则将会导致主题无法正常使用
-  2. 由于我们仍在频繁迭代，下面的这些内容可能会随着 ComfyUI 前端的更新而有所调整，如果需要修改，请从设置中导出主题配置，然后进行修改
+  2. 由于我们仍在频繁迭代，下面的这些内容可能会随着 Hanzo Studio 前端的更新而有所调整，如果需要修改，请从设置中导出主题配置，然后进行修改
 </Tip>
 
 ```json
@@ -85,7 +85,7 @@ import UserDirectory from "/snippets/zh/install/user-directory.mdx"
       "BADGE_FG_COLOR": "#FFF",      // 徽章前景色
       "BADGE_BG_COLOR": "#0F1F0F"    // 徽章背景色
     },
-    "comfy_base": {                  // ComfyUI 基础界面配置
+    "comfy_base": {                  // Hanzo Studio 基础界面配置
       "fg-color": "#fff",            // 前景色
       "bg-color": "#202020",         // 背景色
       "comfy-menu-bg": "#353535",    // 菜单背景色
@@ -111,7 +111,7 @@ import UserDirectory from "/snippets/zh/install/user-directory.mdx"
 ## 画布 
 
 ### 背景图片
-- 版本要求：ComfyUI 前端版本 1.20.5 或更新版本
+- 版本要求：Hanzo Studio 前端版本 1.20.5 或更新版本
 - 功能：为画布设置自定义背景图片，提供更加个性化的工作空间，你可以上传图片或者使用网络图片来为画布设置背景图片
 
 ![设置背景图片](/images/interface/setting/appearance/set-as-bg.jpg)
@@ -162,19 +162,19 @@ import UserDirectory from "/snippets/zh/install/user-directory.mdx"
 
 ### 要求
 
-- ComfyUI 前端版本 1.20.5 或更新版本
+- Hanzo Studio 前端版本 1.20.5 或更新版本
 
 ### 设置 user.css
 
-1. 在 ComfyUI 用户目录（与工作流和设置相同位置 - 请参阅下面的位置详细信息）中创建一个名为 `user.css` 的文件
+1. 在 Hanzo Studio 用户目录（与工作流和设置相同位置 - 请参阅下面的位置详细信息）中创建一个名为 `user.css` 的文件
 2. 在此文件中添加您的自定义 CSS 规则
-3. 重启 ComfyUI 或刷新页面以应用更改
+3. 重启 Hanzo Studio 或刷新页面以应用更改
 
 ### 用户目录位置
 
 <UserDirectory/>
 
-找到上述文件夹位置后，请将对应的 Css 文件复制到对应的用户目录中如默认用户文件夹为`ComfyUI/user/default`，然后重启 ComfyUI 或刷新页面以应用更改
+找到上述文件夹位置后，请将对应的 Css 文件复制到对应的用户目录中如默认用户文件夹为`Hanzo Studio/user/default`，然后重启 Hanzo Studio 或刷新页面以应用更改
 
 ### user.css 示例及相关说明
 

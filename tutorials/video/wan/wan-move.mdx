@@ -1,5 +1,5 @@
 ---
-title: "ComfyUI Wan-Move Workflow Example"
+title: "Hanzo Studio Wan-Move Workflow Example"
 description: "Wan-Move is a motion-controllable video generation model via latent trajectory guidance, enabling fine-grained point-level motion control for image-to-video generation."
 sidebarTitle: "Wan-Move"
 ---
@@ -21,12 +21,12 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 ## Wan-Move image-to-video workflow
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_wanmove_480p.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_wanmove_480p.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow File</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=video_wanmove_480p&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
-    <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on ComfyUI Cloud</p>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=video_wanmove_480p&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+    <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Hanzo Studio Cloud</p>
 </a>
 
 <UpdateReminder />
@@ -35,11 +35,11 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 **text_encoders**
 
-- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
+- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 **clip_vision**
 
-- [clip_vision_h.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors)
+- [clip_vision_h.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors)
 
 **loras**
 
@@ -51,12 +51,12 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 **vae**
 
-- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
+- [wan_2.1_vae.safetensors](https://huggingface.co/hanzoui/Wan_2.1_Hanzo Studio_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)
 
 **Model Storage Location**
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── umt5_xxl_fp8_e4m3fn_scaled.safetensors

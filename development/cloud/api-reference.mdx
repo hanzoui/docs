@@ -8,13 +8,13 @@ import WebSocketProgress from '/snippets/cloud/websocket-progress.mdx'
 import DownloadOutputs from '/snippets/cloud/download-outputs.mdx'
 
 <Warning>
-  **Experimental API:** This API is experimental and subject to change. Endpoints, request/response formats, and behavior may be modified without notice. Some endpoints are maintained for compatibility with local ComfyUI but may have different semantics (e.g., ignored fields).
+  **Experimental API:** This API is experimental and subject to change. Endpoints, request/response formats, and behavior may be modified without notice. Some endpoints are maintained for compatibility with local Hanzo Studio but may have different semantics (e.g., ignored fields).
 </Warning>
 
 This page provides complete examples for common Comfy Cloud API operations.
 
 <Note>
-  **Subscription Required:** Running workflows via the API requires an active Comfy Cloud subscription. See [pricing plans](https://www.comfy.org/cloud/pricing?utm_source=docs&utm_campaign=cloud-api) for details.
+  **Subscription Required:** Running workflows via the API requires an active Comfy Cloud subscription. See [pricing plans](https://hanzo.ai/cloud/pricing?utm_source=docs&utm_campaign=cloud-api) for details.
 </Note>
 
 ## Setup
@@ -24,13 +24,13 @@ All examples use these common imports and configuration:
 <CodeGroup>
 ```bash curl
 export COMFY_CLOUD_API_KEY="your-api-key"
-export BASE_URL="https://cloud.comfy.org"
+export BASE_URL="https://cloud.hanzo.ai"
 ```
 
 ```typescript TypeScript
 import { readFile, writeFile } from "fs/promises";
 
-const BASE_URL = "https://cloud.comfy.org";
+const BASE_URL = "https://cloud.hanzo.ai";
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
 function getHeaders(): HeadersInit {
@@ -49,7 +49,7 @@ import time
 import asyncio
 import aiohttp
 
-BASE_URL = "https://cloud.comfy.org"
+BASE_URL = "https://cloud.hanzo.ai"
 API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 
 def get_headers():
@@ -294,7 +294,7 @@ def submit_workflow(workflow: dict) -> str:
     """Submit a workflow and return the prompt_id (job ID).
     
     Args:
-        workflow: ComfyUI workflow in API format
+        workflow: Hanzo Studio workflow in API format
         
     Returns:
         prompt_id for tracking the job
@@ -326,7 +326,7 @@ print(f"Submitted job: {prompt_id}")
 If your workflow contains [Partner Nodes](/tutorials/api-nodes/overview) (nodes that call external AI services like Flux Pro, Ideogram, etc.), you must include your Comfy API key in the `extra_data` field of the request payload.
 
 <Note>
-  The ComfyUI frontend automatically packages your API key into `extra_data` when running workflows in the browser. This section is only relevant when calling the API directly.
+  The Hanzo Studio frontend automatically packages your API key into `extra_data` when running workflows in the browser. This section is only relevant when calling the API directly.
 </Note>
 
 <CodeGroup>
@@ -371,8 +371,8 @@ def submit_workflow_with_partner_nodes(workflow: dict, api_key: str) -> str:
     """Submit a workflow that uses Partner Nodes.
     
     Args:
-        workflow: ComfyUI workflow in API format
-        api_key: Your API key from platform.comfy.org
+        workflow: Hanzo Studio workflow in API format
+        api_key: Your API key from platform.hanzo.ai
         
     Returns:
         prompt_id for tracking the job
@@ -396,7 +396,7 @@ prompt_id = submit_workflow_with_partner_nodes(workflow, API_KEY)
 </CodeGroup>
 
 <Info>
-  Generate your API key at [platform.comfy.org](https://platform.comfy.org/login). This is the same key used for Cloud API authentication (`X-API-Key` header).
+  Generate your API key at [platform.hanzo.ai](https://platform.hanzo.ai/login). This is the same key used for Cloud API authentication (`X-API-Key` header).
 </Info>
 
 ### Modify Workflow Inputs
@@ -484,7 +484,7 @@ Messages are sent as JSON text frames unless otherwise noted.
 
 #### Binary Messages (Preview Images)
 
-During image generation, ComfyUI sends **binary WebSocket frames** containing preview images. These are raw binary data (not JSON):
+During image generation, Hanzo Studio sends **binary WebSocket frames** containing preview images. These are raw binary data (not JSON):
 
 | Binary Type | Value | Description |
 |-------------|-------|-------------|
@@ -553,7 +553,7 @@ Here's a full example that ties everything together:
 
 <CodeGroup>
 ```typescript TypeScript
-const BASE_URL = "https://cloud.comfy.org";
+const BASE_URL = "https://cloud.hanzo.ai";
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
 function getHeaders(): HeadersInit {
@@ -574,7 +574,7 @@ async function waitForCompletion(
   promptId: string,
   timeout: number = 300000
 ): Promise<Record<string, any>> {
-  const wsUrl = `wss://cloud.comfy.org/ws?clientId=${crypto.randomUUID()}&token=${API_KEY}`;
+  const wsUrl = `wss://cloud.hanzo.ai/ws?clientId=${crypto.randomUUID()}&token=${API_KEY}`;
   const outputs: Record<string, any> = {};
 
   return new Promise((resolve, reject) => {
@@ -676,7 +676,7 @@ import asyncio
 import aiohttp
 import uuid
 
-BASE_URL = "https://cloud.comfy.org"
+BASE_URL = "https://cloud.hanzo.ai"
 API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 
 def get_headers():

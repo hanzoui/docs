@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI Flux.2 Klein 4B Guide"
-description: "A quick introduction to FLUX.2 [klein] 4B and how to run text-to-image and image editing workflows in ComfyUI."
+title: "Hanzo Studio Flux.2 Klein 4B Guide"
+description: "A quick introduction to FLUX.2 [klein] 4B and how to run text-to-image and image editing workflows in Hanzo Studio."
 sidebarTitle: "Flux.2 Klein"
 ---
 
@@ -22,13 +22,13 @@ FLUX.2 [Klein] is the fastest model in the Flux family, unifying text-to-image a
 ## Flux.2 Klein 4B Workflows
 
 <CardGroup cols={3}>
-  <Card title="4B Text-to-Image Workflow" icon="download" href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_klein_text_to_image.json">
+  <Card title="4B Text-to-Image Workflow" icon="download" href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2_klein_text_to_image.json">
     Download the text-to-image workflow for Flux.2 Klein 4B.
   </Card>
-  <Card title="4B Image Edit Base" icon="download" href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_klein_image_edit_4b_base.json">
+  <Card title="4B Image Edit Base" icon="download" href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2_klein_image_edit_4b_base.json">
     Download the image editing workflow using the 4B base model.
   </Card>
-  <Card title="4B Image Edit Distilled" icon="download" href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_klein_image_edit_4b_distilled.json">
+  <Card title="4B Image Edit Distilled" icon="download" href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2_klein_image_edit_4b_distilled.json">
     Download the fast distilled 4B image editing workflow.
   </Card>
 </CardGroup>
@@ -36,7 +36,7 @@ FLUX.2 [Klein] is the fastest model in the Flux family, unifying text-to-image a
 ## Flux.2 Klein 4B Model Downloads
 
 <CardGroup cols={2}>
-  <Card title="qwen_3_4b.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/flux2-klein-4B/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors">
+  <Card title="qwen_3_4b.safetensors" icon="download" href="https://huggingface.co/hanzoui/flux2-klein-4B/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors">
     Text encoder for 4B models.
   </Card>
   <Card title="flux-2-klein-base-4b-fp8.safetensors" icon="download" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4b-fp8/resolve/main/flux-2-klein-base-4b-fp8.safetensors">
@@ -45,7 +45,7 @@ FLUX.2 [Klein] is the fastest model in the Flux family, unifying text-to-image a
   <Card title="flux-2-klein-4b-fp8.safetensors" icon="download" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/main/flux-2-klein-4b-fp8.safetensors">
     Diffusion model (4B distilled).
   </Card>
-  <Card title="flux2-vae.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors">
+  <Card title="flux2-vae.safetensors" icon="download" href="https://huggingface.co/hanzoui/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors">
     VAE for 4B models.
   </Card>
 </CardGroup>
@@ -53,7 +53,7 @@ FLUX.2 [Klein] is the fastest model in the Flux family, unifying text-to-image a
 **4B Model Storage Location**
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── qwen_3_4b.safetensors
@@ -67,13 +67,13 @@ FLUX.2 [Klein] is the fastest model in the Flux family, unifying text-to-image a
 ## Flux.2 Klein 9B Workflows
 
 <CardGroup cols={3}>
-  <Card title="9B Text-to-Image Workflow" icon="download" href="http://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_text_to_image_9b.json">
+  <Card title="9B Text-to-Image Workflow" icon="download" href="http://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2_text_to_image_9b.json">
     Download the text-to-image workflow for Flux.2 Klein 9B.
   </Card>
-  <Card title="9B Image Edit Base" icon="download" href="http://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_klein_image_edit_9b_base.json">
+  <Card title="9B Image Edit Base" icon="download" href="http://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2_klein_image_edit_9b_base.json">
     Download the image editing workflow using the 9B base model.
   </Card>
-  <Card title="9B Image Edit Distilled" icon="download" href="http://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_klein_image_edit_9b_distilled.json">
+  <Card title="9B Image Edit Distilled" icon="download" href="http://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2_klein_image_edit_9b_distilled.json">
     Download the fast distilled 9B image editing workflow.
   </Card>
 </CardGroup>
@@ -91,10 +91,10 @@ For diffusion models, please visit BFL's repo, accept the agreement, and then do
   <Card title="flux-2-klein-9b-fp8.safetensors" icon="download" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8">
     Diffusion model (9B distilled).
   </Card>
-  <Card title="qwen_3_8b_fp8mixed.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors">
+  <Card title="qwen_3_8b_fp8mixed.safetensors" icon="download" href="https://huggingface.co/hanzoui/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors">
     Text encoder for 9B models.
   </Card>
-  <Card title="flux2-vae.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors">
+  <Card title="flux2-vae.safetensors" icon="download" href="https://huggingface.co/hanzoui/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors">
     VAE for 9B models.
   </Card>
 </CardGroup>
@@ -102,7 +102,7 @@ For diffusion models, please visit BFL's repo, accept the agreement, and then do
 **9B Model Storage Location**
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │      ├── flux-2-klein-9b-fp8.safetensors

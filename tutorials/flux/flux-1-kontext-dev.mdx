@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI Flux Kontext Dev Native Workflow Example"
-description: "ComfyUI Flux Kontext Dev Native Workflow Example."
+title: "Hanzo Studio Flux Kontext Dev Native Workflow Example"
+description: "Hanzo Studio Flux Kontext Dev Native Workflow Example."
 sidebarTitle: "Flux.1 Kontext Dev"
 ---
 
@@ -10,7 +10,7 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/Y7L_cbNJHj0?si=zuaRiU3qJYMNW2uv"
-  title="ComfyUI Selection Toolbox New Features"
+  title="Hanzo Studio Selection Toolbox New Features"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -33,7 +33,7 @@ While the previously released API version offers the highest fidelity and speed,
 - **FLUX.1 Kontext [max]** - Experimental version with stronger prompt adherence
 - **FLUX.1 Kontext [dev]** - Open source version (used in this tutorial), 12B parameters, mainly for research
 
-Currently in ComfyUI, you can use all these versions, where [Pro and Max versions](/tutorials/partner-nodes/black-forest-labs/flux-1-kontext) can be called through API nodes, while the Dev open source version please refer to the instructions in this guide.
+Currently in Hanzo Studio, you can use all these versions, where [Pro and Max versions](/tutorials/partner-nodes/black-forest-labs/flux-1-kontext) can be called through API nodes, while the Dev open source version please refer to the instructions in this guide.
 
 <UpdateReminder/>
 
@@ -43,23 +43,23 @@ To run the workflows in this guide successfully, you first need to download the 
 
 **Diffusion Model**
 
-- [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors)
+- [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/hanzoui/flux1-kontext-dev_Hanzo Studio/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors)
 
 <Tip>
 If you want to use the original weights, you can visit Black Forest Labs' related repository to obtain and use the original model weights.
 </Tip>
 
 **VAE**
-- [ae.safetensors](https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/blob/main/split_files/vae/ae.safetensors)
+- [ae.safetensors](https://huggingface.co/hanzoui/Lumina_Image_2.0_Repackaged/blob/main/split_files/vae/ae.safetensors)
 
 **Text Encoder**
-- [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors)
-- [t5xxl_fp16.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors) or [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors)
+- [clip_l.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/blob/main/clip_l.safetensors)
+- [t5xxl_fp16.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors) or [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors)
 
 Model save location
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   └── flux1-dev-kontext_fp8_scaled.safetensors
@@ -72,7 +72,7 @@ Model save location
 
 ## Flux.1 Kontext Dev Workflow
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=flux_kontext_dev_basic&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=flux_kontext_dev_basic&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
@@ -80,13 +80,13 @@ This workflow uses the `Load Image(from output)` node to load the image to be ed
 
 ### 1. Workflow and Input Image Download
 
-Download the following files and drag them into ComfyUI to load the corresponding workflow
+Download the following files and drag them into Hanzo Studio to load the corresponding workflow
 
-![ComfyUI Flux.1 Kontext Pro Image API Node Workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/flux/kontext/dev/flux_1_kontext_dev_basic.png)
+![Hanzo Studio Flux.1 Kontext Pro Image API Node Workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/main/flux/kontext/dev/flux_1_kontext_dev_basic.png)
 
 **Input Image**
 
-![ComfyUI Flux Kontext Native Workflow Input](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/flux/kontext/dev/rabbit.jpg)
+![Hanzo Studio Flux Kontext Native Workflow Input](https://raw.githubusercontent.com/hanzoui/example-workflows/main/flux/kontext/dev/rabbit.jpg)
 
 ### 2. Complete the workflow step by step
 

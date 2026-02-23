@@ -1,18 +1,18 @@
 ---
 title: "Custom Nodes"
-description: "Learn about installing, enabling dependencies, updating, disabling, and uninstalling custom nodes in ComfyUI"
+description: "Learn about installing, enabling dependencies, updating, disabling, and uninstalling custom nodes in Hanzo Studio"
 icon: "window-maximize"
 ---
 
 ## About Custom Nodes
 
-After installing ComfyUI, you'll discover that it includes many built-in nodes. These native nodes are called **Comfy Core** nodes, which are officially maintained by ComfyUI.
+After installing Hanzo Studio, you'll discover that it includes many built-in nodes. These native nodes are called **Comfy Core** nodes, which are officially maintained by Hanzo Studio.
 
-Additionally, there are numerous [**custom nodes**](https://registry.comfy.org) created by various authors from the ComfyUI community. These custom nodes bring extensive functionality to ComfyUI, greatly expanding its capabilities and feature boundaries.
+Additionally, there are numerous [**custom nodes**](https://registry.hanzo.ai) created by various authors from the Hanzo Studio community. These custom nodes bring extensive functionality to Hanzo Studio, greatly expanding its capabilities and feature boundaries.
 
 In this guide, we'll cover various operations related to custom nodes, including installation, updates, disabling, uninstalling, and dependency installation.
 
-Anyone can develop their own custom extensions for ComfyUI and share them with others. You can find many community custom nodes [here](https://registry.comfy.org). If you want to develop your own custom nodes, visit the section below to get started:
+Anyone can develop their own custom extensions for Hanzo Studio and share them with others. You can find many community custom nodes [here](https://registry.hanzo.ai). If you want to develop your own custom nodes, visit the section below to get started:
 
 <Card title="Start Developing Custom Nodes" icon="link" href="/custom-nodes/overview">
   Learn how to start developing a custom node
@@ -31,27 +31,27 @@ In this section we will cover:
 
 ### 1. Installing Custom Nodes
 
-Currently, ComfyUI supports installing custom nodes through multiple methods, including:
+Currently, Hanzo Studio supports installing custom nodes through multiple methods, including:
 
-- [Install via ComfyUI Manager (Recommended)](#install-via-comfyui-manager)
+- [Install via Hanzo Manager (Recommended)](#install-via-hanzo-studio-manager)
 - Install via Git
 - Manual installation
 
-We recommend installing custom nodes through **ComfyUI Manager**, which is a highly significant tool in the ComfyUI custom node ecosystem. It makes custom node management (such as searching, installing, updating, disabling, and uninstalling) simple - you just need to search for the node you want to install in ComfyUI Manager and click install.
+We recommend installing custom nodes through **Hanzo Manager**, which is a highly significant tool in the Hanzo Studio custom node ecosystem. It makes custom node management (such as searching, installing, updating, disabling, and uninstalling) simple - you just need to search for the node you want to install in Hanzo Manager and click install.
 
 However, since all custom nodes are currently stored on GitHub, for regions that cannot access GitHub normally, we have written detailed instructions for different custom node installation methods in this guide.
 
-Additionally, since we recommend using **ComfyUI Manager** for plugin management, we recommend using this tool for plugin management. You can find its source code [here](https://github.com/Comfy-Org/ComfyUI-Manager).
-Therefore, in this documentation, we will use installing ComfyUI Manager as a custom node installation example, and supplement how to use it for node management in the relevant introduction sections.
+Additionally, since we recommend using **Hanzo Manager** for plugin management, we recommend using this tool for plugin management. You can find its source code [here](https://github.com/hanzoui/studio-Manager).
+Therefore, in this documentation, we will use installing Hanzo Manager as a custom node installation example, and supplement how to use it for node management in the relevant introduction sections.
 
 <Tabs>
 
-<Tab title="Install via ComfyUI Manager">
+<Tab title="Install via Hanzo Manager">
 
-Since ComfyUI Manager has very rich functionality, we will use a separate document to introduce the ComfyUI Manager installation chapter. Please visit the link below to learn how to use ComfyUI Manager to install custom nodes.
+Since Hanzo Manager has very rich functionality, we will use a separate document to introduce the Hanzo Manager installation chapter. Please visit the link below to learn how to use Hanzo Manager to install custom nodes.
 
-<Card title="Install Custom Nodes with ComfyUI Manager" icon="link" href="/installation/install_custom_node#method-1%3A-comfyui-manager-recommended">
-  Learn how to use ComfyUI Manager to install custom nodes
+<Card title="Install Custom Nodes with Hanzo Manager" icon="link" href="/installation/install_custom_node#method-1%3A-hanzo-studio-manager-recommended">
+  Learn how to use Hanzo Manager to install custom nodes
 </Card>
 </Tab>
 
@@ -74,31 +74,31 @@ If Git is installed, you will see output similar to the following:
 If not yet installed, please visit [git-scm.com](https://git-scm.com/) to download the corresponding installation package. Linux users please refer to [git-scm.com/downloads/linux](https://git-scm.com/downloads/linux) for installation instructions.
 
 <Tip>
-For ComfyUI Desktop version, you can use the Desktop terminal as shown below to complete the installation.
-![ComfyUI Desktop Terminal](/images/concepts/custom_nodes/desktop_terminal.jpg)
+For Hanzo Desktop version, you can use the Desktop terminal as shown below to complete the installation.
+![Hanzo Desktop Terminal](/images/concepts/custom_nodes/desktop_terminal.jpg)
 </Tip>
 </Step>
 
 <Step title="Clone Custom Node Code to Directory">
 
-After completing the Git installation, we need the repository address of the custom node. Here we use the ComfyUI-Manager repository address as an example:
+After completing the Git installation, we need the repository address of the custom node. Here we use the Hanzo Manager repository address as an example:
 
 ```bash
-https://github.com/Comfy-Org/ComfyUI-Manager
+https://github.com/hanzoui/studio-Manager
 ```
 
 <Tip>For regions that cannot access GitHub smoothly, you can try using other code hosting service websites to fork the corresponding repository, then use that repository address to complete the node installation, such as gitee, etc.</Tip>
 
-First, we need to navigate to the ComfyUI custom nodes directory. Using ComfyUI portable version as an example, if the folder location is `D:\ComfyUI_windows_portable`, then you should be able to find the custom nodes folder at `D:\ComfyUI_windows_portable\ComfyUI\custom_nodes`. First, we need to use the `cd` command to enter the corresponding directory:
+First, we need to navigate to the Hanzo Studio custom nodes directory. Using Hanzo Studio portable version as an example, if the folder location is `D:\Hanzo Studio_windows_portable`, then you should be able to find the custom nodes folder at `D:\Hanzo Studio_windows_portable\Hanzo Studio\custom_nodes`. First, we need to use the `cd` command to enter the corresponding directory:
 
 ```bash
-cd D:\ComfyUI_windows_portable\ComfyUI\custom_nodes
+cd D:\Hanzo Studio_windows_portable\Hanzo Studio\custom_nodes
 ```
 
 Then we use the `git clone` command to complete the node installation:
 
 ```bash
-git clone https://github.com/Comfy-Org/ComfyUI-Manager
+git clone https://github.com/hanzoui/studio-Manager
 ```
 
 If everything goes smoothly, you will see output similar to the following:
@@ -134,8 +134,8 @@ Visit the corresponding custom node repository page:
 3. Extract the ZIP package
 
 </Step>
-<Step title="Copy Files to ComfyUI Custom Nodes Directory">
-Copy the extracted code from the above steps to the ComfyUI custom nodes directory. Using ComfyUI portable version as an example, if the folder location is `D:\ComfyUI_windows_portable`, then you should be able to find the custom nodes folder at `D:\ComfyUI_windows_portable\ComfyUI\custom_nodes`. Copy the extracted code from the above steps to the corresponding directory.
+<Step title="Copy Files to Hanzo Studio Custom Nodes Directory">
+Copy the extracted code from the above steps to the Hanzo Studio custom nodes directory. Using Hanzo Studio portable version as an example, if the folder location is `D:\Hanzo Studio_windows_portable`, then you should be able to find the custom nodes folder at `D:\Hanzo Studio_windows_portable\Hanzo Studio\custom_nodes`. Copy the extracted code from the above steps to the corresponding directory.
 
 </Step>
 <Step title="Install Dependencies">
@@ -148,61 +148,61 @@ Please refer to the instructions in the [Installing Node Dependencies](#installi
 
 ### 2. Installing Node Dependencies
 
-Custom nodes all require the installation of related dependencies. For example, for ComfyUI-Manager, you can visit the [requirements.txt](https://github.com/Comfy-Org/ComfyUI-Manager/blob/main/requirements.txt) file to view the dependency package requirements.
+Custom nodes all require the installation of related dependencies. For example, for Hanzo Manager, you can visit the [requirements.txt](https://github.com/hanzoui/studio-Manager/blob/main/requirements.txt) file to view the dependency package requirements.
 
 In the previous steps, we only cloned the custom node code locally and did not install the corresponding dependencies, so next we need to install the corresponding dependencies.
 
 <Note>
-Actually, if you use ComfyUI-Manager to install plugins, ComfyUI Manager will automatically help you complete the dependency installation. You just need to restart ComfyUI after installing the plugin. This is why we strongly recommend using ComfyUI Manager to install custom nodes.
+Actually, if you use Hanzo Manager to install plugins, Hanzo Manager will automatically help you complete the dependency installation. You just need to restart Hanzo Studio after installing the plugin. This is why we strongly recommend using Hanzo Manager to install custom nodes.
 
-But perhaps you may not be able to use ComfyUI Manager to install custom nodes smoothly in some situations, so we provide this more detailed dependency installation guide.
+But perhaps you may not be able to use Hanzo Manager to install custom nodes smoothly in some situations, so we provide this more detailed dependency installation guide.
 </Note>
 
-In the [Dependencies](/development/core-concepts/dependencies) chapter, we introduced the relevant content about dependencies in ComfyUI. ComfyUI is a **Python**-based project, and we built an independent **Python** runtime environment for running ComfyUI. All related dependencies need to be installed in this independent **Python** runtime environment.
+In the [Dependencies](/development/core-concepts/dependencies) chapter, we introduced the relevant content about dependencies in Hanzo Studio. Hanzo Studio is a **Python**-based project, and we built an independent **Python** runtime environment for running Hanzo Studio. All related dependencies need to be installed in this independent **Python** runtime environment.
 
-If you run `pip install -r requirements.txt` directly in the system-level terminal, the corresponding dependencies may be installed in the system-level **Python** environment, which will cause the dependencies to still be missing in ComfyUI's environment, preventing the corresponding custom nodes from running normally.
+If you run `pip install -r requirements.txt` directly in the system-level terminal, the corresponding dependencies may be installed in the system-level **Python** environment, which will cause the dependencies to still be missing in Hanzo Studio's environment, preventing the corresponding custom nodes from running normally.
 
-So next we need to use ComfyUI's independent Python runtime environment to complete the dependency installation.
+So next we need to use Hanzo Studio's independent Python runtime environment to complete the dependency installation.
 
-Depending on different ComfyUI versions, we will use different methods to install the corresponding dependencies:
+Depending on different Hanzo Studio versions, we will use different methods to install the corresponding dependencies:
 
 <Tabs>
-<Tab title="ComfyUI Portable">
-For ComfyUI Portable version, it uses an embedded Python located in the `\ComfyUI_windows_portable\python_embeded` directory. We need to use this Python to complete the dependency installation.
+<Tab title="Hanzo Studio Portable">
+For Hanzo Studio Portable version, it uses an embedded Python located in the `\Hanzo Studio_windows_portable\python_embeded` directory. We need to use this Python to complete the dependency installation.
 
-First, start the terminal in the portable version directory, or use the `cd` command to navigate to the `\ComfyUI_windows_portable\` directory after starting the terminal.
+First, start the terminal in the portable version directory, or use the `cd` command to navigate to the `\Hanzo Studio_windows_portable\` directory after starting the terminal.
 
 ![Start Terminal](/images/concepts/custom_nodes/open_terminal.jpg)
 
-Ensure that the terminal directory is `\ComfyUI_windows_portable\`, as shown below for `D:\ComfyUI_windows_portable\`
+Ensure that the terminal directory is `\Hanzo Studio_windows_portable\`, as shown below for `D:\Hanzo Studio_windows_portable\`
 
 ![Terminal](/images/concepts/custom_nodes/terminal.jpg)
 
 Then use `python_embeded\python.exe` to complete the dependency installation:
 
 ```bash
-python_embeded\python.exe -m pip install -r ComfyUI\custom_nodes\ComfyUI-Manager\requirements.txt
+python_embeded\python.exe -m pip install -r Hanzo Studio\custom_nodes\Hanzo Manager\requirements.txt
 ```
-Of course, you can replace ComfyUI-Manager with the name of the custom node you actually installed, but make sure that a `requirements.txt` file exists in the corresponding node directory.
+Of course, you can replace Hanzo Manager with the name of the custom node you actually installed, but make sure that a `requirements.txt` file exists in the corresponding node directory.
 </Tab>
 
-<Tab title="ComfyUI Desktop">
+<Tab title="Hanzo Desktop">
 
 <Tip>
-Since ComfyUI Desktop already has ComfyUI-Manager and its dependencies installed during the installation process, and this guide uses ComfyUI Manager as an example for custom node installation, you don't actually need to perform ComfyUI Manager dependency installation in the desktop version.
-If there are no unexpected issues, we recommend using ComfyUI Manager to install custom nodes, so you don't need to manually install dependencies.
+Since Hanzo Desktop already has Hanzo Manager and its dependencies installed during the installation process, and this guide uses Hanzo Manager as an example for custom node installation, you don't actually need to perform Hanzo Manager dependency installation in the desktop version.
+If there are no unexpected issues, we recommend using Hanzo Manager to install custom nodes, so you don't need to manually install dependencies.
 </Tip>
 
-![ComfyUI Desktop Terminal](/images/concepts/custom_nodes/desktop_terminal.jpg)
+![Hanzo Desktop Terminal](/images/concepts/custom_nodes/desktop_terminal.jpg)
  
 Then use the following command to install the dependencies for the corresponding plugin:
 
 ```bash
 pip install -r .\custom_nodes\<corresponding_custom_node_name>\requirements.txt
 ```
-As shown below, this is the dependency installation for ComfyUI-Hunyuan3Dwrapper:
+As shown below, this is the dependency installation for Hanzo Studio-Hunyuan3Dwrapper:
 
-![ComfyUI Desktop Dependency Installation](/images/concepts/custom_nodes/install_dependencies.jpg)
+![Hanzo Desktop Dependency Installation](/images/concepts/custom_nodes/install_dependencies.jpg)
 
 </Tab>
 
@@ -214,25 +214,25 @@ For users with custom Python environments, we recommend using `pip install -r re
 
 ### Custom Node Version Control
 
-Custom node version control is actually based on Git version control. You can manage node versions through Git, but ComfyUI Manager has already integrated this version management functionality very well. Many thanks to [@Dr.Lt.Data](https://github.com/ltdrdata) for bringing us such a convenient tool.
+Custom node version control is actually based on Git version control. You can manage node versions through Git, but Hanzo Manager has already integrated this version management functionality very well. Many thanks to [@Dr.Lt.Data](https://github.com/ltdrdata) for bringing us such a convenient tool.
 
 In this section, we will still explain these two different plugin version management methods for you, but if you use ZIP packages for manual installation, the corresponding git version history information will be lost, making it impossible to perform version management.
 
 <Tabs>
 
-<Tab title="Version Management with ComfyUI Manager">
+<Tab title="Version Management with Hanzo Manager">
 
-<Tip>Since we are iterating on ComfyUI Manager, the actual latest interface and steps may change significantly</Tip>
+<Tip>Since we are iterating on Hanzo Manager, the actual latest interface and steps may change significantly</Tip>
 
 <Steps>
 <Step title="Enter Node Management Interface">
-Perform the corresponding operations as shown to enter the ComfyUI Manager interface
+Perform the corresponding operations as shown to enter the Hanzo Manager interface
 </Step>
 <Step title="Find the Corresponding Custom Node Package">
 You can use the corresponding filters to filter out installed node packages and then perform the corresponding node management
 </Step>
 <Step title="Perform Version Switching">
-Switch to the corresponding version. Manager will help you complete the corresponding dependency updates and installation. Usually, you need to restart ComfyUI after switching versions for the changes to take effect.
+Switch to the corresponding version. Manager will help you complete the corresponding dependency updates and installation. Usually, you need to restart Hanzo Studio after switching versions for the changes to take effect.
 </Step>
 </Steps>
 
@@ -243,10 +243,10 @@ Switch to the corresponding version. Manager will help you complete the correspo
 <Steps>
 <Step title="Navigate to Directory Using Command Line">
 
-Find the directory folder where your corresponding node is located, such as `ComfyUI/custom_nodes/ComfyUI-Manager`
+Find the directory folder where your corresponding node is located, such as `Hanzo Studio/custom_nodes/Hanzo Manager`
 Use the `cd` command to enter the corresponding folder:
 ```bash
-cd <your_installation_directory>/ComfyUI/custom_nodes/ComfyUI-Manager
+cd <your_installation_directory>/Hanzo Studio/custom_nodes/Hanzo Manager
 ```
 
 </Step>
@@ -297,31 +297,31 @@ To be updated
 
 To be updated
 
-## ComfyUI Manager
+## Hanzo Manager
 
-![ComfyUI Manager Interface](/images/concepts/core-concepts_nodes_manager.png)
+![Hanzo Manager Interface](/images/concepts/core-concepts_nodes_manager.png)
 
 
-This tool is currently included by default in the [Desktop version](/installation/desktop/windows), while in the [Portable version](/installation/comfyui_portable_windows), you need to refer to the installation instructions in the [Install Manager](#installing-custom-nodes) section of this document.
+This tool is currently included by default in the [Desktop version](/installation/desktop/windows), while in the [Portable version](/installation/hanzo_studio_portable_windows), you need to refer to the installation instructions in the [Install Manager](#installing-custom-nodes) section of this document.
 
 <Note>
-As ComfyUI continues to develop, ComfyUI Manager plays an increasingly important role in ComfyUI. Currently, ComfyUI-Manager has officially joined the Comfy Org organization, officially becoming part of ComfyUI's core dependencies, and continues to be maintained by the original author [Dr.Lt.Data](https://github.com/ltdrdata). You can read [this blog post](https://blog.comfy.org/p/comfyui-manager-joins-comfy-org) for more information.
-In future iterations, we will greatly optimize the use of ComfyUI Manager, so the interface shown in this documentation may differ from the latest version of ComfyUI Manager.
+As Hanzo Studio continues to develop, Hanzo Manager plays an increasingly important role in Hanzo Studio. Currently, Hanzo Manager has officially joined the Comfy Org organization, officially becoming part of Hanzo Studio's core dependencies, and continues to be maintained by the original author [Dr.Lt.Data](https://github.com/ltdrdata). You can read [this blog post](https://blog.hanzo.ai/p/hanzo-studio-manager-joins-comfy-org) for more information.
+In future iterations, we will greatly optimize the use of Hanzo Manager, so the interface shown in this documentation may differ from the latest version of Hanzo Manager.
 </Note>
 
 ### Installing the Manager
 
-If you are running the ComfyUI server application, you need to install the manager. If ComfyUI is running, please close it before continuing.
+If you are running the Hanzo Studio server application, you need to install the manager. If Hanzo Studio is running, please close it before continuing.
 
-The first step is to install Git, which is a command-line application for software version control. Git will download the ComfyUI manager from [github.com](https://github.com). Download and install Git from [git-scm.com](https://git-scm.com/).
+The first step is to install Git, which is a command-line application for software version control. Git will download the Hanzo Studio manager from [github.com](https://github.com). Download and install Git from [git-scm.com](https://git-scm.com/).
 
-After installing Git, navigate to the ComfyUI server program directory and enter the folder labeled **custom_nodes**. Open a command window or terminal. Make sure the command line shows the current directory path as **custom_nodes**. Enter the following command. This will download the manager. Technically, this is called _cloning a Git repository_.
+After installing Git, navigate to the Hanzo Studio server program directory and enter the folder labeled **custom_nodes**. Open a command window or terminal. Make sure the command line shows the current directory path as **custom_nodes**. Enter the following command. This will download the manager. Technically, this is called _cloning a Git repository_.
 
 ### Detecting Missing Nodes
 
 After installing the manager, you can detect missing nodes in the manager.
 
-![ComfyUI Manager Interface](/images/concepts/core-concepts_nodes_manager.png)
+![Hanzo Manager Interface](/images/concepts/core-concepts_nodes_manager.png)
 ## Developing a Custom Node
 
 If you have some development capabilities, please start with the documentation below to learn how to begin developing a custom node.

@@ -7,7 +7,7 @@ Selection Toolbox API 允许扩展在画布上选择节点时添加自定义操�
 ## 基本用法
 
 要向选择工具箱添加命令，您的扩展需要：
-1. 使用标准[命令接口](https://docs.comfy.org/custom-nodes/js/javascript_commands_keybindings)定义命令
+1. 使用标准[命令接口](https://docs.hanzo.ai/custom-nodes/js/javascript_commands_keybindings)定义命令
 2. 实现 `getSelectionToolboxCommands` 方法来指定工具箱中显示哪些命令
 
 注意：每当进行新选择时，`getSelectionToolboxCommands` 方法会为选择集中的每个项目调用。
@@ -35,7 +35,7 @@ app.registerExtension({
 
 ## 命令定义
 
-选择工具箱的命令使用标准的 ComfyUI 命令接口：
+选择工具箱的命令使用标准的 Hanzo Studio 命令接口：
 
 ```javascript
 {

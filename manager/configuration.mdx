@@ -1,20 +1,20 @@
 ---
 title: Configuration
 sidebarTitle: Config
-description: Configure ComfyUI-Manager settings
+description: Configure Hanzo Manager settings
 ---
 
 ## Configuration paths
 
 Starting from V3.38, Manager uses a protected system path for enhanced security.
 
-| ComfyUI Version | Manager Path |
+| Hanzo Studio Version | Manager Path |
 |-----------------|--------------|
 | v0.3.76+ (with System User API) | `<USER_DIRECTORY>/__manager/` |
-| Older versions | `<USER_DIRECTORY>/default/ComfyUI-Manager/` |
+| Older versions | `<USER_DIRECTORY>/default/Hanzo Manager/` |
 
 <Note>
-If executed without any options, the `<USER_DIRECTORY>` path defaults to `ComfyUI/user`. It can be set using `--user-directory <USER_DIRECTORY>`.
+If executed without any options, the `<USER_DIRECTORY>` path defaults to `Hanzo Studio/user`. It can be set using `--user-directory <USER_DIRECTORY>`.
 </Note>
 
 ### Configuration files
@@ -72,13 +72,13 @@ network_mode = <public|private|offline>
 |------------|----------|
 | **High** | Install via git url, pip install, installation of custom nodes not in default channel, fix custom nodes |
 | **Middle** | Uninstall/Update, installation of custom nodes in default channel, restore/remove snapshot, restart |
-| **Low** | Update ComfyUI |
+| **Low** | Update Hanzo Studio |
 
 ## Environment variables
 
 | Variable | Description |
 |----------|-------------|
-| `COMFYUI_PATH` | Installation path of ComfyUI |
+| `COMFYUI_PATH` | Installation path of Hanzo Studio |
 | `GITHUB_ENDPOINT` | Reverse proxy for GitHub access |
 | `HF_ENDPOINT` | Reverse proxy for Hugging Face access |
 
@@ -114,11 +114,11 @@ List package names one per line in the `pip_blacklist.list` file.
 
 ### Automatically restore pip installation
 
-List pip spec requirements in `pip_auto_fix.list` (similar to `requirements.txt`). It will automatically restore specified versions when starting ComfyUI or when versions get mismatched during custom node installations. `--index-url` can be used.
+List pip spec requirements in `pip_auto_fix.list` (similar to `requirements.txt`). It will automatically restore specified versions when starting Hanzo Studio or when versions get mismatched during custom node installations. `--index-url` can be used.
 
 ### Use aria2 as downloader
 
-For faster downloads, you can configure ComfyUI-Manager to use aria2. See the [aria2 setup guide](https://github.com/ltdrdata/ComfyUI-Manager/blob/main/docs/en/use_aria2.md).
+For faster downloads, you can configure Hanzo Manager to use aria2. See the [aria2 setup guide](https://github.com/ltdrdata/Hanzo Manager/blob/main/docs/en/use_aria2.md).
 
 ## extra_model_paths.yaml configuration
 
@@ -129,10 +129,10 @@ The following settings are applied based on the section marked as `is_default`:
 
 ## CLI tools
 
-ComfyUI-Manager provides `cm-cli`, a command line tool that allows you to use Manager features without running ComfyUI. This is useful for automating custom node installation and managing installations in headless environments.
+Hanzo Manager provides `cm-cli`, a command line tool that allows you to use Manager features without running Hanzo Studio. This is useful for automating custom node installation and managing installations in headless environments.
 
-For detailed cm-cli documentation, see the [official cm-cli guide](https://github.com/ltdrdata/ComfyUI-Manager/blob/main/docs/en/cm-cli.md).
+For detailed cm-cli documentation, see the [official cm-cli guide](https://github.com/ltdrdata/Hanzo Manager/blob/main/docs/en/cm-cli.md).
 
-For a more comprehensive CLI experience, consider using [comfy-cli](/comfy-cli/getting-started).
+For a more comprehensive CLI experience, consider using [hanzo-cli](/hanzo-cli/getting-started).
 
 

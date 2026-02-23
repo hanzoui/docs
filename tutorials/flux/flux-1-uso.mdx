@@ -1,5 +1,5 @@
 ---
-title: "ByteDance USO ComfyUI Native Workflow example"
+title: "ByteDance USO Hanzo Studio Native Workflow example"
 description: "Unified Style and Subject-Driven Generation with ByteDance's USO model"
 sidebarTitle: "ByteDance USO"
 ---
@@ -19,55 +19,55 @@ USO supports three main approaches:
 - [GitHub](https://github.com/bytedance/USO)
 - [Model Weights](https://huggingface.co/bytedance-research/USO)
 
-## ByteDance USO ComfyUI Native Workflow
+## ByteDance USO Hanzo Studio Native Workflow
 
 <UpdateReminder/>
 
 ### 1. Workflow and input
 
-Download the image below and drag it into ComfyUI to load the corresponding workflow.
+Download the image below and drag it into Hanzo Studio to load the corresponding workflow.
 
-![Workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/flux/bytedance-uso/bytedance-uso.png)
+![Workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/flux/bytedance-uso/bytedance-uso.png)
 
 <a 
 className="prose"
 target='_blank'
-href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/flux1_dev_uso_reference_image_gen.json"
+href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/flux1_dev_uso_reference_image_gen.json"
 style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}
 >
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=flux1_dev_uso_reference_image_gen&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=flux1_dev_uso_reference_image_gen&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
 Use the image below as an input image.
 
-![input](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/flux/bytedance-uso/input.png)
+![input](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/flux/bytedance-uso/input.png)
 
 ### 2. Model links
 
 
 **checkpoints**
 
-- [flux1-dev-fp8.safetensors](https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors)
+- [flux1-dev-fp8.safetensors](https://huggingface.co/hanzoui/flux1-dev/resolve/main/flux1-dev-fp8.safetensors)
 
 **loras**
 
-- [uso-flux1-dit-lora-v1.safetensors](https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/loras/uso-flux1-dit-lora-v1.safetensors)
+- [uso-flux1-dit-lora-v1.safetensors](https://huggingface.co/hanzoui/USO_1.0_Repackaged/resolve/main/split_files/loras/uso-flux1-dit-lora-v1.safetensors)
 
 **model_patches**
 
-- [uso-flux1-projector-v1.safetensors](https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/model_patches/uso-flux1-projector-v1.safetensors)
+- [uso-flux1-projector-v1.safetensors](https://huggingface.co/hanzoui/USO_1.0_Repackaged/resolve/main/split_files/model_patches/uso-flux1-projector-v1.safetensors)
 
 **clip_visions**
-- [sigclip_vision_patch14_384.safetensors](https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors)
+- [sigclip_vision_patch14_384.safetensors](https://huggingface.co/hanzoui/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors)
 
 Please download all models and place them in the following directories:
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 checkpoints/
 │   │   └── flux1-dev-fp8.safetensors

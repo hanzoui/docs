@@ -4,7 +4,7 @@ async function listenForCompletion(
   promptId: string,
   timeout: number = 300000
 ): Promise<Record<string, any>> {
-  const wsUrl = `wss://cloud.comfy.org/ws?clientId=${crypto.randomUUID()}&token=${API_KEY}`;
+  const wsUrl = `wss://cloud.hanzo.ai/ws?clientId=${crypto.randomUUID()}&token=${API_KEY}`;
   const outputs: Record<string, any> = {};
 
   return new Promise((resolve, reject) => {

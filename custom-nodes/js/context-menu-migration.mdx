@@ -205,7 +205,7 @@ getNodeMenuItems(node) {
 }
 ```
 
-This declarative approach is cleaner and matches the patterns used throughout the ComfyUI codebase.
+This declarative approach is cleaner and matches the patterns used throughout the Hanzo Studio codebase.
 
 <Tip>While a callback-based approach with `has_submenu: true` and `new LiteGraph.ContextMenu()` is also supported, the declarative `submenu` property is preferred for better maintainability.</Tip>
 
@@ -250,7 +250,7 @@ If you see this warning in the console:
 ```
 [DEPRECATED] Monkey-patching getCanvasMenuOptions is deprecated. (Extension: "MyExtension")
 Please use the new context menu API instead.
-See: https://docs.comfy.org/custom-nodes/js/context-menu-migration
+See: https://docs.hanzo.ai/custom-nodes/js/context-menu-migration
 ```
 
 Your extension is using the old approach and should be migrated.

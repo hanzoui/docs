@@ -7,7 +7,7 @@ The Selection Toolbox API allows extensions to add custom action buttons that ap
 ## Basic Usage
 
 To add commands to the selection toolbox, your extension needs to:
-1. Define commands with the standard [command interface](https://docs.comfy.org/custom-nodes/js/javascript_commands_keybindings)
+1. Define commands with the standard [command interface](https://docs.hanzo.ai/custom-nodes/js/javascript_commands_keybindings)
 2. Implement the `getSelectionToolboxCommands` method to specify which commands appear in the toolbox
 
 Note: The `getSelectionToolboxCommands` method is called for each item in the selection set whenever a new selection is made.
@@ -35,7 +35,7 @@ app.registerExtension({
 
 ## Command Definition
 
-Commands for the selection toolbox use the standard ComfyUI command interface:
+Commands for the selection toolbox use the standard Hanzo Studio command interface:
 
 ```javascript
 {

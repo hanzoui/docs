@@ -2,8 +2,8 @@
 """
 External Link Tracking Script
 
-This script fetches content from ComfyUI_frontend and ComfyUI repositories,
-extracts docs.comfy.org links, and validates them against the current documentation structure.
+This script fetches content from Hanzo Studio_frontend and Hanzo Studio repositories,
+extracts docs.hanzo.ai links, and validates them against the current documentation structure.
 """
 
 import os
@@ -17,14 +17,14 @@ from urllib.parse import urlparse
 class ExternalLinkTracker:
     def __init__(self):
         self.github_token = os.environ.get('GITHUB_TOKEN')
-        self.docs_domain = 'docs.comfy.org'
+        self.docs_domain = 'docs.hanzo.ai'
         self.target_repos = [
-            'Comfy-Org/ComfyUI_frontend',
-            'comfyanonymous/ComfyUI',
-            'Comfy-Org/embedded-docs',
-            'Comfy-Org/workflow_templates',
-            'Comfy-Org/desktop',
-            'Comfy-Org/comfy-cli'
+            'hanzoui/studio_frontend',
+            'hanzoai/studio',
+            'hanzoui/embedded-docs',
+            'hanzoui/workflow-templates',
+            'hanzoui/desktop',
+            'hanzoui/cli'
         ]
         self.docs_root = Path('.')
         self.broken_links = []
@@ -44,7 +44,7 @@ class ExternalLinkTracker:
         try:
             headers = {
                 'Accept': 'application/vnd.github.v3+json',
-                'User-Agent': 'ComfyUI-Docs-Link-Tracker',
+                'User-Agent': 'Hanzo Studio-Docs-Link-Tracker',
                 'X-GitHub-Api-Version': '2022-11-28'
             }
             if self.github_token:
@@ -67,7 +67,7 @@ class ExternalLinkTracker:
         """Get headers for GitHub API requests"""
         headers = {
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'ComfyUI-Docs-Link-Tracker',
+            'User-Agent': 'Hanzo Studio-Docs-Link-Tracker',
             'X-GitHub-Api-Version': '2022-11-28'
         }
         if self.github_token:
@@ -148,8 +148,8 @@ class ExternalLinkTracker:
         return blob_data.get('content', '')
     
     def extract_docs_links(self, content):
-        """Extract all docs.comfy.org links from content"""
-        # Pattern to match docs.comfy.org URLs
+        """Extract all docs.hanzo.ai links from content"""
+        # Pattern to match docs.hanzo.ai URLs
         pattern = r'https?://(?:www\.)?docs\.comfy\.org[^\s\'"<>)]*'
         links = re.findall(pattern, content, re.IGNORECASE)
         
@@ -182,7 +182,7 @@ class ExternalLinkTracker:
         return docs_paths
     
     def validate_link(self, link, docs_paths):
-        """Validate if a docs.comfy.org link exists in current documentation"""
+        """Validate if a docs.hanzo.ai link exists in current documentation"""
         parsed = urlparse(link)
         path = parsed.path.lstrip('/')
         fragment = parsed.fragment
@@ -299,7 +299,7 @@ class ExternalLinkTracker:
                 if links:
                     repo_links[file_info['path']] = links
             
-            print(f"Found {sum(len(links) for links in repo_links.values())} docs.comfy.org links in {len(repo_links)} files")
+            print(f"Found {sum(len(links) for links in repo_links.values())} docs.hanzo.ai links in {len(repo_links)} files")
             all_found_links[repo] = repo_links
         
         # Check if any repositories failed to fetch
@@ -373,7 +373,7 @@ class ExternalLinkTracker:
                 report_lines.append("")
             
             report_lines.append("---\n")
-            report_lines.append("⚠️ **Important:** These links are hardcoded in external repositories. Breaking them may cause broken links in ComfyUI frontend or other products.\n")
+            report_lines.append("⚠️ **Important:** These links are hardcoded in external repositories. Breaking them may cause broken links in Hanzo Studio frontend or other products.\n")
             report_lines.append("**Recommended actions:**")
             report_lines.append("1. If you renamed or moved content, add redirects")
             report_lines.append("2. If you deleted content, consider the impact on external references")
@@ -392,7 +392,7 @@ class ExternalLinkTracker:
         report_lines.append("## 📊 Summary\n")
         report_lines.append(f"- **Repositories scanned:** {len(self.target_repos)}")
         report_lines.append(f"- **Files with docs links:** {total_files}")
-        report_lines.append(f"- **Total docs.comfy.org links found:** {total_links}")
+        report_lines.append(f"- **Total docs.hanzo.ai links found:** {total_links}")
         report_lines.append(f"- **Unique links:** {len(set(link for repo_links in all_found_links.values() for file_links in repo_links.values() for link in file_links))}")
         report_lines.append(f"- **Broken links:** {len(self.broken_links)}")
         
