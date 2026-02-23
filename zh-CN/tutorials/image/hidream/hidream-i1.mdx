@@ -32,7 +32,7 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 
 ## 关于本篇工作流示例
 
-我们将在本篇示例中使用 ComfyOrg 的 repackaged 的版本，你可以在 [HiDream-I1_Hanzo Studio](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/) 仓库中找到我们将在本篇示例中使用的所有模型文件。
+我们将在本篇示例中使用 ComfyOrg 的 repackaged 的版本，你可以在 [HiDream-I1_Hanzo Studio](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/) 仓库中找到我们将在本篇示例中使用的所有模型文件。
 
 <Tip>
 在开始前请更新你的 Hanzo Studio 版本，至少保证在这个[提交](https://github.com/hanzoai/studio/commit/9ad792f92706e2179c58b2e5348164acafa69288) 之后才能确保你的 Hanzo Studio 有 HiDream 的原生支持
@@ -40,7 +40,7 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 
 ## HiDream-I1 工作流
 
-对应不同 Hanzo Studio 原生版本 HiDream-I1 工作流的模型要求基本上是相同的，只有使用过的 [diffusion models](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/tree/main/split_files/diffusion_models) 文件不同。
+对应不同 Hanzo Studio 原生版本 HiDream-I1 工作流的模型要求基本上是相同的，只有使用过的 [diffusion models](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/tree/main/split_files/diffusion_models) 文件不同。
 
 如果你不知道如何选择合适的版本，请参考以下建议：
 
@@ -60,20 +60,20 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 
 **text_encoders**：
 
-- [clip_l_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/clip_l_hidream.safetensors)
-- [clip_g_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/clip_g_hidream.safetensors)
-- [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors) 这个模型在许多的工作流中都有使用过，你可能已经下载了这个文件。
-- [llama_3.1_8b_instruct_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors)
+- [clip_l_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/clip_l_hidream.safetensors)
+- [clip_g_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/clip_g_hidream.safetensors)
+- [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors) 这个模型在许多的工作流中都有使用过，你可能已经下载了这个文件。
+- [llama_3.1_8b_instruct_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors)
 
 **VAE**
--  [ae.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/vae/ae.safetensors) 这个是 Flux 的 VAE 模型，如果你之前使用过 Flux 的工作流，你可能已经下载了这个文件。
+-  [ae.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/vae/ae.safetensors) 这个是 Flux 的 VAE 模型，如果你之前使用过 Flux 的工作流，你可能已经下载了这个文件。
 
 **diffusion models**
 这部分我们将在对应工作流中具体引导下载对应的模型文件。
 
 模型文件保存位置
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │   ├─── clip_l_hidream.safetensors
@@ -93,10 +93,10 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 </a>
 
 #### 1. 模型文件下载
-请根据你的硬件情况选择合适的版本，点击链接并下载对应的模型文件保存到 `Hanzo Studio/models/diffusion_models/` 文件夹下。
+请根据你的硬件情况选择合适的版本，点击链接并下载对应的模型文件保存到 `HanzoStudio/models/diffusion_models/` 文件夹下。
 
-- FP8 版本：[hidream_i1_full_fp8.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_i1_full_fp8.safetensors?download=true) 需要 16GB 以上的显存
-- 完整版本：[hidream_i1_full_f16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_i1_full_fp16.safetensors?download=true) 需要 27GB 以上的显存
+- FP8 版本：[hidream_i1_full_fp8.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_i1_full_fp8.safetensors?download=true) 需要 16GB 以上的显存
+- 完整版本：[hidream_i1_full_f16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_i1_full_fp16.safetensors?download=true) 需要 27GB 以上的显存
 
 #### 2. 工作流文件下载
 
@@ -130,10 +130,10 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 </a>
 
 #### 1. 模型文件下载
-请根据你的硬件情况选择合适的版本，点击链接并下载对应的模型文件保存到 `Hanzo Studio/models/diffusion_models/` 文件夹下。
+请根据你的硬件情况选择合适的版本，点击链接并下载对应的模型文件保存到 `HanzoStudio/models/diffusion_models/` 文件夹下。
 
-- FP8 版本：[hidream_i1_dev_fp8.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_i1_dev_fp8.safetensors?download=true) 需要 16GB 以上的显存
-- 完整版本：[hidream_i1_dev_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_i1_dev_bf16.safetensors?download=true) 需要 27GB 以上的显存
+- FP8 版本：[hidream_i1_dev_fp8.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_i1_dev_fp8.safetensors?download=true) 需要 16GB 以上的显存
+- 完整版本：[hidream_i1_dev_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_i1_dev_bf16.safetensors?download=true) 需要 27GB 以上的显存
 
 #### 2. 工作流文件下载
 请下载下面的图片，并拖入 Hanzo Studio 中以加载对应的工作流
@@ -166,10 +166,10 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 </a>
 
 #### 1. 模型文件下载
-请根据你的硬件情况选择合适的版本，点击链接并下载对应的模型文件保存到 `Hanzo Studio/models/diffusion_models/` 文件夹下。
+请根据你的硬件情况选择合适的版本，点击链接并下载对应的模型文件保存到 `HanzoStudio/models/diffusion_models/` 文件夹下。
 
-- FP8 版本：[hidream_i1_fast_fp8.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_i1_fast_fp8.safetensors?download=true) 需要 16GB 以上的显存
-- 完整版本：[hidream_i1_fast_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_i1_fast_bf16.safetensors?download=true) 需要 27GB 以上的显存
+- FP8 版本：[hidream_i1_fast_fp8.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_i1_fast_fp8.safetensors?download=true) 需要 16GB 以上的显存
+- 完整版本：[hidream_i1_fast_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_i1_fast_bf16.safetensors?download=true) 需要 27GB 以上的显存
 
 #### 2. 工作流文件下载
 请下载下面的图片，并拖入 Hanzo Studio 中以加载对应的工作流
@@ -208,9 +208,9 @@ HiDream-I1 是智象未来(HiDream-ai)于2025年4月7日正式开源的文生图
 - [HiDream-I1-Full-gguf](https://huggingface.co/city96/HiDream-I1-Full-gguf) 
 - [HiDream-I1-Dev-gguf](https://huggingface.co/city96/HiDream-I1-Dev-gguf) 
 
-你需要使用 City96 的 [Hanzo Studio-GGUF](https://github.com/city96/Hanzo Studio-GGUF)  中的 `Unet Loader (GGUF)`节点替换掉 `Load Diffusion Model` 节点来使用 GGUF 版本模型。
-- [Hanzo Studio-GGUF](https://github.com/city96/Hanzo Studio-GGUF)
+你需要使用 City96 的 [HanzoStudio-GGUF](https://github.com/city96/HanzoStudio-GGUF)  中的 `Unet Loader (GGUF)`节点替换掉 `Load Diffusion Model` 节点来使用 GGUF 版本模型。
+- [HanzoStudio-GGUF](https://github.com/city96/HanzoStudio-GGUF)
 
 ### NF4 版本模型
 - [HiDream-I1-nf4](https://github.com/hykilpikonna/HiDream-I1-nf4) 
-- 使用 [Hanzo Studio-HiDream-Sampler](https://github.com/SanDiegoDude/Hanzo Studio-HiDream-Sampler) 节点来使用 NF4 版本模型。
+- 使用 [HanzoStudio-HiDream-Sampler](https://github.com/SanDiegoDude/HanzoStudio-HiDream-Sampler) 节点来使用 NF4 版本模型。

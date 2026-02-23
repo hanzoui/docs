@@ -32,10 +32,10 @@ icon: "clone"
 ![Missing Models](/images/interface/features/template/missing_models.jpg)
 
 1. 对于桌面版，当你点击`下载`按钮后， 桌面程序会自动为你完成模型文件的下载
-2. 其它版本则会通过浏览器下载对应模型，你需要下载后将对应的模型保存到 `Hanzo Studio/models` 对应的文件夹，比如截图中对应的模型应保存的位置为：
+2. 其它版本则会通过浏览器下载对应模型，你需要下载后将对应的模型保存到 `HanzoStudio/models` 对应的文件夹，比如截图中对应的模型应保存的位置为：
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   └── qwen_image_fp8_e4m3fn.safetensors
@@ -45,8 +45,8 @@ icon: "clone"
 │       └── qwen_2.5_vl_7b_fp8_scaled.safetensors
 ```
 
-在目前版本中，模板的缺失文件检测仅支持检测模型是否在对应的一级目录下是否有同名文件，也就是文件需要在 `Hanzo Studio/models/diffusion_models` 下存在，
-如果你已经下载好了模型并存放在类似：`Hanzo Studio/models/diffusion_models/wan_video` 的子文件夹，那么你可以忽略弹窗提示，在对应的模型加载节点确保对应的模型被加载选择即可。
+在目前版本中，模板的缺失文件检测仅支持检测模型是否在对应的一级目录下是否有同名文件，也就是文件需要在 `HanzoStudio/models/diffusion_models` 下存在，
+如果你已经下载好了模型并存放在类似：`HanzoStudio/models/diffusion_models/wan_video` 的子文件夹，那么你可以忽略弹窗提示，在对应的模型加载节点确保对应的模型被加载选择即可。
 
 如果你好奇我们是如何做到嵌入模型链接的，我们在对应节点的 `properties` 中添加了 `models` 信息， 下面是嵌入了模型信息的 `DualCLIPLoader` 节点的完整片段：
 ```json
@@ -104,17 +104,17 @@ icon: "clone"
 
 - `name` 对应了模型文件的名称
 - `url` 对应了模型文件的下载链接(可直接下载的文件链接，而不是仓库地址)
-- `directory` 对应了模型文件的下载后应存储到的 Hanzo Studio/models 目录下的哪个子目录， 如 `vae` 则对应 `Hanzo Studio/models/vae` 目录
+- `directory` 对应了模型文件的下载后应存储到的 HanzoStudio/models 目录下的哪个子目录， 如 `vae` 则对应 `HanzoStudio/models/vae` 目录
 
 目前模型链接仅支持 huggingface 和 civitai 来源的链接，并且要求模型格式为安全的模型格式如 `.safetensors`, `.sft` 格式等，类似  `.gguf`, 不安全格式在嵌入后会提示不安全并不显示链接  
 
-你可以使用[这个工具](https://hanzo-studio-wiki.github.io/Hanzo Studio-Workflow-JSON-Editor/)来编辑工作流模板中的模型信息，但目前 [@Hanzo Studio-Wiki](https://github.com/Hanzo Studio-Wiki) 仅对原生的节点增加了支持。
+你可以使用[这个工具](https://hanzo-studio-wiki.github.io/HanzoStudio-Workflow-JSON-Editor/)来编辑工作流模板中的模型信息，但目前 [@HanzoStudio-Wiki](https://github.com/HanzoStudio-Wiki) 仅对原生的节点增加了支持。
 
 ## 如何更新模板？
 
 目前模板是通过一个单独依赖的形式进行管理和更新的，对应的地址为：[hanzo-studio-workflow-templates](https://pypi.org/project/hanzo-studio-workflow-templates/)
 
-如果你在更新 Hanzo Studio 后发现没有文档或者我们的更新说明中新增的模板，那么可能是你没有在更新 Hanzo Studio 之后更新对应的依赖, 你可以访问 [Hanzo Studio/requirements.txt](https://github.com/hanzoai/studio/blob/master/requirements.txt) 来查看对应的依赖版本
+如果你在更新 Hanzo Studio 后发现没有文档或者我们的更新说明中新增的模板，那么可能是你没有在更新 Hanzo Studio 之后更新对应的依赖, 你可以访问 [HanzoStudio/requirements.txt](https://github.com/hanzoai/studio/blob/master/requirements.txt) 来查看对应的依赖版本
 
 通常下面的三个依赖是每次更新 Hanzo Studio 时我们也可能会同时升级的
 

@@ -24,7 +24,7 @@ HiDream-E1 是智象未来(HiDream-ai) 正式开源的交互式图像编辑大�
 
 ## HiDream E1 及 E1.1 工作流相关模型
 
-本篇指南涉及的所有模型你都可以在[这里](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/tree/main/split_files)找到, E1, E1.1 除了 Diffusion model 之外都是用相同的模型
+本篇指南涉及的所有模型你都可以在[这里](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/tree/main/split_files)找到, E1, E1.1 除了 Diffusion model 之外都是用相同的模型
 我们在对应的工作流文件中也以包含了对应的模型信息，你可以选择手动下载模型保存，或者在加载工作流后按工作流提示进行下载，推荐使用 E1.1
 
 这个模型的运行对显存占用要求极高，具体显存占用请参考对应部分的说明
@@ -32,24 +32,24 @@ HiDream-E1 是智象未来(HiDream-ai) 正式开源的交互式图像编辑大�
 **Diffusion Model**
 
 你不用同时下载这两个模型，由于 E1.1 是基于 E1 的迭代版本，在实际测试中它的质量和效果较 E1 都有较大提升
-- [hidream_e1_1_bf16.safetensors(推荐)](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_e1_1_bf16.safetensors) 34.2GB
-- [hidream_e1_full_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_e1_full_bf16.safetensors) 34.2GB
+- [hidream_e1_1_bf16.safetensors(推荐)](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_e1_1_bf16.safetensors) 34.2GB
+- [hidream_e1_full_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_e1_full_bf16.safetensors) 34.2GB
 
 **Text Encoder**：
 
-- [clip_l_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/clip_l_hidream.safetensors) 236.12MB
-- [clip_g_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/clip_g_hidream.safetensors) 1.29GB
-- [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors) 4.8GB
-- [llama_3.1_8b_instruct_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors) 8.46GB
+- [clip_l_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/clip_l_hidream.safetensors) 236.12MB
+- [clip_g_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/clip_g_hidream.safetensors) 1.29GB
+- [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors) 4.8GB
+- [llama_3.1_8b_instruct_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors) 8.46GB
 
 **VAE**
-- [ae.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/vae/ae.safetensors) 319.77MB
+- [ae.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/vae/ae.safetensors) 319.77MB
 > 这个是 Flux 的 VAE 模型，如果你之前使用过 Flux 的工作流，你可能已经下载了这个文件。
 
 文件保存位置
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │   ├─── clip_l_hidream.safetensors

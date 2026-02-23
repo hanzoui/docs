@@ -77,7 +77,7 @@ Wan-Animate 是由 WAN 团队开发的一个统一的人物动画和替换框架
 - [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/Wan_2.1_HanzoStudio_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)
 
 ```
-Hanzo Studio/
+HanzoStudio/
 ├───📂 models/
 │   ├───📂 diffusion_models/
 │   │   ├─── Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
@@ -98,8 +98,8 @@ Hanzo Studio/
 
 我们需要安装以下自定义节点：
 
-- [Hanzo Studio-KJNodes](https://github.com/kijai/Hanzo Studio-KJNodes)
-- [Hanzo Studio-hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux)
+- [HanzoStudio-KJNodes](https://github.com/kijai/HanzoStudio-KJNodes)
+- [HanzoStudio-hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux)
 
 如果你不知道如何安装自定义节点，请参阅 [如何安装自定义节点](/zh-CN/installation/install_custom_node)
 
@@ -118,7 +118,7 @@ Wan2.2 animate 有两种模式：Mix 和 Move
 2. 如需要，更新提示词
 3. 上传参考图像，此图像中的角色将是目标角色
 4. 你可以使用我们提供的视频作为首次输入视频，[hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux) 中的 **DWPose Estimator** 节点将预处理输入视频以生成姿态和面部控制视频
-5. `Points Editor` 来自 [KJNodes](https://github.com/kijai/Hanzo Studio-KJNodes/)，默认情况下此节点不会加载输入视频的第一帧，你需要运行一次工作流或手动上传第一帧
+5. `Points Editor` 来自 [KJNodes](https://github.com/kijai/HanzoStudio-KJNodes/)，默认情况下此节点不会加载输入视频的第一帧，你需要运行一次工作流或手动上传第一帧
     - 在 `Points Editor` 节点下方，我们添加了关于此节点如何工作以及如何编辑的说明，请参阅它
 6. 对于 "Video Extend" 组，它是为了扩展输出视频长度
     - 每个 `Video Extend` 将扩展另外 77 帧（约 4.8125 秒）

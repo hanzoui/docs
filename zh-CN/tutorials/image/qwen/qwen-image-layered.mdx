@@ -39,16 +39,16 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 **diffusion_models**
 
-- [qwen_image_layered_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_layered_bf16.safetensors)
+- [qwen_image_layered_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_HanzoStudio/resolve/main/split_files/diffusion_models/qwen_image_layered_bf16.safetensors)
 
 **vae**
 
-- [qwen_image_layered_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/resolve/main/split_files/vae/qwen_image_layered_vae.safetensors)
+- [qwen_image_layered_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_HanzoStudio/resolve/main/split_files/vae/qwen_image_layered_vae.safetensors)
 
 **模型保存位置**
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── qwen_2.5_vl_7b_fp8_scaled.safetensors
@@ -62,7 +62,7 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 默认使用 bf16，需要较高显存。如需降低显存使用，可以使用 fp8 版本：
 
-- [qwen_image_layered_fp8mixed.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/blob/main/split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors)
+- [qwen_image_layered_fp8mixed.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_HanzoStudio/blob/main/split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors)
 
 然后更新[子图](/zh-CN/interface/features/subgraph)中的 **Load Diffusion model** 节点来使用它。
 

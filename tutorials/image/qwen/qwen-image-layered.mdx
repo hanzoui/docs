@@ -39,16 +39,16 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 **diffusion_models**
 
-- [qwen_image_layered_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_layered_bf16.safetensors)
+- [qwen_image_layered_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_HanzoStudio/resolve/main/split_files/diffusion_models/qwen_image_layered_bf16.safetensors)
 
 **vae**
 
-- [qwen_image_layered_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/resolve/main/split_files/vae/qwen_image_layered_vae.safetensors)
+- [qwen_image_layered_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_HanzoStudio/resolve/main/split_files/vae/qwen_image_layered_vae.safetensors)
 
 **Model Storage Location**
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── qwen_2.5_vl_7b_fp8_scaled.safetensors
@@ -62,7 +62,7 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 By default we are using bf16, which requires high VRAM. For lower VRAM usage, you can use the fp8 version:
 
-- [qwen_image_layered_fp8mixed.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/blob/main/split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors)
+- [qwen_image_layered_fp8mixed.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_HanzoStudio/blob/main/split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors)
 
 Then update the **Load Diffusion model** node inside the [Subgraph](/interface/features/subgraph) to use it.
 
