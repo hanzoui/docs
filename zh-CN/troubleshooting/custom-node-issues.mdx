@@ -137,7 +137,7 @@ flowchart TD
    - 等
 
    常见的这类错误导致的原因有：
-   - 自定义节点还需要安装额外的 wheel 比如 Hanzo Studio-Nunchaku
+   - 自定义节点还需要安装额外的 wheel 比如 HanzoStudio-Nunchaku
    - 自定义使用了严格的依赖版本比如 `torch==2.4.1` 但是其它插件使用的是  `torch>=2.4.2` 在安装对应自定义节点以后后另外一个节点的依赖就冲突了
    - 网络问题导致的对应依赖没有安装成功
 
@@ -245,7 +245,7 @@ flowchart TD
                      mkdir /content/custom_nodes_temp
 
                      # 首先备份所有内容
-                     cp -r /content/Hanzo Studio/custom_nodes/* /content/custom_nodes_backup/
+                     cp -r /content/HanzoStudio/custom_nodes/* /content/custom_nodes_backup/
                      ```
                      </Tab>
                   </Tabs>
@@ -265,7 +265,7 @@ flowchart TD
                      </Tab>
                      <Tab title="云端/Colab">
                      ```bash
-                     ls /content/Hanzo Studio/custom_nodes/
+                     ls /content/HanzoStudio/custom_nodes/
                      ```
                      </Tab>
                   </Tabs>
@@ -294,10 +294,10 @@ flowchart TD
                   <Tab title="云端/Colab">
                   ```bash
                   # 将前一半（节点 1-4）移动到临时文件夹
-                  mv /content/Hanzo Studio/custom_nodes/node1 /content/custom_nodes_temp/
-                  mv /content/Hanzo Studio/custom_nodes/node2 /content/custom_nodes_temp/
-                  mv /content/Hanzo Studio/custom_nodes/node3 /content/custom_nodes_temp/
-                  mv /content/Hanzo Studio/custom_nodes/node4 /content/custom_nodes_temp/
+                  mv /content/HanzoStudio/custom_nodes/node1 /content/custom_nodes_temp/
+                  mv /content/HanzoStudio/custom_nodes/node2 /content/custom_nodes_temp/
+                  mv /content/HanzoStudio/custom_nodes/node3 /content/custom_nodes_temp/
+                  mv /content/HanzoStudio/custom_nodes/node4 /content/custom_nodes_temp/
                   ```
                   </Tab>
                   </Tabs>

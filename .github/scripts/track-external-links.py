@@ -44,7 +44,7 @@ class ExternalLinkTracker:
         try:
             headers = {
                 'Accept': 'application/vnd.github.v3+json',
-                'User-Agent': 'Hanzo Studio-Docs-Link-Tracker',
+                'User-Agent': 'HanzoStudio-Docs-Link-Tracker',
                 'X-GitHub-Api-Version': '2022-11-28'
             }
             if self.github_token:
@@ -67,7 +67,7 @@ class ExternalLinkTracker:
         """Get headers for GitHub API requests"""
         headers = {
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'Hanzo Studio-Docs-Link-Tracker',
+            'User-Agent': 'HanzoStudio-Docs-Link-Tracker',
             'X-GitHub-Api-Version': '2022-11-28'
         }
         if self.github_token:

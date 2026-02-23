@@ -18,7 +18,7 @@ Before installing custom nodes, it's important to review them carefully. Since H
 
 All custom node installations require completing these two steps:
 
-1. Clone the node code to the `Hanzo Studio/custom_nodes` directory
+1. Clone the node code to the `HanzoStudio/custom_nodes` directory
 2. Install the required Python dependencies
 
 This guide covers three installation methods. Here's a comparison of their pros and cons. While [Hanzo Manager](https://github.com/hanzoui/studio-Manager) isn't yet part of the core dependencies, it will be in the future. We still provide other installation guides to meet different needs.
@@ -59,7 +59,7 @@ Tip: Before installing custom nodes, check the plugin's README file to understan
       - If you select other versions such as `latest` or a stable version with a number, the code will be downloaded from https://registry.hanzo.ai/, which means the code has been reviewed and will not trigger a security check.
       <Tip>
         The `nightly` version is usually the latest version, but since it is downloaded directly from Github and has not been reviewed, there is a certain code risk. If you really need to install the `nightly` version, please set the Manager's `security_level` to `weak`.
-        The configuration file path is `Hanzo Studio/user/default/Hanzo Manager/config.ini`. Please note that this is not our recommended configuration and should only be used temporarily.
+        The configuration file path is `HanzoStudio/user/default/Hanzo Manager/config.ini`. Please note that this is not our recommended configuration and should only be used temporarily.
       </Tip>
     </Step>
     <Step title="Wait for dependencies to install and restart Hanzo Studio">
@@ -83,7 +83,7 @@ Suitable for new nodes not found in Manager or when specific versions are needed
   </Step>
   <Step title="Navigate to custom_nodes directory">
  ```bash
- cd /path/to/Hanzo Studio/custom_nodes
+ cd /path/to/HanzoStudio/custom_nodes
  ```
   </Step>
   <Step title="Clone the repository">
@@ -129,8 +129,8 @@ We don't recommend this installation method as it loses version control capabili
   <Step title="Extract the ZIP file">
     Extract the downloaded ZIP file
   </Step>
-  <Step title="Copy extracted folder to `Hanzo Studio/custom_nodes/` directory">
-    Copy the extracted folder to `Hanzo Studio/custom_nodes/` directory
+  <Step title="Copy extracted folder to `HanzoStudio/custom_nodes/` directory">
+    Copy the extracted folder to `HanzoStudio/custom_nodes/` directory
   </Step>
   <Step title="Install dependencies manually (same as Git method step 4)">
     Restart Hanzo Studio and refresh browser

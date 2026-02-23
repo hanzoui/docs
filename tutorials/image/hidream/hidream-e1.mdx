@@ -24,7 +24,7 @@ In combination with the previously released [hidream-i1](/tutorials/image/hidrea
 
 ## HiDream E1 and E1.1 Workflow Related Models
 
-All the models involved in this guide can be found [here](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/tree/main/split_files). Except for the Diffusion model, E1 and E1.1 use the same models.
+All the models involved in this guide can be found [here](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/tree/main/split_files). Except for the Diffusion model, E1 and E1.1 use the same models.
 The corresponding workflow files also include the relevant model information. You can choose to manually download and save the models, or follow the workflow prompts to download them after loading the workflow. It is recommended to use E1.1.
 
 This model requires a large amount of VRAM to run. Please refer to the relevant sections for specific VRAM requirements.
@@ -32,24 +32,24 @@ This model requires a large amount of VRAM to run. Please refer to the relevant 
 **Diffusion Model**
 
 You do not need to download both models. Since E1.1 is an iterative version based on E1, our tests show that its quality and performance are significantly improved compared to E1.
-- [hidream_e1_1_bf16.safetensors (Recommended)](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_e1_1_bf16.safetensors) 34.2GB
-- [hidream_e1_full_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/resolve/main/split_files/diffusion_models/hidream_e1_full_bf16.safetensors) 34.2GB
+- [hidream_e1_1_bf16.safetensors (Recommended)](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_e1_1_bf16.safetensors) 34.2GB
+- [hidream_e1_full_bf16.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/resolve/main/split_files/diffusion_models/hidream_e1_full_bf16.safetensors) 34.2GB
 
 **Text Encoder**:
 
-- [clip_l_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/clip_l_hidream.safetensors) 236.12MB
-- [clip_g_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/clip_g_hidream.safetensors) 1.29GB
-- [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors) 4.8GB
-- [llama_3.1_8b_instruct_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors) 8.46GB
+- [clip_l_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/clip_l_hidream.safetensors) 236.12MB
+- [clip_g_hidream.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/clip_g_hidream.safetensors) 1.29GB
+- [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors) 4.8GB
+- [llama_3.1_8b_instruct_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors) 8.46GB
 
 **VAE**
-- [ae.safetensors](https://huggingface.co/hanzoui/HiDream-I1_Hanzo Studio/blob/main/split_files/vae/ae.safetensors) 319.77MB
+- [ae.safetensors](https://huggingface.co/hanzoui/HiDream-I1_HanzoStudio/blob/main/split_files/vae/ae.safetensors) 319.77MB
 > This is the VAE model for Flux. If you have used the Flux workflow before, you may have already downloaded this file.
 
 Model Save Location
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │   ├─── clip_l_hidream.safetensors

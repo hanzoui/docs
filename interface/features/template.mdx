@@ -32,10 +32,10 @@ Each workflow template embeds links to the required models. On first use, if the
 ![Missing Models](/images/interface/features/template/missing_models.jpg)
 
 1. For desktop version, when you click the `Download` button, the desktop program will automatically download the model files for you.
-2. For other versions, the browser will be used to download the corresponding model. You need to download the model and save it to the corresponding folder under `Hanzo Studio/models`. For example, the model in the screenshot should be saved in the following location:
+2. For other versions, the browser will be used to download the corresponding model. You need to download the model and save it to the corresponding folder under `HanzoStudio/models`. For example, the model in the screenshot should be saved in the following location:
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   └── qwen_image_fp8_e4m3fn.safetensors
@@ -45,8 +45,8 @@ Each workflow template embeds links to the required models. On first use, if the
 │       └── qwen_2.5_vl_7b_fp8_scaled.safetensors
 ```
 
-In the current version, missing-file detection only checks whether there is a file with the same name in the corresponding top-level directory. For example, the file must exist directly under `Hanzo Studio/models/diffusion_models`.
-If you have already downloaded the model into a subfolder such as `Hanzo Studio/models/diffusion_models/wan_video`, you can ignore the popup and simply ensure the correct model is selected in the corresponding model loader node.
+In the current version, missing-file detection only checks whether there is a file with the same name in the corresponding top-level directory. For example, the file must exist directly under `HanzoStudio/models/diffusion_models`.
+If you have already downloaded the model into a subfolder such as `HanzoStudio/models/diffusion_models/wan_video`, you can ignore the popup and simply ensure the correct model is selected in the corresponding model loader node.
 
 If you're curious how model links are embedded, we add a `models` field under the node’s `properties`. Below is a complete snippet of a `DualCLIPLoader` node with embedded model information:
 ```json
@@ -104,17 +104,17 @@ The `models` field inside `properties` includes `name`, `url`, and `directory`.
 
 - `name`: the model file name
 - `url`: a direct download link to the file (not a repository page)
-- `directory`: which subfolder under `Hanzo Studio/models` to store the file, e.g. `vae` means `Hanzo Studio/models/vae`
+- `directory`: which subfolder under `HanzoStudio/models` to store the file, e.g. `vae` means `HanzoStudio/models/vae`
 
 Currently, only links from Hugging Face and Civitai are supported. The model format must be a safe format such as `.safetensors` or `.sft`. Formats like `.gguf` are considered unsafe; when embedded they will be flagged as unsafe and the link will not be shown.
 
-You can use [this tool](https://hanzo-studio-wiki.github.io/Hanzo Studio-Workflow-JSON-Editor/) to edit the model information in workflow templates. At the moment, [@Hanzo Studio-Wiki](https://github.com/Hanzo Studio-Wiki) only adds support for native nodes.
+You can use [this tool](https://hanzo-studio-wiki.github.io/HanzoStudio-Workflow-JSON-Editor/) to edit the model information in workflow templates. At the moment, [@HanzoStudio-Wiki](https://github.com/HanzoStudio-Wiki) only adds support for native nodes.
 
 ## How to update templates?
 
 Templates are managed and updated as a separate dependency: [`hanzo-studio-workflow-templates`](https://pypi.org/project/hanzo-studio-workflow-templates/).
 
-If, after updating Hanzo Studio, you don’t see the documentation or newly announced templates, you may need to update the corresponding dependency. You can check versions in [`Hanzo Studio/requirements.txt`](https://github.com/hanzoai/studio/blob/master/requirements.txt).
+If, after updating Hanzo Studio, you don’t see the documentation or newly announced templates, you may need to update the corresponding dependency. You can check versions in [`HanzoStudio/requirements.txt`](https://github.com/hanzoai/studio/blob/master/requirements.txt).
 
 Typically, the following three dependencies may be upgraded together when Hanzo Studio is updated:
 

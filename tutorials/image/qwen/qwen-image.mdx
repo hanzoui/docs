@@ -89,16 +89,16 @@ Distilled version
 - Qwen-Image_fp8 (20.4 GB)
 - Distilled versions (non-official, requires only 15 steps)
 
-All models are available at [Huggingface](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/tree/main) and [Modelscope](https://modelscope.cn/models/hanzoui/Qwen-Image_Hanzo Studio/files)
+All models are available at [Huggingface](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/tree/main) and [Modelscope](https://modelscope.cn/models/hanzoui/Qwen-Image_HanzoStudio/files)
 
 **Diffusion model**
 
-- [qwen_image_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors)
+- [qwen_image_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors)
 
 Qwen_image_distill
 
-- [qwen_image_distill_full_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors)
-- [qwen_image_distill_full_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_bf16.safetensors)
+- [qwen_image_distill_full_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors)
+- [qwen_image_distill_full_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_bf16.safetensors)
 
 <Note>
 - The original author of the distilled version recommends using 15 steps with cfg 1.0.
@@ -111,16 +111,16 @@ Qwen_image_distill
 
 **Text encoder**
 
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
 
 **VAE**
 
-[qwen_image_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/vae/qwen_image_vae.safetensors)
+[qwen_image_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/split_files/vae/qwen_image_vae.safetensors)
 
 **Model Storage Location**
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   ├── qwen_image_fp8_e4m3fn.safetensors
@@ -173,7 +173,7 @@ Download the image below as input
 
 1. InstantX Controlnet
 
-Download [Qwen-Image-InstantX-ControlNet-Union.safetensors](https://huggingface.co/hanzoui/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors) and save it to the `Hanzo Studio/models/controlnet/` folder
+Download [Qwen-Image-InstantX-ControlNet-Union.safetensors](https://huggingface.co/hanzoui/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors) and save it to the `HanzoStudio/models/controlnet/` folder
 
 2. **Lotus Depth model**
 
@@ -188,7 +188,7 @@ We will use this model to generate the depth map of the image. The following two
 - [vae-ft-mse-840000-ema-pruned.safetensors](https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors)  or any SD1.5 VAE
 
 ```
-Hanzo Studio/
+HanzoStudio/
 ├── models/
 │   ├── diffusion_models/
 │   │   └─── lotus-depth-d-v1-1.safetensors
@@ -234,7 +234,7 @@ Download the image below as input:
 
 ### 2. Model Links
 
-Other models are the same as the Qwen-Image basic workflow. You only need to download the models below and save them to the `Hanzo Studio/models/model_patches` folder
+Other models are the same as the Qwen-Image basic workflow. You only need to download the models below and save them to the `HanzoStudio/models/model_patches` folder
 
 - [qwen_image_canny_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_canny_diffsynth_controlnet.safetensors)
 - [qwen_image_depth_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_depth_diffsynth_controlnet.safetensors)
@@ -301,7 +301,7 @@ Download the image below as input
 
 ### 2. Model Links
 
-Download the model below. Since this is a LoRA model, it needs to be saved to the `Hanzo Studio/models/loras/` folder
+Download the model below. Since this is a LoRA model, it needs to be saved to the `HanzoStudio/models/loras/` folder
 -  [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): Image structure control LoRA supporting canny, depth, pose, lineart, softedge, normal, openpose
 
 ### 3. Workflow Instructions

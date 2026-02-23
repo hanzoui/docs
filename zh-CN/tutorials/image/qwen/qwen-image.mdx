@@ -90,16 +90,16 @@ GPU: RTX4090D 24GB
 - 蒸馏版本 (非官方，仅需 15 步)
 
 
-所有模型均可在 [Huggingface](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/tree/main) 或者 [魔搭](https://modelscope.cn/models/hanzoui/Qwen-Image_Hanzo Studio/files) 找到
+所有模型均可在 [Huggingface](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/tree/main) 或者 [魔搭](https://modelscope.cn/models/hanzoui/Qwen-Image_HanzoStudio/files) 找到
 
 **Diffusion model**
 
-- [qwen_image_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors)
+- [qwen_image_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors)
 
 Qwen_image_distill
 
-- [qwen_image_distill_full_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors)
-- [qwen_image_distill_full_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_bf16.safetensors)
+- [qwen_image_distill_full_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors)
+- [qwen_image_distill_full_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_bf16.safetensors)
 
 <Note>
  - 蒸馏版本原始作者建议在 15 步 cfg 1.0
@@ -112,16 +112,16 @@ Qwen_image_distill
 
 **Text encoder**
 
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
 
 **VAE**
 
-- [qwen_image_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/vae/qwen_image_vae.safetensors)
+- [qwen_image_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image_HanzoStudio/resolve/main/split_files/vae/qwen_image_vae.safetensors)
 
 模型保存位置
 
 ```
-📂 Hanzo Studio/
+📂 HanzoStudio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   ├── qwen_image_fp8_e4m3fn.safetensors
@@ -175,7 +175,7 @@ Qwen_image_distill
 
 1. InstantX Controlnet
 
-下载 [Qwen-Image-InstantX-ControlNet-Union.safetensors](https://huggingface.co/hanzoui/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors) 并保存到 `Hanzo Studio/models/controlnet/` 文件夹下
+下载 [Qwen-Image-InstantX-ControlNet-Union.safetensors](https://huggingface.co/hanzoui/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors) 并保存到 `HanzoStudio/models/controlnet/` 文件夹下
 
 2. **Lotus Depth model**
 
@@ -196,7 +196,7 @@ Qwen_image_distill
 - [vae-ft-mse-840000-ema-pruned.safetensors](https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors)  或者任意的 SD1.5 的 VAE 都可以使用
 
 ```
-Hanzo Studio/
+HanzoStudio/
 ├── models/
 │   ├── diffusion_models/
 │   │   └─── lotus-depth-d-v1-1.safetensors
@@ -240,7 +240,7 @@ Comfy Org rehost 地址： [Qwen-Image-DiffSynth-ControlNets/model_patches](http
 
 ### 2. 模型链接
 
-其它模型与 Qwen-Image 基础工作流一致，你只需下载下面的模型并保存到 `Hanzo Studio/models/model_patches` 文件夹中
+其它模型与 Qwen-Image 基础工作流一致，你只需下载下面的模型并保存到 `HanzoStudio/models/model_patches` 文件夹中
 
 - [qwen_image_canny_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_canny_diffsynth_controlnet.safetensors)
 - [qwen_image_depth_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_depth_diffsynth_controlnet.safetensors)
@@ -307,7 +307,7 @@ Comfy Org reshot 地址: [qwen_image_union_diffsynth_lora.safetensors](https://h
 
 ### 2. 模型链接
 
-下载下面的模型，由于这是一个 LoRA 模型，所以需要保存到 `Hanzo Studio/models/loras/` 文件夹下
+下载下面的模型，由于这是一个 LoRA 模型，所以需要保存到 `HanzoStudio/models/loras/` 文件夹下
 -  [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、post、lineart、softedge、normal、openpose
 
 ### 3. 工作流说明
