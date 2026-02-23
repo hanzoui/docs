@@ -2,7 +2,7 @@
 """
 External Link Tracking Script
 
-This script fetches content from Hanzo Studio_frontend and Hanzo Studio repositories,
+This script fetches content from HanzoStudio_frontend and Hanzo Studio repositories,
 extracts docs.hanzo.ai links, and validates them against the current documentation structure.
 """
 
