@@ -1,6 +1,6 @@
 ---
 title: "更新日志"
-description: "跟踪 ComfyUI 的最新功能、改进和错误修复。详细发布说明请查看 [Github 发布页面](https://github.com/comfyanonymous/ComfyUI/releases)。"
+description: "跟踪 Hanzo Studio 的最新功能、改进和错误修复。详细发布说明请查看 [Github 发布页面](https://github.com/hanzoai/studio/releases)。"
 icon: "clock-rotate-left"
 ---
 
@@ -59,13 +59,13 @@ icon: "clock-rotate-left"
 - 修复 LTXV2 文本编码器 lowvram 兼容性
 - 修复 fp8 处理问题
 - 修复 MPO 格式图像只使用第一帧
-- 根据 PyTorch 版本条件性支持 comfy-kitchen CUDA
+- 根据 PyTorch 版本条件性支持 hanzo-kitchen CUDA
 
 **其他**
 - 新增 OOM 内存摘要用于调试
 - Mahiro CFG 显示名称更新
 - 工作流模板更新至 v0.7.67
-- 代码重构与清理（CLIP 预处理、comfy-kitchen 集成）
+- 代码重构与清理（CLIP 预处理、hanzo-kitchen 集成）
 </Update>
 
 <Update label="v0.7.0" description="2025年12月31日">
@@ -85,8 +85,8 @@ icon: "clock-rotate-left"
 - 新增上下文窗口中的 VACE 上下文处理
 
 **版本更新**
-- ComfyUI Frontend 更新至 v1.35.9
-- ComfyUI Manager 更新至 v4.0.4
+- Hanzo Frontend 更新至 v1.35.9
+- Hanzo Manager 更新至 v4.0.4
 - 工作流模板更新至 v0.7.64
 
 **API 节点**
@@ -157,7 +157,7 @@ icon: "clock-rotate-left"
 **工作流与API增强**
 - 上下文窗口修复和增强的时序处理
 - Kling API @image引用格式
-- ComfyUI-Manager pip安装支持
+- Hanzo Manager pip安装支持
 
 **前端改进**
 - 显著改善前端加载和启动性能
@@ -190,7 +190,7 @@ icon: "clock-rotate-left"
 **桌面用户注意事项**
 - 如果您未关闭自动更新，请等待最新的桌面版本发布，它将自动更新到最新版本。
 - 如果您正在使用桌面版本**并且关闭了自动更新**，本次桌面版本可能无法自动更新到最新版本。
-- 请从[这里](https://www.comfy.org/download)下载最新的桌面版本以获取最新功能。
+- 请从[这里](https://hanzo.ai/download)下载最新的桌面版本以获取最新功能。
 
 </Update>
 <Update label="v0.3.76" description="2025年12月2日">
@@ -208,7 +208,7 @@ icon: "clock-rotate-left"
 - 将 3D 动画节点合并到 3D 节点中
 
 **LoRA 训练器**
-- ComfyUI 原生 LoRA 训练器支持多分辨率
+- Hanzo Studio 原生 LoRA 训练器支持多分辨率
 - 支持 Z-Image LoRA 训练
 
 **性能与模型支持**
@@ -276,7 +276,7 @@ icon: "clock-rotate-left"
 - **HunyuanV3D 架构迁移**：将 Hunyuan3D 节点更新至 V3 架构，提升性能和兼容性
 
 **API 节点扩展**
-- **新增 Topaz API 节点**：在 ComfyUI 中直接添加了对 Topaz 视频增强工作流的支持
+- **新增 Topaz API 节点**：在 Hanzo Studio 中直接添加了对 Topaz 视频增强工作流的支持
 - **Nano Banana Pro 集成**：通过 Nano Banana Pro 扩展 API 节点集合，增强处理能力
 - **Kling 唇形同步改进**：修复了 KlingLipSyncAudioToVideoNode 中的音频格式转换问题，确保正确处理 MP3 格式
 
@@ -474,7 +474,7 @@ icon: "clock-rotate-left"
 <Update label="v0.3.61" description="2025年9月30日">
 
 **API 节点**
-- **Rodin3D Gen-2**：Rodin 最强大的图像转3D工具现已在 ComfyUI 中上线！
+- **Rodin3D Gen-2**：Rodin 最强大的图像转3D工具现已在 Hanzo Studio 中上线！
 - **WAN 图生图**：Wan2.5 图生图 API 节点，支持图像编辑。
 
 **增强音频功能**
@@ -574,10 +574,10 @@ icon: "clock-rotate-left"
 
 **节点模型补丁改进**
 
-此次专项更新改进了支撑 ComfyUI 灵活架构的核心节点模型补丁系统：
+此次专项更新改进了支撑 Hanzo Studio 灵活架构的核心节点模型补丁系统：
 
 **核心基础设施增强**
-- **节点模型补丁更新**：增强了 nodes_model_patch.py，改进了底层模型补丁机制，使得 ComfyUI 对 Qwen-Image ControlNet 的扩展更为容易
+- **节点模型补丁更新**：增强了 nodes_model_patch.py，改进了底层模型补丁机制，使得 Hanzo Studio 对 Qwen-Image ControlNet 的扩展更为容易
 
 **工作流程优势**
 - **增强的稳定性**：核心模型补丁改进有助于在不同工作流程配置中实现更可靠的节点执行和模型处理
@@ -588,7 +588,7 @@ icon: "clock-rotate-left"
 
 **音频工作流集成与增强性能优化**
 
-此版本增加了 ComfyUI 的音频处理能力，并包含性能改进和模型兼容性更新：
+此版本增加了 Hanzo Studio 的音频处理能力，并包含性能改进和模型兼容性更新：
 
 **音频处理更新**
 - **Wav2vec2 音频编码器**：新增原生 wav2vec2 实现作为音频编码器模型，为多模态应用启用音频到嵌入工作流
@@ -622,7 +622,7 @@ icon: "clock-rotate-left"
 
 **增强模型支持和 Qwen Image ControlNet 集成等**
 
-此版本显著扩展了 ControlNet 功能并改进了模型兼容性，让 ComfyUI 工作流更加多样化和可靠：
+此版本显著扩展了 ControlNet 功能并改进了模型兼容性，让 Hanzo Studio 工作流更加多样化和可靠：
 
 **Qwen ControlNet 生态系统**
 - **Diffsynth ControlNet 支持**：新增支持 Qwen Diffsynth ControlNet 的 Canny 和深度条件控制，实现精确的边缘和基于深度的图像控制
@@ -641,7 +641,7 @@ icon: "clock-rotate-left"
 - **EasyCache 和 LazyCache**：实现高级缓存系统以改进工作流执行性能
 
 **平台和开发改进**
-- **Python 3.13 支持**：完全兼容 Python 3.13，保持 ComfyUI 与最新 Python 发展同步
+- **Python 3.13 支持**：完全兼容 Python 3.13，保持 Hanzo Studio 与最新 Python 发展同步
 - **前端更新**：更新到 v1.25.10，改进导航和用户界面增强功能
 - **逐元素融合**：通过逐元素操作融合添加性能优化
 - **导航模式回滚**：回滚导航默认到传统旧版模式，避免默认启用新版标准导航模式导致用户体验问题，用户仍旧可以在设置中启用标准导航模式
@@ -660,7 +660,7 @@ icon: "clock-rotate-left"
 - **SDPA 后端优化**：改进缩放点积注意力后端设置，提升性能
 
 **多媒体节点支持**
-- **音频录制节点**：新增原生音频录制节点，现在你可以直接在 ComfyUI内录制音频
+- **音频录制节点**：新增原生音频录制节点，现在你可以直接在 Hanzo Studio内录制音频
 - **音频视频集成**：完善音频-视频依赖项集成
 
 **API节点支持更新**
@@ -692,7 +692,7 @@ icon: "clock-rotate-left"
 
 **模型集成与性能提升**
 
-本次更新扩展了ComfyUI的模型支持，优化了API功能，并提升了工作流程的稳定性：
+本次更新扩展了Hanzo Studio的模型支持，优化了API功能，并提升了工作流程的稳定性：
 
 **Qwen模型生态**
 - **Qwen图像模型支持**：改进了LoRA加载和模型合并功能，支持更复杂的视觉工作流程

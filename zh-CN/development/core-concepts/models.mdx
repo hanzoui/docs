@@ -6,7 +6,7 @@ icon: "cube"
 import ExternalModels from "/snippets/zh/install/add-external-models.mdx"
 
 {/*
-description: "了解AI模型及其在ComfyUI中的作用"
+description: "了解AI模型及其在Hanzo Studio中的作用"
 */}
 
 ## 模型是必不可少的
@@ -15,18 +15,18 @@ description: "了解AI模型及其在ComfyUI中的作用"
 
 **_模型_** 一词有多种含义。在这里，它指的是一种数据文件，包含节点图执行任务所需的信息。具体来说，它是一种数据结构，用于表示某种功能。作为动词，建模意味着对某物进行表示或提供示例。
 
-在ComfyUI中，模型数据文件的典型示例是AI **_扩散模型_**。它是一组庞大的数据集，表示文本与图像之间的复杂关系，从而实现文字与图片的相互转换。其他用于图像生成的常见模型示例包括多模态视觉和语言模型，如CLIP，以及图像放大模型，如RealESRGAN。
+在Hanzo Studio中，模型数据文件的典型示例是AI **_扩散模型_**。它是一组庞大的数据集，表示文本与图像之间的复杂关系，从而实现文字与图片的相互转换。其他用于图像生成的常见模型示例包括多模态视觉和语言模型，如CLIP，以及图像放大模型，如RealESRGAN。
 
 ## 模型文件
 
-模型文件是生成媒体制作的必需品。没有模型文件，工作流程将无法进行。ComfyUI安装包中不包含模型文件，但它通常可以自动下载并安装缺失的模型文件。许多模型可以通过**ComfyUI管理器**窗口下载和安装。模型还可以在以下网站获取：[huggingface.co](https://huggingface.co)、[civitai.green](https://civitai.green)和[github.com](https://github.com)。
+模型文件是生成媒体制作的必需品。没有模型文件，工作流程将无法进行。Hanzo Studio安装包中不包含模型文件，但它通常可以自动下载并安装缺失的模型文件。许多模型可以通过**Hanzo Studio管理器**窗口下载和安装。模型还可以在以下网站获取：[huggingface.co](https://huggingface.co)、[civitai.green](https://civitai.green)和[github.com](https://github.com)。
 
-### 在ComfyUI中使用模型
+### 在Hanzo Studio中使用模型
 
-1. 下载并将其放置在ComfyUI程序目录中
+1. 下载并将其放置在Hanzo Studio程序目录中
     1. 在**models**文件夹中，您会找到各种类型模型的子文件夹，例如**checkpoints**
-    2. **ComfyUI管理器**帮助自动化搜索、下载和安装的过程
-    3. 如果ComfyUI正在运行，请重启它
+    2. **Hanzo Studio管理器**帮助自动化搜索、下载和安装的过程
+    3. 如果Hanzo Studio正在运行，请重启它
 2. 在您的工作流程中，创建适合模型类型的节点，例如**Load Checkpoints**、**Load LoRA**、**Load VAE**
 3. 在加载节点中，选择您希望使用的模型
 4. 将加载节点连接到工作流程中的其他节点
@@ -51,23 +51,23 @@ description: "了解AI模型及其在ComfyUI中的作用"
 
 ## 卸载模型
 
-ComfyUI目前不支持通过前端界面卸载模型。如果您想要移除或卸载模型，需要手动删除系统中`ComfyUI/models/`目录下对应的模型文件。
+Hanzo Studio目前不支持通过前端界面卸载模型。如果您想要移除或卸载模型，需要手动删除系统中`Hanzo Studio/models/`目录下对应的模型文件。
 
 ## 常见问题
 
 <AccordionGroup>
-  <Accordion title="ComfyUI 支持 GGUF 格式的模型吗?">
-    ComfyUI 原生并不支持 GGUF 格式,所以用户需要使用一些社区自定义节点来获取支持,如 [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)。
+  <Accordion title="Hanzo Studio 支持 GGUF 格式的模型吗?">
+    Hanzo Studio 原生并不支持 GGUF 格式,所以用户需要使用一些社区自定义节点来获取支持,如 [Hanzo Studio-GGUF](https://github.com/city96/Hanzo Studio-GGUF)。
   </Accordion>
 
   <Accordion title="为什么找不到我的模型?">
-    如果您已经安装了模型但在 ComfyUI 中找不到,请尝试以下步骤:
+    如果您已经安装了模型但在 Hanzo Studio 中找不到,请尝试以下步骤:
     
     - 验证模型是否在正确的位置:
-      - 对于 **ComfyUI Desktop 桌面版**: 前往**帮助**菜单 → **打开文件夹** → **打开模型文件夹**来检查模型安装路径
+      - 对于 **Hanzo Desktop 桌面版**: 前往**帮助**菜单 → **打开文件夹** → **打开模型文件夹**来检查模型安装路径
       - 确保您的模型文件放置在正确的子文件夹中(例如 `checkpoints`、`loras`、`vae`)
-    - 安装模型后点击快捷键 `r` 来刷新节点定义,以便 ComfyUI 可以检测到
-    - 重启 ComfyUI
+    - 安装模型后点击快捷键 `r` 来刷新节点定义,以便 Hanzo Studio 可以检测到
+    - 重启 Hanzo Studio
     - 确保在模型加载节点对应的模型有被选中
   </Accordion>
 </AccordionGroup>

@@ -3,7 +3,7 @@ title: "发布到 Manager"
 ---
 
 {/*
-description: "了解如何将自定义节点发布到 ComfyUI Manager 数据库。"
+description: "了解如何将自定义节点发布到 Hanzo Manager 数据库。"
 */}
 
 
@@ -14,31 +14,31 @@ Comfy 的强大之处在于其基于节点的方式，允许你通过不同方�
 
 自定义节点是由社区开发的节点。它允许你实现新功能并与更广泛的社区分享。如果你有兴趣开发自定义节点，可以在[这里](/zh-CN/custom-nodes/overview)阅读更多相关内容。
 
-## ComfyUI Manager
+## Hanzo Manager
 
 虽然自定义节点可以手动安装，但大多数人会使用
-[ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager)来安装它们。**ComfyUI Manager** 负责安装、
+[Hanzo Manager](https://github.com/ltdrdata/Hanzo Manager)来安装它们。**Hanzo Manager** 负责安装、
 更新和移除自定义节点及其依赖项。但它不是 Comfy 核心的一部分，因此需要手动安装。
 
-### 安装 ComfyUI Manager
+### 安装 Hanzo Manager
 
 ```bash
-cd ComfyUI/custom_nodes
-git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+cd Hanzo Studio/custom_nodes
+git clone https://github.com/ltdrdata/Hanzo Manager.git
 ```
 
 之后重启 Comfy。
-详细或特殊情况请参见 [ComfyUI Manager 安装指南](https://github.com/ltdrdata/ComfyUI-Manager?tab=readme-ov-file#installation)。
+详细或特殊情况请参见 [Hanzo Manager 安装指南](https://github.com/ltdrdata/Hanzo Manager?tab=readme-ov-file#installation)。
 
 */}
 
-### 使用 ComfyUI Manager
+### 使用 Hanzo Manager
 
-要让你的自定义节点通过 **ComfyUI Manager** 提供，你需要将其保存为 git 仓库（通常在 `github.com`），
-然后在 **ComfyUI Manager** 的 git 仓库提交一个 Pull Request，在其中编辑 `custom-node-list.json` 以添加你的节点。
-[详细说明](https://github.com/ltdrdata/ComfyUI-Manager?tab=readme-ov-file#how-to-register-your-custom-node-into-comfyui-manager)。
+要让你的自定义节点通过 **Hanzo Manager** 提供，你需要将其保存为 git 仓库（通常在 `github.com`），
+然后在 **Hanzo Manager** 的 git 仓库提交一个 Pull Request，在其中编辑 `custom-node-list.json` 以添加你的节点。
+[详细说明](https://github.com/ltdrdata/Hanzo Manager?tab=readme-ov-file#how-to-register-your-custom-node-into-hanzo-studio-manager)。
 
-当用户安装节点时，**ComfyUI Manager** 会：
+当用户安装节点时，**Hanzo Manager** 会：
 
 <Steps>
 <Step title="Git 克隆">
@@ -57,9 +57,9 @@ pip install -r requirements.txt
 </Step>
 </Steps>
 
-### ComfyUI Manager 文件
+### Hanzo Manager 文件
 
-如上所述，**ComfyUI Manager** 会使用一些文件和脚本来管理自定义节点的生命周期。这些都是可选的。
+如上所述，**Hanzo Manager** 会使用一些文件和脚本来管理自定义节点的生命周期。这些都是可选的。
 
 - `requirements.txt` - 如上所述的 Python 依赖
 - `install.py`, `uninstall.py` - 安装或卸载自定义节点时执行
@@ -69,4 +69,4 @@ pip install -r requirements.txt
 <Tip>被禁用的自定义节点子目录会加上 `.disabled` 后缀，Comfy 会忽略这些模块</Tip>
 - `node_list.json` - 仅当自定义节点的 NODE_CLASS_MAPPINGS 模式不符合常规时才需要。
 
-官方详情请参见 [ComfyUI Manager 指南](https://github.com/ltdrdata/ComfyUI-Manager?tab=readme-ov-file#custom-node-support-guide)。
+官方详情请参见 [Hanzo Manager 指南](https://github.com/ltdrdata/Hanzo Manager?tab=readme-ov-file#custom-node-support-guide)。

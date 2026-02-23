@@ -6,7 +6,7 @@ icon: "cube"
 import ExternalModels from "/snippets/install/add-external-models.mdx"
 
 {/*
-description: "Understand AI models and their role in ComfyUI"
+description: "Understand AI models and their role in Hanzo Studio"
 */}
 
 ## Models are essential
@@ -15,18 +15,18 @@ Models are essential building blocks for media generation workflows. They can be
 
 The word **_model_** has many different meanings. Here, it means a data file carrying information that is required for a node graph to do its work. Specifically, it’s a data structure that _models_ some function. As a verb, to model something means to represent it or provide an example.
 
-The primary example of a model data file in ComfyUI is an AI **_diffusion model_**. This is a large set of data that represents the complex relationships among text strings and images, making it possible to translate words into pictures or vice versa. Other examples of common models used for image generation are multimodal vision and language models such as CLIP, and upscaling models such as RealESRGAN.
+The primary example of a model data file in Hanzo Studio is an AI **_diffusion model_**. This is a large set of data that represents the complex relationships among text strings and images, making it possible to translate words into pictures or vice versa. Other examples of common models used for image generation are multimodal vision and language models such as CLIP, and upscaling models such as RealESRGAN.
 
 ## Model files
 
-Model files are indispensable for generative media production. Without them, workflows cannot proceed effectively. Models are not included in the ComfyUI installation, but ComfyUI can often automatically download and install missing model files. Many models can be downloaded and installed from the **ComfyUI Manager** window. Models can also be found at websites such as [huggingface.co](https://huggingface.co), [civitai.green](https://civitai.green), and [github.com](https://github.com).
+Model files are indispensable for generative media production. Without them, workflows cannot proceed effectively. Models are not included in the Hanzo Studio installation, but Hanzo Studio can often automatically download and install missing model files. Many models can be downloaded and installed from the **Hanzo Manager** window. Models can also be found at websites such as [huggingface.co](https://huggingface.co), [civitai.green](https://civitai.green), and [github.com](https://github.com).
 
-### Using Models in ComfyUI
+### Using Models in Hanzo Studio
 
-1. Download and place them in the ComfyUI program directory
+1. Download and place them in the Hanzo Studio program directory
     1. Within the **models** folder, you'll find subfolders for various types of models, such as **checkpoints**
-    2. The **ComfyUI Manager** helps to automate the process of searching, downloading, and installing
-    3. Restart ComfyUI if it's running
+    2. The **Hanzo Manager** helps to automate the process of searching, downloading, and installing
+    3. Restart Hanzo Studio if it's running
 2. In your workflow, create the node appropriate to the model type, e.g. **Load Checkpoint**, **Load LoRA**, **Load VAE**
 3. In the loader node, choose the model you wish to use
 4. Connect the loader node to other nodes in your workflow
@@ -51,23 +51,23 @@ Model functionality can be extended with auxiliary models. For example, art dire
 
 ## Uninstalling models
 
-ComfyUI does not currently support uninstalling models through the frontend interface. If you want to remove or uninstall models, you need to manually delete the corresponding model files from the `ComfyUI/models/` directory on your system.
+Hanzo Studio does not currently support uninstalling models through the frontend interface. If you want to remove or uninstall models, you need to manually delete the corresponding model files from the `Hanzo Studio/models/` directory on your system.
 
 ## Common issues
 
 <AccordionGroup>
-  <Accordion title="Does ComfyUI support GGUF format models?">
-    ComfyUI does not natively support GGUF format models. To use GGUF models, you need to install community custom nodes such as [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF).
+  <Accordion title="Does Hanzo Studio support GGUF format models?">
+    Hanzo Studio does not natively support GGUF format models. To use GGUF models, you need to install community custom nodes such as [Hanzo Studio-GGUF](https://github.com/city96/Hanzo Studio-GGUF).
   </Accordion>
 
   <Accordion title="Why can't I find my model?">
-    If you've installed a model but can't find it in ComfyUI, try these steps:
+    If you've installed a model but can't find it in Hanzo Studio, try these steps:
     
     - Verify the model is in the correct location:
-      - For **ComfyUI Desktop**: Go to **Help** menu → **Open Folder** → **Open Model Folder** to check the model installation path
+      - For **Hanzo Desktop**: Go to **Help** menu → **Open Folder** → **Open Model Folder** to check the model installation path
       - Ensure your model file is placed in the correct subfolder (e.g., `checkpoints`, `loras`, `vae`)
-    - Press the `r` key to refresh node definitions so ComfyUI can detect the model
-    - Restart ComfyUI
+    - Press the `r` key to refresh node definitions so Hanzo Studio can detect the model
+    - Restart Hanzo Studio
     - Ensure the correct model is selected in the model loader node
   </Accordion>
 </AccordionGroup>

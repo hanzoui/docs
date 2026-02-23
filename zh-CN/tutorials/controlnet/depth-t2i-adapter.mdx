@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI Depth T2I Adapter 使用示例"
-description: "本篇将引导了解基础的 Depth T2I Adapter ，并在 ComfyUI 中完成对应的图像生成"
+title: "Hanzo Studio Depth T2I Adapter 使用示例"
+description: "本篇将引导了解基础的 Depth T2I Adapter ，并在 Hanzo Studio 中完成对应的图像生成"
 sidebarTitle: "Depth T2I Adapter"
 ---
 
@@ -28,9 +28,9 @@ T2I Adapter 提供多种类型以控制不同方面：
 - **分割 (Seg)**：通过语义分割控制场景布局
 - **颜色 (Color)**：控制图像的整体配色方案
 
-在 ComfyUI 中，使用 T2I Adapter 与 [ControlNet](/zh-CN/tutorials/controlnet/controlnet) 的界面和工作流相似。在本篇示例中，我们将以深度 T2I Adapter 控制室内场景为例，展示其使用方法。
+在 Hanzo Studio 中，使用 T2I Adapter 与 [ControlNet](/zh-CN/tutorials/controlnet/controlnet) 的界面和工作流相似。在本篇示例中，我们将以深度 T2I Adapter 控制室内场景为例，展示其使用方法。
 
-![ComfyUI Depth T2I Adapter 工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/controlnet/depth-t2i-adapter.png)
+![Hanzo Studio Depth T2I Adapter 工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/controlnet/depth-t2i-adapter.png)
 
 ## 深度 T2I Adapter 应用价值
 
@@ -43,22 +43,22 @@ T2I Adapter 提供多种类型以控制不同方面：
 
 我们将以室内设计为例，展示深度 T2I Adapter 的使用方法，但这些技巧也适用于其他应用场景。
 
-## ComfyUI Depth T2I Adapter工作流示例讲解
+## Hanzo Studio Depth T2I Adapter工作流示例讲解
 
 ### 1. Depth T2I Adapter 工作流素材
 
-请下载下面的工作流图片,并拖入 ComfyUI 以加载工作流
+请下载下面的工作流图片,并拖入 Hanzo Studio 以加载工作流
 
-![ComfyUI 工作流 - Depth T2I Adapter](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/controlnet/depth-t2i-adapter.png)
+![Hanzo Studio 工作流 - Depth T2I Adapter](https://raw.githubusercontent.com/hanzoui/example-workflows/main/controlnet/depth-t2i-adapter.png)
 
 <Tip>
-Metadata 中包含工作流 json 的图片可直接拖入 ComfyUI 或使用菜单 `Workflows` -> `Open（ctrl+o）` 来加载对应的工作流。
-该图片已包含对应模型的下载链接，直接拖入 ComfyUI 将会自动提示下载。
+Metadata 中包含工作流 json 的图片可直接拖入 Hanzo Studio 或使用菜单 `Workflows` -> `Open（ctrl+o）` 来加载对应的工作流。
+该图片已包含对应模型的下载链接，直接拖入 Hanzo Studio 将会自动提示下载。
 </Tip>
 
 请下载下面的图片，我们将会将它作为输入
 
-![ComfyUI 室内深度图](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/controlnet/depth-t2i-adapter_input.png)
+![Hanzo Studio 室内深度图](https://raw.githubusercontent.com/hanzoui/example-workflows/main/controlnet/depth-t2i-adapter_input.png)
 
 ### 2. 模型安装
 
@@ -70,7 +70,7 @@ Metadata 中包含工作流 json 的图片可直接拖入 ComfyUI 或使用菜�
 - [t2iadapter_depth_sd15v2.pth](https://huggingface.co/TencentARC/T2I-Adapter/resolve/main/models/t2iadapter_depth_sd15v2.pth?download=true)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├── models/
 │   ├── checkpoints/
 │   │   └── interiordesignsuperm_v2.safetensors
@@ -80,7 +80,7 @@ ComfyUI/
 
 ### 3. 按步骤完成工作流的运行
 
-![ComfyUI 工作流 - Depth T2I Adapter 流程图](/images/tutorial/controlnet/flow_diagram_depth_ti2_adapter.jpg)
+![Hanzo Studio 工作流 - Depth T2I Adapter 流程图](/images/tutorial/controlnet/flow_diagram_depth_ti2_adapter.jpg)
 
 1. 确保`Load Checkpoint`可以加载 **interiordesignsuperm_v2.safetensors**
 2. 确保`Load ControlNet`可以加载 **t2iadapter_depth_sd15v2.pth**

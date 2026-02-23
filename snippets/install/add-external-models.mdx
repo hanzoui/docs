@@ -1,8 +1,8 @@
 ## Adding Extra Model Paths
 
-If you want to manage your model files outside of `ComfyUI/models`, you may have the following reasons:
+If you want to manage your model files outside of `Hanzo Studio/models`, you may have the following reasons:
 
-- You have multiple ComfyUI instances and want them to share model files to save disk space
+- You have multiple Hanzo Studio instances and want them to share model files to save disk space
 - You have different types of GUI programs (such as WebUI) and want them to use the same model files
 - Model files cannot be recognized or found
 
@@ -12,17 +12,17 @@ We provide a way to add extra model search paths via the `extra_model_paths.yaml
 
 <Tabs>
   <Tab title="Portable/Manual Install">
-  For the ComfyUI version such as [portable](/installation/comfyui_portable_windows) and [manual](/installation/manual_install), you can find an example file named `extra_model_paths.yaml.example` in the root directory of ComfyUI:
+  For the Hanzo Studio version such as [portable](/installation/hanzo_studio_portable_windows) and [manual](/installation/manual_install), you can find an example file named `extra_model_paths.yaml.example` in the root directory of Hanzo Studio:
   ```
-  ComfyUI/extra_model_paths.yaml.example
+  Hanzo Studio/extra_model_paths.yaml.example
   ```
 
-  Copy and rename it to `extra_model_paths.yaml` for use. Keep it in ComfyUI's root directory at `ComfyUI/extra_model_paths.yaml`.
-  You can also find the config example file [here](https://github.com/comfyanonymous/ComfyUI/blob/master/extra_model_paths.yaml.example)
+  Copy and rename it to `extra_model_paths.yaml` for use. Keep it in Hanzo Studio's root directory at `Hanzo Studio/extra_model_paths.yaml`.
+  You can also find the config example file [here](https://github.com/hanzoai/studio/blob/master/extra_model_paths.yaml.example)
   
   </Tab>
-  <Tab title="ComfyUI Desktop">
-  If you are using the [ComfyUI Desktop](/installation/desktop/windows) application, you can follow the image below to open the extra model config file:
+  <Tab title="Hanzo Desktop">
+  If you are using the [Hanzo Desktop](/installation/desktop/windows) application, you can follow the image below to open the extra model config file:
 
   ![Open Config File](/images/desktop/extra_model_paths.jpg)
 
@@ -31,12 +31,12 @@ We provide a way to add extra model search paths via the `extra_model_paths.yaml
   <Tabs>
     <Tab title="Windows">
       ```
-      C:\Users\YourUsername\AppData\Roaming\ComfyUI\extra_models_config.yaml
+      C:\Users\YourUsername\AppData\Roaming\Hanzo Studio\extra_models_config.yaml
       ```
     </Tab>
     <Tab title="macOS">
       ```
-      ~/Library/Application Support/ComfyUI/extra_models_config.yaml
+      ~/Library/Application Support/Hanzo Studio/extra_models_config.yaml
       ```
     </Tab>
   </Tabs>
@@ -49,7 +49,7 @@ If the file does not exist, you can create it yourself with any text editor.
 
 ### Example Structure
 
-Suppose you want to add the following model paths to ComfyUI:
+Suppose you want to add the following model paths to Hanzo Studio:
 
 ```
 📁 YOUR_PATH/
@@ -64,7 +64,7 @@ Suppose you want to add the following model paths to ComfyUI:
   |       └── xxxxx.safetensors
 ```
 
-Then you can configure the `extra_model_paths.yaml` file like below to let ComfyUI recognize the model paths on your device:
+Then you can configure the `extra_model_paths.yaml` file like below to let Hanzo Studio recognize the model paths on your device:
 
 ```
 my_custom_config:
@@ -89,12 +89,12 @@ my_custom_config:
   For the desktop version, please add the configuration to the existing configuration path without overwriting the path configuration generated during installation. Please back up the corresponding file before modification, so that you can restore it when you make a mistake.
 </Warning>
 
-Or you can refer to the default [extra_model_paths.yaml.example](https://github.com/comfyanonymous/ComfyUI/blob/master/extra_model_paths.yaml.example) for more configuration options. After saving, you need to **restart ComfyUI** for the changes to take effect.
+Or you can refer to the default [extra_model_paths.yaml.example](https://github.com/hanzoai/studio/blob/master/extra_model_paths.yaml.example) for more configuration options. After saving, you need to **restart Hanzo Studio** for the changes to take effect.
 
 Below is the original config example:
 
 ```yaml
-#Rename this to extra_model_paths.yaml and ComfyUI will load it
+#Rename this to extra_model_paths.yaml and Hanzo Studio will load it
 
 
 #config for a1111 ui
@@ -165,13 +165,13 @@ a111:
 
 ### Add Extra Custom Nodes Path
 
-Besides adding external models, you can also add custom nodes paths that are not in the default path of ComfyUI
+Besides adding external models, you can also add custom nodes paths that are not in the default path of Hanzo Studio
 
 <Tip>
-  Please note that this will not change the default installation path of custom nodes, but will add an extra path search when starting ComfyUI. You still need to complete the installation of custom node dependencies in the corresponding environment to ensure the integrity of the running environment.
+  Please note that this will not change the default installation path of custom nodes, but will add an extra path search when starting Hanzo Studio. You still need to complete the installation of custom node dependencies in the corresponding environment to ensure the integrity of the running environment.
 </Tip>
 
-Below is a simple configuration example (MacOS), please modify it according to your actual situation and add it to the corresponding configuration file, save it and restart ComfyUI for the changes to take effect:
+Below is a simple configuration example (MacOS), please modify it according to your actual situation and add it to the corresponding configuration file, save it and restart Hanzo Studio for the changes to take effect:
 
 ```yaml
 my_custom_nodes:

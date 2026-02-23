@@ -13,7 +13,7 @@ openapi: "/openapi-cloud.yaml"
 This page provides the complete OpenAPI 3.0 specification for the Comfy Cloud API.
 
 <Note>
-  **Subscription Required:** Running workflows via the API requires an active Comfy Cloud subscription. See [pricing plans](https://www.comfy.org/cloud/pricing?utm_source=docs&utm_campaign=cloud-api) for details.
+  **Subscription Required:** Running workflows via the API requires an active Comfy Cloud subscription. See [pricing plans](https://hanzo.ai/cloud/pricing?utm_source=docs&utm_campaign=cloud-api) for details.
 </Note>
 
 ## Interactive API Reference
@@ -37,7 +37,7 @@ The OpenAPI spec can be used to:
 
 You can download the raw OpenAPI specification file:
 
-<Card title="openapi-cloud.yaml" icon="download" href="https://raw.githubusercontent.com/Comfy-Org/docs/main/openapi-cloud.yaml">
+<Card title="openapi-cloud.yaml" icon="download" href="https://raw.githubusercontent.com/hanzoui/docs/main/openapi-cloud.yaml">
   Download the OpenAPI 3.0 specification
 </Card>
 
@@ -59,14 +59,14 @@ X-API-Key: your-api-key
 
 | Environment | URL |
 |-------------|-----|
-| Production | `https://cloud.comfy.org` |
+| Production | `https://cloud.hanzo.ai` |
 
 ## WebSocket Connection
 
 For real-time updates, connect to the WebSocket endpoint:
 
 ```
-wss://cloud.comfy.org/ws?clientId={uuid}&token={api_key}
+wss://cloud.hanzo.ai/ws?clientId={uuid}&token={api_key}
 ```
 
 See the [API Reference](/development/cloud/api-reference#websocket-for-real-time-progress) for message types and handling.

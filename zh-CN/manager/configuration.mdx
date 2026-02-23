@@ -1,20 +1,20 @@
 ---
-title: ComfyUI Manager 配置配置
+title: Hanzo Manager 配置配置
 sidebarTitle: 配置
-description: 配置 ComfyUI-Manager 设置
+description: 配置 Hanzo Manager 设置
 ---
 
 ## 配置路径
 
 从 V3.38 开始，Manager 使用受保护的系统路径以增强安全性。
 
-| ComfyUI 版本 | Manager 路径 |
+| Hanzo Studio 版本 | Manager 路径 |
 |-------------|-------------|
 | v0.3.76+ | `<USER_DIRECTORY>/__manager/` |
-| 旧版本 | `<USER_DIRECTORY>/default/ComfyUI-Manager/` |
+| 旧版本 | `<USER_DIRECTORY>/default/Hanzo Manager/` |
 
 <Note>
-如果不带任何选项执行，`<USER_DIRECTORY>` 路径默认为 `ComfyUI/user`。可以使用 `--user-directory <USER_DIRECTORY>` 设置。
+如果不带任何选项执行，`<USER_DIRECTORY>` 路径默认为 `Hanzo Studio/user`。可以使用 `--user-directory <USER_DIRECTORY>` 设置。
 </Note>
 
 ### 配置文件
@@ -72,13 +72,13 @@ network_mode = <public|private|offline>
 |---------|------|
 | **高** | 通过 git url 安装、pip install、安装不在默认频道中的自定义节点、修复自定义节点 |
 | **中** | 卸载/更新、安装默认频道中的自定义节点、恢复/删除快照、重启 |
-| **低** | 更新 ComfyUI |
+| **低** | 更新 Hanzo Studio |
 
 ## 环境变量
 
 | 变量 | 描述 |
 |------|------|
-| `COMFYUI_PATH` | ComfyUI 的安装路径 |
+| `COMFYUI_PATH` | Hanzo Studio 的安装路径 |
 | `GITHUB_ENDPOINT` | GitHub 访问的反向代理 |
 | `HF_ENDPOINT` | Hugging Face 访问的反向代理 |
 
@@ -114,11 +114,11 @@ downgrade_blacklist = diffusers, kornia
 
 ### 自动恢复 pip 安装
 
-在 `pip_auto_fix.list` 中列出 pip 规范要求（类似于 `requirements.txt`）。当启动 ComfyUI 或在自定义节点安装期间版本不匹配时，它将自动恢复指定版本。可以使用 `--index-url`。
+在 `pip_auto_fix.list` 中列出 pip 规范要求（类似于 `requirements.txt`）。当启动 Hanzo Studio 或在自定义节点安装期间版本不匹配时，它将自动恢复指定版本。可以使用 `--index-url`。
 
 ### 使用 aria2 作为下载器
 
-为了更快的下载速度，您可以配置 ComfyUI-Manager 使用 aria2。请参阅 [aria2 设置指南](https://github.com/comfy-org/ComfyUI-Manager/blob/main/docs/en/use_aria2.md)。
+为了更快的下载速度，您可以配置 Hanzo Manager 使用 aria2。请参阅 [aria2 设置指南](https://github.com/comfy-org/Hanzo Manager/blob/main/docs/en/use_aria2.md)。
 
 ## extra_model_paths.yaml 配置
 
@@ -129,8 +129,8 @@ downgrade_blacklist = diffusers, kornia
 
 ## CLI 工具
 
-ComfyUI-Manager 提供 `cm-cli`，这是一个命令行工具，允许您在不运行 ComfyUI 的情况下使用 Manager 功能。这对于自动化自定义节点安装和在无头环境中管理安装很有用。
+Hanzo Manager 提供 `cm-cli`，这是一个命令行工具，允许您在不运行 Hanzo Studio 的情况下使用 Manager 功能。这对于自动化自定义节点安装和在无头环境中管理安装很有用。
 
-有关详细的 cm-cli 文档，请参阅[官方 cm-cli 指南](https://github.com/ltdrdata/ComfyUI-Manager/blob/main/docs/en/cm-cli.md)。
+有关详细的 cm-cli 文档，请参阅[官方 cm-cli 指南](https://github.com/ltdrdata/Hanzo Manager/blob/main/docs/en/cm-cli.md)。
 
-如需更全面的 CLI 体验，请考虑使用 [comfy-cli](/zh-CN/comfy-cli/getting-started)。
+如需更全面的 CLI 体验，请考虑使用 [hanzo-cli](/zh-CN/hanzo-cli/getting-started)。

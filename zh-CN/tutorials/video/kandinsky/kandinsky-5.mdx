@@ -1,6 +1,6 @@
 ---
 title: "Kandinsky 5.0"
-description: "本指南介绍如何在 ComfyUI 中使用 Kandinsky 5.0 视频生成工作流"
+description: "本指南介绍如何在 Hanzo Studio 中使用 Kandinsky 5.0 视频生成工作流"
 sidebarTitle: "Kandinsky 5.0"
 ---
 
@@ -39,17 +39,17 @@ Kandinsky 5.0 使用带有 Flow Matching 的潜在扩散管道，具有以下特
 
 ### 1. 下载工作流文件
 
-请更新你的 ComfyUI 到最新版本，并通过菜单 `工作流` -> `浏览模板` -> `视频` 找到 "Kandinsky 5.0 T2V" 以加载工作流。
+请更新你的 Hanzo Studio 到最新版本，并通过菜单 `工作流` -> `浏览模板` -> `视频` 找到 "Kandinsky 5.0 T2V" 以加载工作流。
 
-<a className="prose" target='_blank' href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_kandinsky5_t2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose" target='_blank' href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_kandinsky5_t2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
 ### 2. 手动下载模型
 
 **Text Encoders**
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
-- [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [clip_l.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/clip_l.safetensors)
 
 **Diffusion Model**
 - [kandinsky5lite_t2v_sft_5s.safetensors](https://huggingface.co/kandinskylab/Kandinsky-5.0-T2V-Lite-sft-5s/resolve/main/model/kandinsky5lite_t2v_sft_5s.safetensors)
@@ -58,7 +58,7 @@ Kandinsky 5.0 使用带有 Flow Matching 的潜在扩散管道，具有以下特
 - [hunyuan_video_vae_bf16.safetensors](https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      ├── qwen_2.5_vl_7b_fp8_scaled.safetensors
@@ -73,17 +73,17 @@ ComfyUI/
 
 ### 1. 下载工作流文件
 
-请更新你的 ComfyUI 到最新版本，并通过菜单 `工作流` -> `浏览模板` -> `视频` 找到 "Kandinsky 5.0 I2V" 以加载工作流。
+请更新你的 Hanzo Studio 到最新版本，并通过菜单 `工作流` -> `浏览模板` -> `视频` 找到 "Kandinsky 5.0 I2V" 以加载工作流。
 
-<a className="prose" target='_blank' href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_kandinsky5_i2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose" target='_blank' href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/video_kandinsky5_i2v.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
 ### 2. 手动下载模型
 
 **Text Encoders**
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
-- [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [clip_l.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/clip_l.safetensors)
 
 **Diffusion Model**
 - [kandinsky5lite_i2v_5s.safetensors](https://huggingface.co/kandinskylab/Kandinsky-5.0-I2V-Lite-5s/resolve/main/model/kandinsky5lite_i2v_5s.safetensors)
@@ -92,7 +92,7 @@ ComfyUI/
 - [hunyuan_video_vae_bf16.safetensors](https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors)
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      ├── qwen_2.5_vl_7b_fp8_scaled.safetensors
@@ -107,5 +107,5 @@ ComfyUI/
 
 - [HuggingFace 模型合集](https://huggingface.co/collections/kandinskylab/kandinsky-50-video-lite)
 - [GitHub 仓库](https://github.com/ai-forever/Kandinsky-5)
-- [ComfyUI 集成](https://github.com/ai-forever/Kandinsky-5/blob/main/comfyui/README.md)
+- [Hanzo Studio 集成](https://github.com/ai-forever/Kandinsky-5/blob/main/comfyui/README.md)
 - [项目主页](https://ai-forever.github.io/Kandinsky-5/)

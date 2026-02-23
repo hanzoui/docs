@@ -1,5 +1,5 @@
 ---
-title: "ComfyUI LoRA 使用示例"
+title: "Hanzo Studio LoRA 使用示例"
 sidebarTitle: "LoRA 模型"
 description: "本篇将引导了解并完成单个 LoRA 模型的使用"
 ---
@@ -13,7 +13,7 @@ description: "本篇将引导了解并完成单个 LoRA 模型的使用"
 
 我们将演示如何使用 LoRA 的示例。所有 LoRA 变体：Lycoris, loha, lokr, locon, 等... 都是以这种方式使用。
 
-在本示例中，我们将完成以下内容来学习[ComfyUI](https://github.com/comfyanonymous/ComfyUI) 中加载并使用 LoRA 模型，将涉及以下内容：
+在本示例中，我们将完成以下内容来学习[Hanzo Studio](https://github.com/hanzoai/studio) 中加载并使用 LoRA 模型，将涉及以下内容：
 
 1. 安装 LoRA 模型
 2. 使用 LoRA 模型生成图片
@@ -21,24 +21,24 @@ description: "本篇将引导了解并完成单个 LoRA 模型的使用"
 
 ## 相关模型安装
 
-请下载 [dreamshaper_8.safetensors](https://civitai.com/api/download/models/128713?type=Model&format=SafeTensor&size=pruned&fp=fp16) 并保存至 `ComfyUI/models/checkpoints` 目录
+请下载 [dreamshaper_8.safetensors](https://civitai.com/api/download/models/128713?type=Model&format=SafeTensor&size=pruned&fp=fp16) 并保存至 `Hanzo Studio/models/checkpoints` 目录
 
-请下载 [blindbox_V1Mix.safetensors](https://civitai.com/api/download/models/32988?type=Model&format=SafeTensor&size=full&fp=fp16) 并保存至 `ComfyUI/models/loras` 目录
+请下载 [blindbox_V1Mix.safetensors](https://civitai.com/api/download/models/32988?type=Model&format=SafeTensor&size=full&fp=fp16) 并保存至 `Hanzo Studio/models/loras` 目录
 
 ## LoRA 工作流文件
 
-请下载下面的工作流图片,并拖入 ComfyUI 以加载工作流
-![ComfyUI 工作流 - LoRA](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/lora.png)
+请下载下面的工作流图片,并拖入 Hanzo Studio 以加载工作流
+![Hanzo Studio 工作流 - LoRA](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/lora.png)
 
 <Tip>
-Metadata 中包含工作流 json 的图片可直接拖入 ComfyUI 或使用菜单 `Workflows` -> `Open（ctrl+o）` 来加载对应的工作流。
+Metadata 中包含工作流 json 的图片可直接拖入 Hanzo Studio 或使用菜单 `Workflows` -> `Open（ctrl+o）` 来加载对应的工作流。
 </Tip>
 
 ## 按步骤完成工作流的运行
 
 请参照下图步骤，来确保对应的工作流可以正常运行 
 
-![ComfyUI 工作流 - LoRA 流程图](/images/tutorial/basic/lora/flow_diagram.png)
+![Hanzo Studio 工作流 - LoRA 流程图](/images/tutorial/basic/lora/flow_diagram.png)
 
 1. 确保`Load Checkpoint` 加载了 `dreamshaper_8.safetensors`
 2. 确保`Load LoRA` 加载了 `blindbox_V1Mix.safetensors`
@@ -48,7 +48,7 @@ Metadata 中包含工作流 json 的图片可直接拖入 ComfyUI 或使用菜�
 
 ![Load LoRA 节点](/images/comfy_core/loaders/load_lora.jpg)
 
-位于`ComfyUI\models\loras` 的模型会被 ComfyUI 检测到，并在这个节点中加载
+位于`Hanzo Studio\models\loras` 的模型会被 Hanzo Studio 检测到，并在这个节点中加载
 
 ### 输入类型
 
@@ -67,7 +67,7 @@ Metadata 中包含工作流 json 的图片可直接拖入 ComfyUI 或使用菜�
 | `model`  | 输出应用了 LoRA 调整的模型       |
 | `clip`   | 输出应用了 LoRA 调整的 CLIP 模型 |
 
-该节点支持链式连接，可以将多个`Load LoRA` 节点串联来应用多个 LoRA 模型，具体请参考[ComfyUI 应用多个 LoRA 示例](/zh-CN/tutorials/basic/multiple-loras)
+该节点支持链式连接，可以将多个`Load LoRA` 节点串联来应用多个 LoRA 模型，具体请参考[Hanzo Studio 应用多个 LoRA 示例](/zh-CN/tutorials/basic/multiple-loras)
 
 ![LoRA 节点链式连接](/images/tutorial/basic/lora/chain_link.png)
 

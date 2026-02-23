@@ -7,16 +7,16 @@ info:
     Endpoints, request/response formats, and behavior may be modified without notice.
     </Warning>
 
-    API for Comfy Cloud - Run ComfyUI workflows on cloud infrastructure.
+    API for Comfy Cloud - Run Hanzo Studio workflows on cloud infrastructure.
 
     This API allows you to interact with Comfy Cloud programmatically, including:
     - Submitting and managing workflows
     - Uploading and downloading files
     - Monitoring job status and progress
 
-    ## Cloud vs OSS ComfyUI Compatibility
+    ## Cloud vs OSS Hanzo Studio Compatibility
 
-    Comfy Cloud implements the same API interfaces as OSS ComfyUI for maximum compatibility,
+    Comfy Cloud implements the same API interfaces as OSS Hanzo Studio for maximum compatibility,
     but some fields are accepted for compatibility while being handled differently or ignored:
 
     | Field | Endpoints | Cloud Behavior |
@@ -27,14 +27,14 @@ info:
     | `number`, `front` | `/api/prompt` | **Ignored** - Cloud uses its own fair queue scheduling per user. |
     | `split`, `full_info` | `/api/userdata` | **Ignored** - Cloud always returns full file metadata. |
 
-    These fields are retained in the API schema for drop-in compatibility with existing ComfyUI clients and workflows.
+    These fields are retained in the API schema for drop-in compatibility with existing Hanzo Studio clients and workflows.
   version: 1.0.0
   license:
     name: GNU General Public License v3.0
-    url: https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE
+    url: https://github.com/hanzoai/studio/blob/master/LICENSE
 
 servers:
-  - url: https://cloud.comfy.org
+  - url: https://cloud.hanzo.ai
     description: Comfy Cloud API
 
 # All endpoints require API key authentication unless marked with security: []
@@ -45,7 +45,7 @@ tags:
   - name: workflow
     description: |
       Submit workflows for execution and manage the execution queue.
-      This is the primary way to run ComfyUI workflows on the cloud.
+      This is the primary way to run Hanzo Studio workflows on the cloud.
   - name: job
     description: |
       Monitor job status, view execution history, and manage running jobs.
@@ -56,14 +56,14 @@ tags:
       Assets provide durable storage with tagging and metadata support.
   - name: file
     description: |
-      Legacy file upload and download endpoints compatible with local ComfyUI.
+      Legacy file upload and download endpoints compatible with local Hanzo Studio.
       For new integrations, consider using the Assets API instead.
   - name: model
     description: |
       Browse available AI models. Models are pre-loaded on cloud infrastructure.
   - name: node
     description: |
-      Get information about available ComfyUI nodes and their inputs/outputs.
+      Get information about available Hanzo Studio nodes and their inputs/outputs.
       Useful for building dynamic workflow interfaces.
   - name: user
     description: |
@@ -673,7 +673,7 @@ paths:
         - file
       summary: View a file
       description: |
-        Retrieve and view a file from the ComfyUI file system.
+        Retrieve and view a file from the Hanzo Studio file system.
         This endpoint is typically used to view generated images or other output files.
       operationId: viewFile
       parameters:
@@ -683,13 +683,13 @@ paths:
           description: Name of the file to view
           schema:
             type: string
-            example: "ComfyUI_00004_.png"
+            example: "Hanzo Studio_00004_.png"
         - name: subfolder
           in: query
           required: false
           description: |
             Subfolder path where the file is located.
-            **Note:** Accepted for ComfyUI API compatibility but **ignored** in cloud.
+            **Note:** Accepted for Hanzo Studio API compatibility but **ignored** in cloud.
             Cloud uses content-addressed storage where assets are stored by hash only.
             The subfolder is client-side UI metadata and not used for storage lookup.
           schema:
@@ -1855,7 +1855,7 @@ paths:
           required: false
           description: |
             Whether to split file information by type.
-            **Note:** Accepted for ComfyUI API compatibility but currently ignored.
+            **Note:** Accepted for Hanzo Studio API compatibility but currently ignored.
           schema:
             type: boolean
             default: false
@@ -1864,7 +1864,7 @@ paths:
           required: false
           description: |
             Whether to return full file metadata.
-            **Note:** Accepted for ComfyUI API compatibility but currently ignored (always returns full info).
+            **Note:** Accepted for Hanzo Studio API compatibility but currently ignored (always returns full info).
           schema:
             type: boolean
             default: false
@@ -2082,21 +2082,21 @@ paths:
                   type: string
                   description: |
                     Whether to overwrite existing file (true/false).
-                    **Note:** Accepted for ComfyUI API compatibility but effectively ignored in cloud.
+                    **Note:** Accepted for Hanzo Studio API compatibility but effectively ignored in cloud.
                     Cloud uses content-addressed storage (hash-based deduplication), so identical
                     content always maps to the same hash. Re-uploading the same content is a no-op.
                 subfolder:
                   type: string
                   description: |
                     Optional subfolder path.
-                    **Note:** Accepted for ComfyUI API compatibility but **ignored** for storage.
+                    **Note:** Accepted for Hanzo Studio API compatibility but **ignored** for storage.
                     Cloud stores assets by hash only. The subfolder is returned in the response
                     for client-side organization but is not used for server-side storage paths.
                 type:
                   type: string
                   description: |
                     Upload type (defaults to "output").
-                    **Note:** Accepted for ComfyUI API compatibility. Cloud stores all uploads
+                    **Note:** Accepted for Hanzo Studio API compatibility. Cloud stores all uploads
                     as assets with tags rather than directory-based organization.
       responses:
         '200':
@@ -2225,7 +2225,7 @@ paths:
       tags:
         - system
       summary: Get system statistics
-      description: Returns system statistics including ComfyUI version, device info, and system resources
+      description: Returns system statistics including Hanzo Studio version, device info, and system resources
       operationId: getSystemStats
       security: []  # Public endpoint
       responses:
@@ -2318,7 +2318,7 @@ components:
       name: X-API-Key
       description: |
         API key authentication. Generate an API key from your account settings
-        at https://platform.comfy.org/profile/api-keys. Pass the key in the X-API-Key header.
+        at https://platform.hanzo.ai/profile/api-keys. Pass the key in the X-API-Key header.
   schemas:
     PromptRequest:
       type: object
@@ -2333,13 +2333,13 @@ components:
           type: number
           description: |
             Priority number for the queue (lower numbers have higher priority).
-            **Note:** Accepted for ComfyUI API compatibility but **ignored** in cloud.
+            **Note:** Accepted for Hanzo Studio API compatibility but **ignored** in cloud.
             Cloud uses its own queue management with per-user ordering and fair scheduling.
         front:
           type: boolean
           description: |
             If true, adds the prompt to the front of the queue.
-            **Note:** Accepted for ComfyUI API compatibility but **ignored** in cloud.
+            **Note:** Accepted for Hanzo Studio API compatibility but **ignored** in cloud.
             Cloud manages queue ordering internally based on job submission time and fair scheduling.
         extra_data:
           type: object
@@ -2633,7 +2633,7 @@ components:
         Queue item tuple format: [job_number, prompt_id, workflow_json, output_node_ids, metadata]
         - [0] job_number (integer): Position in queue (1-based)
         - [1] prompt_id (string): Job UUID
-        - [2] workflow_json (object): Full ComfyUI workflow
+        - [2] workflow_json (object): Full Hanzo Studio workflow
         - [3] output_node_ids (array): Node IDs to return results from
         - [4] metadata (object): Contains {create_time: <milliseconds>}
       items:
@@ -2764,7 +2764,7 @@ components:
           description: UNIX timestamp of the last modification.
     PromptErrorResponse:
       type: object
-      description: Error response for ComfyUI prompt execution.
+      description: Error response for Hanzo Studio prompt execution.
       additionalProperties: true
 
     ModelFolder:
@@ -2814,7 +2814,7 @@ components:
             - os
             - python_version
             - embedded_python
-            - comfyui_version
+            - hanzo_studio_version
             - pytorch_version
             - argv
             - ram_total
@@ -2829,12 +2829,12 @@ components:
             embedded_python:
               type: boolean
               description: Whether using embedded Python
-            comfyui_version:
+            hanzo_studio_version:
               type: string
-              description: ComfyUI version
-            comfyui_frontend_version:
+              description: Hanzo Studio version
+            hanzo_studio_frontend_version:
               type: string
-              description: ComfyUI frontend version (commit hash or tag)
+              description: Hanzo Studio frontend version (commit hash or tag)
             workflow_templates_version:
               type: string
               description: Workflow templates version
@@ -3222,7 +3222,7 @@ components:
           description: User-friendly job status
         execution_error:
           $ref: '#/components/schemas/ExecutionError'
-          description: Detailed execution error from ComfyUI (only for failed jobs with structured error data)
+          description: Detailed execution error from Hanzo Studio (only for failed jobs with structured error data)
         create_time:
           type: integer
           format: int64
@@ -3265,11 +3265,11 @@ components:
           description: User-friendly job status
         workflow:
           type: object
-          description: Full ComfyUI workflow (10-100KB, omitted if not available)
+          description: Full Hanzo Studio workflow (10-100KB, omitted if not available)
           additionalProperties: true
         execution_error:
           $ref: '#/components/schemas/ExecutionError'
-          description: Detailed execution error from ComfyUI (only for failed jobs with structured error data)
+          description: Detailed execution error from Hanzo Studio (only for failed jobs with structured error data)
         create_time:
           type: integer
           format: int64
@@ -3280,7 +3280,7 @@ components:
           description: Last update timestamp (Unix timestamp in seconds)
         outputs:
           type: object
-          description: Full outputs object from ComfyUI (only for terminal states)
+          description: Full outputs object from Hanzo Studio (only for terminal states)
           additionalProperties: true
         preview_output:
           type: object
@@ -3294,7 +3294,7 @@ components:
           description: UUID identifying the workflow graph definition
         execution_status:
           type: object
-          description: ComfyUI execution status and timeline (only for terminal states)
+          description: Hanzo Studio execution status and timeline (only for terminal states)
           additionalProperties: true
         execution_meta:
           type: object
@@ -3303,7 +3303,7 @@ components:
 
     ExecutionError:
       type: object
-      description: Detailed execution error information from ComfyUI
+      description: Detailed execution error information from Hanzo Studio
       required:
         - node_id
         - node_type
@@ -3387,7 +3387,7 @@ components:
     WebSocketMessageType:
       type: string
       description: |
-        Type of WebSocket message. These match ComfyUI's native message types.
+        Type of WebSocket message. These match Hanzo Studio's native message types.
       enum:
         - status
         - execution_start

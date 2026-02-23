@@ -1,6 +1,6 @@
 ---
-title: "Stability AI Stable Audio 2.5 合作伙伴节点 ComfyUI 官方工作流示例"
-description: "本文将介绍如何在 ComfyUI 中使用 Stability AI Stable Audio 2.5 合作伙伴节点的文本转音频、音频转音频和音频修复功能"
+title: "Stability AI Stable Audio 2.5 合作伙伴节点 Hanzo Studio 官方工作流示例"
+description: "本文将介绍如何在 Hanzo Studio 中使用 Stability AI Stable Audio 2.5 合作伙伴节点的文本转音频、音频转音频和音频修复功能"
 sidebarTitle: "Stable Audio 2.5"
 ---
 
@@ -20,24 +20,24 @@ Stable Audio 2.5 完全基于授权音频训练，商业安全，非常适合需
 
 对于文本转音频，你可以通过文本提示生成音频。你需要描述想要生成的音乐。
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/api_stability_ai_text_to_audio.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/api_stability_ai_text_to_audio.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 工作流</p>
 </a>
 ![workflow](/images/tutorial/api_nodes/stability_ai/api_stability_ai_text_to_audio.jpg)
 
 1. 修改文本提示。你应该使用关键词来描述想要生成的音乐。
 2. （可选）修改 `duration` 参数。默认为 `190`。
-3. 点击 `Run` 按钮或使用快捷键 `Ctrl(cmd) + Enter` 来执行音频生成。音频将保存到 `ComfyUI/output/audio` 目录。
+3. 点击 `Run` 按钮或使用快捷键 `Ctrl(cmd) + Enter` 来执行音频生成。音频将保存到 `Hanzo Studio/output/audio` 目录。
 
 ## 音频转音频工作流
 
 音频转音频基本上是音乐重采样。你可以使用它从给定的音乐片段生成新音乐，或者你可以哼唱一段旋律，然后模型将基于输入音频生成新音乐。
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/api_stability_ai_audio_to_audio.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/api_stability_ai_audio_to_audio.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/stability_ai/stable_audio/beatbox.mp3" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/stability_ai/stable_audio/beatbox.mp3" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载输入音频</p>
 </a>
 
@@ -48,7 +48,7 @@ Stable Audio 2.5 完全基于授权音频训练，商业安全，非常适合需
    - 1.2 `LoadAudio` 节点：你可以使用它上传要在此工作流中使用的音频。
 2. 修改文本提示。你应该使用关键词来描述想要生成的音乐。
 3. `strength` 参数用于控制与原始音频的差异。值越低，生成的音频与原始音频越相似。
-4. 点击 `Run` 按钮或使用快捷键 `Ctrl(cmd) + Enter` 来执行音频生成。音频将保存到 `ComfyUI/output/audio` 目录。
+4. 点击 `Run` 按钮或使用快捷键 `Ctrl(cmd) + Enter` 来执行音频生成。音频将保存到 `Hanzo Studio/output/audio` 目录。
 
 ## 音频修复工作流
 
@@ -56,11 +56,11 @@ Stable Audio 2.5 完全基于授权音频训练，商业安全，非常适合需
 
 你需要设置想要开始和结束修复的位置。
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/api_stability_ai_audio_inpaint.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/api_stability_ai_audio_inpaint.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/stability_ai/stable_audio/audio_input.wav" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/stability_ai/stable_audio/audio_input.wav" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载输入音频</p>
 </a>
 ![workflow](/images/tutorial/api_nodes/stability_ai/api_stability_ai_audio_inpaint.jpg)
@@ -69,4 +69,4 @@ Stable Audio 2.5 完全基于授权音频训练，商业安全，非常适合需
 2. 修改文本提示。你应该使用关键词来描述想要生成的音乐。
 3. （可选）修改 `duration` 参数。默认为 `190`。
 4. （重要）修改 `mask_start` 和 `mask_end` 参数。你需要设置想要开始和结束修复的位置。
-5. 点击 `Run` 按钮或使用快捷键 `Ctrl(cmd) + Enter` 来执行音频生成。音频将保存到 `ComfyUI/output/audio` 目录。
+5. 点击 `Run` 按钮或使用快捷键 `Ctrl(cmd) + Enter` 来执行音频生成。音频将保存到 `Hanzo Studio/output/audio` 目录。

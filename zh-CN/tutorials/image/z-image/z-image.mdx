@@ -1,5 +1,5 @@
 ---
-title: "Z-Image ComfyUI 工作流示例"
+title: "Z-Image Hanzo Studio 工作流示例"
 description: "Z-Image 是一个拥有 6B 参数的高效图像生成基础模型，采用单流扩散变换器架构，适用于社区驱动的微调和自定义开发。"
 sidebarTitle: "Z-Image"
 ---
@@ -24,11 +24,11 @@ Z-Image（Base）是非蒸馏基础模型，专为社区驱动的微调和自定
 ## Z-Image 文生图工作流
 
 <CardGroup cols={2}>
-  <Card title="下载工作流" icon="download" href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_z_image.json">
+  <Card title="下载工作流" icon="download" href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_z_image.json">
     下载 Z-Image 文生图工作流 JSON 文件。
   </Card>
-  <Card title="在 ComfyUI Cloud 上运行" icon="cloud" href="https://cloud.comfy.org/?template=image_z_image&utm_source=docs&utm_medium=inhouse_social&utm_campaign=z_image_launch">
-    在 ComfyUI Cloud 上直接运行此工作流。
+  <Card title="在 Hanzo Studio Cloud 上运行" icon="cloud" href="https://cloud.hanzo.ai/?template=image_z_image&utm_source=docs&utm_medium=inhouse_social&utm_campaign=z_image_launch">
+    在 Hanzo Studio Cloud 上直接运行此工作流。
   </Card>
 </CardGroup>
 
@@ -37,13 +37,13 @@ Z-Image（Base）是非蒸馏基础模型，专为社区驱动的微调和自定
 ## Z-Image 模型下载
 
 <CardGroup cols={2}>
-  <Card title="qwen_3_4b.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors">
+  <Card title="qwen_3_4b.safetensors" icon="download" href="https://huggingface.co/hanzoui/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors">
     Z-Image 文本编码器。
   </Card>
-  <Card title="z_image_bf16.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/z_image/resolve/main/split_files/diffusion_models/z_image_bf16.safetensors">
+  <Card title="z_image_bf16.safetensors" icon="download" href="https://huggingface.co/hanzoui/z_image/resolve/main/split_files/diffusion_models/z_image_bf16.safetensors">
     Z-Image 扩散模型。
   </Card>
-  <Card title="ae.safetensors" icon="download" href="https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors">
+  <Card title="ae.safetensors" icon="download" href="https://huggingface.co/hanzoui/z_image_turbo/resolve/main/split_files/vae/ae.safetensors">
     Z-Image VAE。
   </Card>
 </CardGroup>
@@ -51,7 +51,7 @@ Z-Image（Base）是非蒸馏基础模型，专为社区驱动的微调和自定
 **模型存储位置**
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── qwen_3_4b.safetensors

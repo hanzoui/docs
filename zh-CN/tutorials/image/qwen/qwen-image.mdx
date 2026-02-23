@@ -1,5 +1,5 @@
 ---
-title: "Qwen-Image ComfyUI原生工作流示例"
+title: "Qwen-Image Hanzo Studio原生工作流示例"
 description: "Qwen-Image 是一个拥有 20B 参数的 MMDiT（多模态扩散变换器）模型，基于 Apache 2.0 许可证开源。"
 sidebarTitle: "Qwen-Image"
 ---
@@ -19,29 +19,29 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
  - [ModelScope](https://modelscope.cn/models/qwen/Qwen-Image)
 
  另外目前 Qwen-Image 有多种 ControlNet 支持
-- [Qwen-Image-DiffSynth-ControlNets/model_patches](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/tree/main/split_files/model_patches): 包括 canny、depth、inpaint 三个模型
-- [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、pose、lineart、softedge、normal、openpose
+- [Qwen-Image-DiffSynth-ControlNets/model_patches](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/tree/main/split_files/model_patches): 包括 canny、depth、inpaint 三个模型
+- [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、pose、lineart、softedge、normal、openpose
 - instanX ControlNet: 待更新
 
 ## ComfyOrg Qwen-Image live stream
 
-**Qwen-Image in ComfyUI - Lightning & LoRAs**
+**Qwen-Image in Hanzo Studio - Lightning & LoRAs**
 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/WBFHwrpYRtY?si=uREGRhBDryTJBIry"
-  title="Qwen-Image in ComfyUI - Lightning & LoRAs / August 15th, 2025"
+  title="Qwen-Image in Hanzo Studio - Lightning & LoRAs / August 15th, 2025"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
 
 
-**Qwen-Image ControlNet in ComfyUI - DiffSynth**
+**Qwen-Image ControlNet in Hanzo Studio - DiffSynth**
 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/bXMClHfEFn4?si=dcaNdqOMSwvu3t8x"
-  title="Qwen-Image ControlNet in ComfyUI - DiffSynth / August 26th, 2025"
+  title="Qwen-Image ControlNet in Hanzo Studio - DiffSynth / August 26th, 2025"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -51,7 +51,7 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 <UpdateReminder />
 
-<a href="https://cloud.comfy.org/?template=image_qwen_image&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
+<a href="https://cloud.hanzo.ai/?template=image_qwen_image&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
     在 Comfy Cloud 上运行
 </a>
 
@@ -71,15 +71,15 @@ GPU: RTX4090D 24GB
 
 ### 1. 工作流文件
 
-更新 ComfyUI 后你可以从模板中找到工作流文件，或者将下面的工作流拖入 ComfyUI 中加载
-![Qwen-image 文生图工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/image/qwen/qwen-image.png)
+更新 Hanzo Studio 后你可以从模板中找到工作流文件，或者将下面的工作流拖入 Hanzo Studio 中加载
+![Qwen-image 文生图工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/image/qwen/qwen-image.png)
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_qwen_image.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载原始版 JSON 格式工作流</p>
 </a>
 
 蒸馏版
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/image/qwen/image_qwen_image_distill.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/example-workflows/main/image/qwen/image_qwen_image_distill.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载蒸馏版JSON 格式工作流</p>
 </a>
 ### 2. 模型下载
@@ -90,16 +90,16 @@ GPU: RTX4090D 24GB
 - 蒸馏版本 (非官方，仅需 15 步)
 
 
-所有模型均可在 [Huggingface](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main) 或者 [魔搭](https://modelscope.cn/models/Comfy-Org/Qwen-Image_ComfyUI/files) 找到
+所有模型均可在 [Huggingface](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/tree/main) 或者 [魔搭](https://modelscope.cn/models/hanzoui/Qwen-Image_Hanzo Studio/files) 找到
 
 **Diffusion model**
 
-- [qwen_image_fp8_e4m3fn.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors)
+- [qwen_image_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors)
 
 Qwen_image_distill
 
-- [qwen_image_distill_full_fp8_e4m3fn.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors)
-- [qwen_image_distill_full_bf16.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/non_official/diffusion_models/qwen_image_distill_full_bf16.safetensors)
+- [qwen_image_distill_full_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors)
+- [qwen_image_distill_full_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/non_official/diffusion_models/qwen_image_distill_full_bf16.safetensors)
 
 <Note>
  - 蒸馏版本原始作者建议在 15 步 cfg 1.0
@@ -112,16 +112,16 @@ Qwen_image_distill
 
 **Text encoder**
 
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
 
 **VAE**
 
-- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors)
+- [qwen_image_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image_Hanzo Studio/resolve/main/split_files/vae/qwen_image_vae.safetensors)
 
 模型保存位置
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   ├── qwen_image_fp8_e4m3fn.safetensors
@@ -155,32 +155,32 @@ Qwen_image_distill
 
 这是一个 ControlNet 模型
 
-<a href="https://cloud.comfy.org/?template=image_qwen_image_instantx_controlnet&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
+<a href="https://cloud.hanzo.ai/?template=image_qwen_image_instantx_controlnet&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
     在 Comfy Cloud 上运行
 </a>
 
 ### 1. 工作流及输入图片
 
-下载下面的图片并拖入 ComfyUI 以加载工作流
-![workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-instantx-controlnet/image_qwen_image_instantx_controlnet.png)
+下载下面的图片并拖入 Hanzo Studio 以加载工作流
+![workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-instantx-controlnet/image_qwen_image_instantx_controlnet.png)
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image_instantx_controlnet.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_qwen_image_instantx_controlnet.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
 下载下面的图片作为输入
-![input](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-instantx-controlnet/input.jpg)
+![input](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-instantx-controlnet/input.jpg)
 
 ### 2. 模型链接
 
 1. InstantX Controlnet
 
-下载 [Qwen-Image-InstantX-ControlNet-Union.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors) 并保存到 `ComfyUI/models/controlnet/` 文件夹下
+下载 [Qwen-Image-InstantX-ControlNet-Union.safetensors](https://huggingface.co/hanzoui/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors) 并保存到 `Hanzo Studio/models/controlnet/` 文件夹下
 
 2. **Lotus Depth model**
 
 <Note>
-    你也可以使用类似 [comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux) 等自定义节点来完成各种类型图像的预处理
+    你也可以使用类似 [hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux) 等自定义节点来完成各种类型图像的预处理
 </Note>
 
 **Lotus Depth 模型**
@@ -189,14 +189,14 @@ Qwen_image_distill
 
 **Diffusion Model**
 
-- [lotus-depth-d-v1-1.safetensors](https://huggingface.co/Comfy-Org/lotus/resolve/main/lotus-depth-d-v1-1.safetensors) 
+- [lotus-depth-d-v1-1.safetensors](https://huggingface.co/hanzoui/lotus/resolve/main/lotus-depth-d-v1-1.safetensors) 
 
 **VAE Model**
 
 - [vae-ft-mse-840000-ema-pruned.safetensors](https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors)  或者任意的 SD1.5 的 VAE 都可以使用
 
 ```
-ComfyUI/
+Hanzo Studio/
 ├── models/
 │   ├── diffusion_models/
 │   │   └─── lotus-depth-d-v1-1.safetensors
@@ -210,41 +210,41 @@ ComfyUI/
 
 1. 确保 `Load ControlNet Model` 节点正确加载了 `Qwen-Image-InstantX-ControlNet-Union.safetensors`  模型
 2. 上传输入图像
-3. 这里是一个子图，这里是 ComfyUI 支持的 lotus Depth 模型，你可以在模板中找到 Lotus Depth 或者编辑对应子图了解对应工作流，请确保所有模型都正确加载
+3. 这里是一个子图，这里是 Hanzo Studio 支持的 lotus Depth 模型，你可以在模板中找到 Lotus Depth 或者编辑对应子图了解对应工作流，请确保所有模型都正确加载
 4. 点击 `Run` 按钮，或者使用快捷键 `Ctrl(cmd) + Enter(回车)` 来运行工作流
 
 ## Qwen Image ControlNet DiffSynth-ControlNets Model Patches 工作流
 
-<a href="https://cloud.comfy.org/?template=image_qwen_image_controlnet_patch&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
+<a href="https://cloud.hanzo.ai/?template=image_qwen_image_controlnet_patch&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
     在 Comfy Cloud 上运行
 </a>
 
 这个模型实际上并不是一个 controlnet，而是一个 Model patch， 支持 canny、depth、inpaint 三种不同的控制模式
 
 原始模型地址：[DiffSynth-Studio/Qwen-Image ControlNet](https://www.modelscope.cn/collections/Qwen-Image-ControlNet-6157b44e89d444) 
-Comfy Org rehost 地址： [Qwen-Image-DiffSynth-ControlNets/model_patches](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/tree/main/split_files/model_patches)
+Comfy Org rehost 地址： [Qwen-Image-DiffSynth-ControlNets/model_patches](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/tree/main/split_files/model_patches)
 
 
 ### 1. 工作流及输入图片
 
-下载下面的图片拖入 ComfyUI 中以加载对应的工作流
-![workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-controlnet-model-patch/image_qwen_image_controlnet_patch.png)
+下载下面的图片拖入 Hanzo Studio 中以加载对应的工作流
+![workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-controlnet-model-patch/image_qwen_image_controlnet_patch.png)
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image_controlnet_patch.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_qwen_image_controlnet_patch.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
 下载下面的图片作为输入图片：
 
-![input](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-controlnet-model-patch/input.png)
+![input](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-controlnet-model-patch/input.png)
 
 ### 2. 模型链接
 
-其它模型与 Qwen-Image 基础工作流一致，你只需下载下面的模型并保存到 `ComfyUI/models/model_patches` 文件夹中
+其它模型与 Qwen-Image 基础工作流一致，你只需下载下面的模型并保存到 `Hanzo Studio/models/model_patches` 文件夹中
 
-- [qwen_image_canny_diffsynth_controlnet.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_canny_diffsynth_controlnet.safetensors)
-- [qwen_image_depth_diffsynth_controlnet.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_depth_diffsynth_controlnet.safetensors)
-- [qwen_image_inpaint_diffsynth_controlnet.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_inpaint_diffsynth_controlnet.safetensors)
+- [qwen_image_canny_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_canny_diffsynth_controlnet.safetensors)
+- [qwen_image_depth_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_depth_diffsynth_controlnet.safetensors)
+- [qwen_image_inpaint_diffsynth_controlnet.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_inpaint_diffsynth_controlnet.safetensors)
 
 
 ### 3. 工作流使用说明
@@ -286,33 +286,33 @@ Comfy Org rehost 地址： [Qwen-Image-DiffSynth-ControlNets/model_patches](http
 
 ## Qwen Image union ControlNet LoRA 工作流
 
-<a href="https://cloud.comfy.org/?template=image_qwen_image_union_control_lora&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
+<a href="https://cloud.hanzo.ai/?template=image_qwen_image_union_control_lora&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#7c3aed', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginBottom: '1rem'}}>
     在 Comfy Cloud 上运行
 </a>
 
 原始模型地址：[DiffSynth-Studio/Qwen-Image-In-Context-Control-Union](https://www.modelscope.cn/models/DiffSynth-Studio/Qwen-Image-In-Context-Control-Union/)
-Comfy Org reshot 地址: [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、post、lineart、softedge、normal、openpose
+Comfy Org reshot 地址: [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、post、lineart、softedge、normal、openpose
 
 ### 1. 工作流及输入图片
 
-下载下面的图片并拖入 ComfyUI 以加载工作流
-![workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-union-control-lora/image_qwen_image_union_control_lora.png)
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image_union_control_lora.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+下载下面的图片并拖入 Hanzo Studio 以加载工作流
+![workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-union-control-lora/image_qwen_image_union_control_lora.png)
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_qwen_image_union_control_lora.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
 下载下面的图片作为输入图片
 
-![workflow](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/image/qwen/qwen-image-union-control-lora/input.png)
+![workflow](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/image/qwen/qwen-image-union-control-lora/input.png)
 
 ### 2. 模型链接
 
-下载下面的模型，由于这是一个 LoRA 模型，所以需要保存到 `ComfyUI/models/loras/` 文件夹下
--  [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、post、lineart、softedge、normal、openpose
+下载下面的模型，由于这是一个 LoRA 模型，所以需要保存到 `Hanzo Studio/models/loras/` 文件夹下
+-  [qwen_image_union_diffsynth_lora.safetensors](https://huggingface.co/hanzoui/Qwen-Image-DiffSynth-ControlNets/blob/main/split_files/loras/qwen_image_union_diffsynth_lora.safetensors): 图像结构控制lora 支持 canny、depth、post、lineart、softedge、normal、openpose
 
 ### 3. 工作流说明
 
-这个模型是一个统一的控制 LoRA, 支持  canny、depth、pose、lineart、softedge、normal、openpose 等控制, 由于许多的图像预处理原生节点并未完全支持，所以你应该需要类似 [comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux) 来完成其它图像的预处理
+这个模型是一个统一的控制 LoRA, 支持  canny、depth、pose、lineart、softedge、normal、openpose 等控制, 由于许多的图像预处理原生节点并未完全支持，所以你应该需要类似 [hanzo_studio_controlnet_aux](https://github.com/Fannovel16/hanzo_studio_controlnet_aux) 来完成其它图像的预处理
 
 ![Union Control LoRA](/images/tutorial/image/qwen/image_qwen_image_union_control_lora.jpg)
 

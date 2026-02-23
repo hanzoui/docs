@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "ComfyUI",
+  "name": "Hanzo Studio",
   "colors": {
     "primary": "#1A56DB",
     "light": "#1A56DB",
@@ -36,7 +36,7 @@
                           "installation/desktop/linux"
                         ]
                       },
-                      "installation/comfyui_portable_windows",
+                      "installation/hanzo_studio_portable_windows",
                       "installation/manual_install",
                       "installation/update_comfyui"
                     ]
@@ -73,7 +73,7 @@
                   "interface/features/partial-execution",
                   "interface/features/node-docs",
                   {
-                    "group": "ComfyUI Settings",
+                    "group": "Hanzo Studio Settings",
                     "icon": "gear",
                     "pages": [
                       "interface/settings/overview",
@@ -92,7 +92,7 @@
                     ]
                   },
                   {
-                    "group": "ComfyUI-Manager",
+                    "group": "Hanzo Manager",
                     "icon": "puzzle-piece",
                     "pages": [
                       "manager/overview",
@@ -578,14 +578,14 @@
             "pages": [
               "development/overview",
               {
-                "group": "ComfyUI Server",
+                "group": "Hanzo Studio Server",
                 "icon": "code",
                 "pages": [
-                  "development/comfyui-server/comms_overview",
-                  "development/comfyui-server/comms_messages",
-                  "development/comfyui-server/comms_routes",
-                  "development/comfyui-server/execution_model_inversion_guide",
-                  "development/comfyui-server/api-key-integration"
+                  "development/hanzo-studio-server/comms_overview",
+                  "development/hanzo-studio-server/comms_messages",
+                  "development/hanzo-studio-server/comms_routes",
+                  "development/hanzo-studio-server/execution_model_inversion_guide",
+                  "development/hanzo-studio-server/api-key-integration"
                 ]
               },
               {
@@ -600,9 +600,9 @@
               {
                 "group": "CLI",
                 "pages": [
-                  "comfy-cli/getting-started",
-                  "comfy-cli/reference",
-                  "comfy-cli/troubleshooting"
+                  "hanzo-cli/getting-started",
+                  "hanzo-cli/reference",
+                  "hanzo-cli/troubleshooting"
                 ]
               },
               {
@@ -735,7 +735,7 @@
           },
           {
             "tab": "Registry API Reference",
-            "openapi": "https://api.comfy.org/openapi"
+            "openapi": "https://api.hanzo.ai/openapi"
           },
           {
             "tab": "Cloud API Reference",
@@ -769,7 +769,7 @@
                           "zh-CN/installation/desktop/linux"
                         ]
                       },
-                      "zh-CN/installation/comfyui_portable_windows",
+                      "zh-CN/installation/hanzo_studio_portable_windows",
                       "zh-CN/installation/manual_install",
                       "zh-CN/installation/update_comfyui"
                     ]
@@ -806,7 +806,7 @@
                   "zh-CN/interface/features/partial-execution",
                   "zh-CN/interface/features/node-docs",
                   {
-                    "group": "ComfyUI 设置",
+                    "group": "Hanzo Studio 设置",
                     "icon": "gear",
                     "pages": [
                       "zh-CN/interface/settings/overview",
@@ -825,7 +825,7 @@
                     ]
                   },
                   {
-                    "group": "ComfyUI-Manager",
+                    "group": "Hanzo Manager",
                     "icon": "puzzle-piece",
                     "pages": [
                       "zh-CN/manager/overview",
@@ -1312,14 +1312,14 @@
             "pages": [
               "zh-CN/development/overview",
               {
-                "group": "ComfyUI Server",
+                "group": "Hanzo Studio Server",
                 "icon": "code",
                 "pages": [
-                  "zh-CN/development/comfyui-server/comms_overview",
-                  "zh-CN/development/comfyui-server/comms_messages",
-                  "zh-CN/development/comfyui-server/comms_routes",
-                  "zh-CN/development/comfyui-server/execution_model_inversion_guide",
-                  "zh-CN/development/comfyui-server/api-key-integration"
+                  "zh-CN/development/hanzo-studio-server/comms_overview",
+                  "zh-CN/development/hanzo-studio-server/comms_messages",
+                  "zh-CN/development/hanzo-studio-server/comms_routes",
+                  "zh-CN/development/hanzo-studio-server/execution_model_inversion_guide",
+                  "zh-CN/development/hanzo-studio-server/api-key-integration"
                 ]
               },
               {
@@ -1334,9 +1334,9 @@
               {
                 "group": "CLI",
                 "pages": [
-                  "zh-CN/comfy-cli/getting-started",
-                  "zh-CN/comfy-cli/reference",
-                  "zh-CN/comfy-cli/troubleshooting"
+                  "zh-CN/hanzo-cli/getting-started",
+                  "zh-CN/hanzo-cli/reference",
+                  "zh-CN/hanzo-cli/troubleshooting"
                 ]
               },
               {
@@ -1478,7 +1478,7 @@
           },
           {
             "tab": "Registry API 参考文档",
-            "openapi": "https://api.comfy.org/openapi"
+            "openapi": "https://api.hanzo.ai/openapi"
           },
           {
             "tab": "Cloud API 参考文档",
@@ -1494,19 +1494,19 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "href": "https://docs.comfy.org"
+    "href": "https://docs.hanzo.ai"
   },
   "navbar": {
     "links": [
       {
         "label": "Download",
-        "href": "https://comfy.org/download"
+        "href": "https://hanzo.ai/download"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Comfy Cloud",
-      "href": "https://comfy.org/cloud?utm_source=comfy&utm_content=docs"
+      "href": "https://hanzo.ai/cloud?utm_source=comfy&utm_content=docs"
     }
   },
   "appearance": {
@@ -1515,9 +1515,9 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/comfyanonymous/ComfyUI/",
-      "x": "https://x.com/ComfyUI",
-      "discord": "https://discord.com/invite/comfyorg",
+      "github": "https://github.com/hanzoai/studio/",
+      "x": "https://x.com/Hanzo Studio",
+      "discord": "https://discord.com/invite/hanzoai",
       "youtube": "https://www.youtube.com/@comfyorg"
     },
     "links": [
@@ -1526,15 +1526,15 @@
         "items": [
           {
             "label": "installation",
-            "href": "https://docs.comfy.org/installation/system_requirements"
+            "href": "https://docs.hanzo.ai/installation/system_requirements"
           },
           {
             "label": "Tutorials",
-            "href": "https://docs.comfy.org/tutorials/basic/text-to-image"
+            "href": "https://docs.hanzo.ai/tutorials/basic/text-to-image"
           },
           {
             "label": "Development",
-            "href": "https://docs.comfy.org/development/overview"
+            "href": "https://docs.hanzo.ai/development/overview"
           }
         ]
       },
@@ -1543,15 +1543,15 @@
         "items": [
           {
             "label": "Features",
-            "href": "https://www.comfy.org/#features-1"
+            "href": "https://hanzo.ai/#features-1"
           },
           {
             "label": "Gallery",
-            "href": "https://www.comfy.org/gallery"
+            "href": "https://hanzo.ai/gallery"
           },
           {
             "label": "Download",
-            "href": "https://www.comfy.org/download"
+            "href": "https://hanzo.ai/download"
           }
         ]
       },
@@ -1560,19 +1560,19 @@
         "items": [
           {
             "label": "About",
-            "href": "https://www.comfy.org/about"
+            "href": "https://hanzo.ai/about"
           },
           {
             "label": "Careers",
-            "href": "https://www.comfy.org/careers"
+            "href": "https://hanzo.ai/careers"
           },
           {
             "label": "Terms of Service",
-            "href": "https://www.comfy.org/terms-of-service"
+            "href": "https://hanzo.ai/terms-of-service"
           },
           {
             "label": "Privacy Policy",
-            "href": "https://www.comfy.org/privacy-policy"
+            "href": "https://hanzo.ai/privacy-policy"
           }
         ]
       }
@@ -1593,7 +1593,7 @@
     },
     {
       "source": "/get_started/pre_package",
-      "destination": "/installation/comfyui_portable_windows"
+      "destination": "/installation/hanzo_studio_portable_windows"
     },
     {
       "source": "/get_started/gettingstarted",

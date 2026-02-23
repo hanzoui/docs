@@ -393,7 +393,7 @@
 
   // Generate GitHub Discussions URL for current page
   function generateDiscussionUrl() {
-    const repoOwner = 'Comfy-Org';
+    const repoOwner = 'hanzoui';
     const repoName = 'docs';
     const currentPath = window.location.pathname;
     const currentTitle = document.title || 'Discussion';
@@ -430,7 +430,7 @@
   
   // Generate URL for creating a new discussion with context
   function generateNewDiscussionUrl() {
-    const repoOwner = 'Comfy-Org';
+    const repoOwner = 'hanzoui';
     const repoName = 'docs';
     const currentPath = window.location.pathname;
     const currentTitle = document.title || 'Discussion';
@@ -628,7 +628,7 @@
     // Create giscus script
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'Comfy-Org/docs');
+    script.setAttribute('data-repo', 'hanzoui/docs');
     script.setAttribute('data-repo-id', 'R_kgDOLlassQ'); // Replace with real ID
     script.setAttribute('data-category', 'Announcements');
     script.setAttribute('data-category-id', 'DIC_kwDOLlassc4CtQoz'); // Replace with real ID

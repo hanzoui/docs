@@ -1,5 +1,5 @@
 ---
-title: "Qwen-Image-Layered ComfyUI Workflow Example"
+title: "Qwen-Image-Layered Hanzo Studio Workflow Example"
 description: "Qwen-Image-Layered is a model capable of decomposing an image into multiple RGBA layers, enabling inherent editability through layer decomposition."
 sidebarTitle: "Qwen-Image-Layered"
 ---
@@ -21,12 +21,12 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 ## Qwen-Image-Layered workflow
 
-<a className="prose" target='_blank' href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image_layered.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
+<a className="prose" target='_blank' href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_qwen_image_layered.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download JSON Workflow File</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=image_qwen_image_layered&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
-    <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on ComfyUI Cloud</p>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=image_qwen_image_layered&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+    <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Hanzo Studio Cloud</p>
 </a>
 
 <UpdateReminder />
@@ -35,20 +35,20 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 **text_encoders**
 
-- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
+- [qwen_2.5_vl_7b_fp8_scaled.safetensors](https://huggingface.co/hanzoui/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors)
 
 **diffusion_models**
 
-- [qwen_image_layered_bf16.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-Layered_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_layered_bf16.safetensors)
+- [qwen_image_layered_bf16.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/resolve/main/split_files/diffusion_models/qwen_image_layered_bf16.safetensors)
 
 **vae**
 
-- [qwen_image_layered_vae.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-Layered_ComfyUI/resolve/main/split_files/vae/qwen_image_layered_vae.safetensors)
+- [qwen_image_layered_vae.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/resolve/main/split_files/vae/qwen_image_layered_vae.safetensors)
 
 **Model Storage Location**
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── qwen_2.5_vl_7b_fp8_scaled.safetensors
@@ -62,7 +62,7 @@ import UpdateReminder from '/snippets/tutorials/update-reminder.mdx'
 
 By default we are using bf16, which requires high VRAM. For lower VRAM usage, you can use the fp8 version:
 
-- [qwen_image_layered_fp8mixed.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-Layered_ComfyUI/blob/main/split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors)
+- [qwen_image_layered_fp8mixed.safetensors](https://huggingface.co/hanzoui/Qwen-Image-Layered_Hanzo Studio/blob/main/split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors)
 
 Then update the **Load Diffusion model** node inside the [Subgraph](/interface/features/subgraph) to use it.
 

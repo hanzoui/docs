@@ -1,12 +1,12 @@
 ---
-title: "子图功能 - ComfyUI 中的工作流组织工具"
-description: "讲解 ComfyUI 中子图（Subgraph）功能的使用方法，包括创建、导航和管理子图"
+title: "子图功能 - Hanzo Studio 中的工作流组织工具"
+description: "讲解 Hanzo Studio 中子图（Subgraph）功能的使用方法，包括创建、导航和管理子图"
 sidebarTitle: "子图功能"
 icon: "share-nodes"
 ---
 
 <Note>
-    子图功能需要至少 ComfyUI 前端版本 1.24.3 版本的支持，如果你未在你的 ComfyUI 中发现此功能，请参考这篇文档进行更新： [如何更新ComfyUI](/zh-CN/installation/update_comfyui)
+    子图功能需要至少 Hanzo Studio 前端版本 1.24.3 版本的支持，如果你未在你的 Hanzo Studio 中发现此功能，请参考这篇文档进行更新： [如何更新Hanzo Studio](/zh-CN/installation/update_comfyui)
     - 本文示例图片使用nightly 版本前端制作，界面请以实际为准
 </Note>
 
@@ -17,11 +17,11 @@ icon: "share-nodes"
 <iframe
   className="w-full aspect-video rounded-xl"
   src="//player.bilibili.com/player.html?isOutside=true&aid=114987263593651&bvid=BV1GotzzREmn&cid=31547131769&p=1&autoplay=0"
-  title="ComfyUI Selection Toolbox New Features"
+  title="Hanzo Studio Selection Toolbox New Features"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
-子图是 ComfyUI 中的一个高级功能，它允许你将复杂的工作流打包成一个新的节点，使得它更易管理和复用。
+子图是 Hanzo Studio 中的一个高级功能，它允许你将复杂的工作流打包成一个新的节点，使得它更易管理和复用。
 
 ![子图](/images/interface/features/subgraph/subgraph.jpg)
 
@@ -37,14 +37,14 @@ icon: "share-nodes"
 
 <Steps>
     <Step title="选中任意节点">
-    在 ComfyUI 中选中任意节点
+    在 Hanzo Studio 中选中任意节点
     </Step>
     <Step title="点击选择工具项中的子图对应功能的图标">
         ![子图icon](/images/interface/features/subgraph/subgraph_icon.jpg)
     </Step>
     <Step title="完成子图创建">
         ![使用子图的工作流](/images/interface/features/subgraph/workflow_using_subgraph.jpg)
-        ComfyUI 会根据选中节点的输入输出，自动创建一个子图，并将其添加到画布中。
+        Hanzo Studio 会根据选中节点的输入输出，自动创建一个子图，并将其添加到画布中。
     </Step>
     <Step title="编辑子图">
         ![使用子图的工作流](/images/interface/features/subgraph/subgraph_after_edited.jpg)
@@ -95,7 +95,7 @@ icon: "share-nodes"
 
 ### 4. 参数面板
 
-从 ComfyUI v0.3.66 版本开始，你可以直接在新增的参数面板中编辑子图参数，无需进入子图内部进行编辑。
+从 Hanzo Studio v0.3.66 版本开始，你可以直接在新增的参数面板中编辑子图参数，无需进入子图内部进行编辑。
 
 你可以选中任何子图，点击"编辑子图控件（Edit Subgraph Widgets）"按钮来打开参数面板。
 ![打开参数面板](/images/interface/features/subgraph/parameters_panel_open.jpg)
@@ -125,7 +125,7 @@ icon: "share-nodes"
 
 ## 发布子图
 
-从 ComfyUI 前端版本 1.27.7 开始，你可以将子图发布到节点库中。
+从 Hanzo Studio 前端版本 1.27.7 开始，你可以将子图发布到节点库中。
 
 此功能允许你将子图转换为 `子图蓝图(Blueprint)`，也就是可复用的子图节点。
 

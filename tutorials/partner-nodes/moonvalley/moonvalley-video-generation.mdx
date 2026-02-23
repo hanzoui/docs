@@ -1,6 +1,6 @@
 ---
-title: "Moonvalley API Node Official ComfyUI Example"
-description: "This article introduces how to use Moonvalley Partner nodes for text-to-video, image-to-video, and video-to-video capabilities in ComfyUI."
+title: "Moonvalley API Node Official Hanzo Studio Example"
+description: "This article introduces how to use Moonvalley Partner nodes for text-to-video, image-to-video, and video-to-video capabilities in Hanzo Studio."
 sidebarTitle: "Moonvalley"
 ---
 
@@ -10,7 +10,7 @@ import UpdateReminder from "/snippets/tutorials/update-reminder.mdx";
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/8Z8X9fFKapQ?si=lK_KFSzDcT0Mepk9"
-  title="ComfyUI Selection Toolbox New Features"
+  title="Hanzo Studio Selection Toolbox New Features"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -25,7 +25,7 @@ Moonvalley Marey Realism v1.5 is an AI video generation model designed for cinem
 - Complex scene layering and advanced lighting effects: Supports foreground, midground, and background layering in complex scenes, with intelligent spatial relationship understanding.
 - Production-level control features such as motion and pose transfer: Automatically generates realistic lighting for composite scenes.
 
-Currently, Moonvalley-related Partner nodes are natively supported in ComfyUI. You can use the corresponding text-to-video, image-to-video, and video-to-video capabilities directly in ComfyUI.
+Currently, Moonvalley-related Partner nodes are natively supported in Hanzo Studio. You can use the corresponding text-to-video, image-to-video, and video-to-video capabilities directly in Hanzo Studio.
 
 <ReqHint/>
 <UpdateReminder/>
@@ -37,10 +37,10 @@ Currently, Moonvalley-related Partner nodes are natively supported in ComfyUI. Y
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_text_to_video.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_text_to_video.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_text_to_video.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_text_to_video.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download the workflow file in JSON format</p>
 </a>
 
@@ -53,7 +53,7 @@ Currently, Moonvalley-related Partner nodes are natively supported in ComfyUI. Y
 2. Enter the negative prompt (content you do not want to appear in the video)
 3. Modify the video output resolution
 4. Click the `Run` button, or use the shortcut `Ctrl(cmd) + Enter` to start video generation
-5. After the API returns the result, you can view the generated video in the `Save Video` node. The video will also be saved in the `ComfyUI/output/` directory
+5. After the API returns the result, you can view the generated video in the `Save Video` node. The video will also be saved in the `Hanzo Studio/output/` directory
 
 
 ## Moonvalley Image-to-Video Workflow
@@ -63,16 +63,16 @@ Currently, Moonvalley-related Partner nodes are natively supported in ComfyUI. Y
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_image_to_video.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_image_to_video.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_image_to_video.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_image_to_video.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download the workflow file in JSON format</p>
 </a>
 
 Download the image below as the input image
 
-![Input Image](https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_image_to_video_input.webp)
+![Input Image](https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_image_to_video_input.webp)
 
 ### 2. Follow the Steps to Run the Workflow
 
@@ -83,7 +83,7 @@ Download the image below as the input image
 3. Enter the negative prompt (content you do not want to appear in the video)
 4. Modify the video output resolution
 5. Click the `Run` button, or use the shortcut `Ctrl(cmd) + Enter` to start video generation
-6. After the API returns the result, you can view the generated video in the `Save Video` node. The video will also be saved in the `ComfyUI/output/` directory
+6. After the API returns the result, you can view the generated video in the `Save Video` node. The video will also be saved in the `Hanzo Studio/output/` directory
 
 
 ## Moonvalley Video-to-Video Workflow
@@ -95,10 +95,10 @@ The `Moonvalley Marey Video to Video` node allows you to input a reference video
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_video_to_video.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_video_to_video.mp4"
 ></video>
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_video_to_video.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_video_to_video.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Download the workflow file in JSON format</p>
 </a>
 
@@ -107,7 +107,7 @@ Download the video below as the input video:
 <video
   controls
   className="w-full aspect-video"
-  src="https://raw.githubusercontent.com/Comfy-Org/example_workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_video_to_video_input.mp4"
+  src="https://raw.githubusercontent.com/hanzoui/example-workflows/refs/heads/main/api_nodes/moonvalley/api_moonvalley_video_to_video_input.mp4"
 ></video>
 
 
@@ -123,4 +123,4 @@ Download the video below as the input video:
     -  `Motion Transfer`: Generate based on the motion in the reference video
     -  `Pose Transfer`: Generate based on the character poses in the reference video
 5. Click the `Run` button, or use the shortcut `Ctrl(cmd) + Enter` to start video generation
-6. After the API returns the result, you can view the generated video in the `Save Video` node. The video will also be saved in the `ComfyUI/output/` directory
+6. After the API returns the result, you can view the generated video in the `Save Video` node. The video will also be saved in the `Hanzo Studio/output/` directory

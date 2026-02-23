@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI OmniGen2 原生工作流示例"
-description: "ComfyUI OmniGen2 原生工作流示例 - 统一的文生图、图像编辑和多图像合成模型。"
+title: "Hanzo Studio OmniGen2 原生工作流示例"
+description: "Hanzo Studio OmniGen2 原生工作流示例 - 统一的文生图、图像编辑和多图像合成模型。"
 sidebarTitle: "OmniGen2"
 ---
 
@@ -33,18 +33,18 @@ OmniGen2 是一个强大且高效的统一多模态生成模型，总参数量�
 由于本文涉及不同工作流，对应的模型文件及安装位置如下，对应工作流中也已包含了模型文件下载信息：
 
 **Diffusion Models）**
-- [omnigen2_fp16.safetensors](https://huggingface.co/Comfy-Org/Omnigen2_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/omnigen2_fp16.safetensors)
+- [omnigen2_fp16.safetensors](https://huggingface.co/hanzoui/Omnigen2_Hanzo Studio_repackaged/resolve/main/split_files/diffusion_models/omnigen2_fp16.safetensors)
 
 **VAE**
-- [ae.safetensors](https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensors)
+- [ae.safetensors](https://huggingface.co/hanzoui/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensors)
 
 **Text Encoders）**
-- [qwen_2.5_vl_fp16.safetensors](https://huggingface.co/Comfy-Org/Omnigen2_ComfyUI_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_fp16.safetensors)
+- [qwen_2.5_vl_fp16.safetensors](https://huggingface.co/hanzoui/Omnigen2_Hanzo Studio_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_fp16.safetensors)
 
 
 文件保存位置：
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   └── omnigen2_fp16.safetensors
@@ -54,15 +54,15 @@ OmniGen2 是一个强大且高效的统一多模态生成模型，总参数量�
 │       └── qwen_2.5_vl_fp16.safetensors
 ```
 
-## ComfyUI OmniGen2 文生图工作流
+## Hanzo Studio OmniGen2 文生图工作流
 
 ### 1. 工作流文件下载
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=image_omnigen2_t2i&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=image_omnigen2_t2i&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Comfy Cloud 上运行</p>
 </a>
 
-![文生图工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/image/omnigen2/image_omnigen2_t2i.png)
+![文生图工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/image/omnigen2/image_omnigen2_t2i.png)
 
 ### 2. 按步骤完成工作流运行
 
@@ -78,21 +78,21 @@ OmniGen2 是一个强大且高效的统一多模态生成模型，总参数量�
     - 在第一个 `CLipTextEncode` 节点中输入正向提示词（想要出现在图像中的内容）
     - 在第二个 `CLipTextEncode` 节点中输入负向提示词（不想要出现在图像中的内容）
 6. **开始生成**：点击 `Queue Prompt` 按钮，或使用快捷键 `Ctrl(cmd) + Enter(回车)` 来执行文生图
-7. **查看结果**：生成完成后对应的图片会自动保存到 `ComfyUI/output/` 目录下，你也可以在 `SaveImage` 节点中预览
+7. **查看结果**：生成完成后对应的图片会自动保存到 `Hanzo Studio/output/` 目录下，你也可以在 `SaveImage` 节点中预览
 
-## ComfyUI OmniGen2 图片编辑工作流
+## Hanzo Studio OmniGen2 图片编辑工作流
 
 OmniGen2 有丰富的图像编辑能力，并且支持为图像添加文本
 
 ### 1. 工作流文件下载
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=image_omnigen2_image_edit&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=image_omnigen2_image_edit&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Comfy Cloud 上运行</p>
 </a>
 
-![输入图片](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/image/omnigen2/image_omnigen2_image_edit.png)
+![输入图片](https://raw.githubusercontent.com/hanzoui/example-workflows/main/image/omnigen2/image_omnigen2_image_edit.png)
 下载下面的图片，我们将使用它作为输入图片。
-![输入图片](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/image/omnigen2/input_fairy.png)
+![输入图片](https://raw.githubusercontent.com/hanzoui/example-workflows/main/image/omnigen2/input_fairy.png)
 
 
 ### 2. 按步骤完成工作流运行
@@ -107,7 +107,7 @@ OmniGen2 有丰富的图像编辑能力，并且支持为图像添加文本
     - 在第一个 `CLipTextEncode` 节点中输入正向提示词（想要出现在图像中的内容）
     - 在第二个 `CLipTextEncode` 节点中输入负向提示词（不想要出现在图像中的内容）
 6. **开始生成**：点击 `Queue Prompt` 按钮，或使用快捷键 `Ctrl(cmd) + Enter(回车)` 来执行文生图
-7. **查看结果**：生成完成后对应的图片会自动保存到 `ComfyUI/output/` 目录下，你也可以在 `SaveImage` 节点中预览
+7. **查看结果**：生成完成后对应的图片会自动保存到 `Hanzo Studio/output/` 目录下，你也可以在 `SaveImage` 节点中预览
 
 ### 3. 工作流补充说明
 

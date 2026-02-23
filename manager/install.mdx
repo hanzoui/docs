@@ -1,31 +1,31 @@
 ---
-title: ComfyUI-Manager Installation
+title: Hanzo Manager Installation
 sidebarTitle: Install
-description: How to install ComfyUI-Manager for different setups
+description: How to install Hanzo Manager for different setups
 ---
 
 ## Desktop users
 
-If you're using [ComfyUI Desktop](/installation/desktop/windows), ComfyUI-Manager is already included and enabled by default. No additional installation is required.
+If you're using [Hanzo Desktop](/installation/desktop/windows), Hanzo Manager is already included and enabled by default. No additional installation is required.
 
 ## Portable users
 
-For users running the [Windows Portable](/installation/comfyui_portable_windows) version, the new ComfyUI-Manager is built into ComfyUI core but needs to be enabled.
+For users running the [Windows Portable](/installation/hanzo_studio_portable_windows) version, the new Hanzo Manager is built into Hanzo Studio core but needs to be enabled.
 
 1. Install the manager dependencies:
    ```bash
-   .\python_embeded\python.exe -m pip install -r ComfyUI\manager_requirements.txt
+   .\python_embeded\python.exe -m pip install -r Hanzo Studio\manager_requirements.txt
    ```
 
-2. Launch ComfyUI with the manager enabled:
+2. Launch Hanzo Studio with the manager enabled:
    ```bash
-   .\python_embeded\python.exe -s ComfyUI\main.py --windows-standalone-build --enable-manager
+   .\python_embeded\python.exe -s Hanzo Studio\main.py --windows-standalone-build --enable-manager
    pause
    ```
 
 ## Manual install users
 
-For users with a [manual installation](/installation/manual_install), the new ComfyUI-Manager is built into ComfyUI core but needs to be enabled.
+For users with a [manual installation](/installation/manual_install), the new Hanzo Manager is built into Hanzo Studio core but needs to be enabled.
 
 1. Activate your virtual environment:
    ```bash
@@ -41,7 +41,7 @@ For users with a [manual installation](/installation/manual_install), the new Co
    pip install -r manager_requirements.txt
    ```
 
-3. Enable the manager with the `--enable-manager` flag when running ComfyUI:
+3. Enable the manager with the `--enable-manager` flag when running Hanzo Studio:
    ```bash
    python main.py --enable-manager
    ```
@@ -50,7 +50,7 @@ For users with a [manual installation](/installation/manual_install), the new Co
 
 | Flag | Description |
 |------|-------------|
-| `--enable-manager` | Enable ComfyUI-Manager |
+| `--enable-manager` | Enable Hanzo Manager |
 | `--enable-manager-legacy-ui` | Use the legacy manager UI instead of the new UI (requires `--enable-manager`) |
 | `--disable-manager-ui` | Disable the manager UI and endpoints while keeping background features (requires `--enable-manager`) |
 
@@ -80,29 +80,29 @@ Desktop users can switch to the legacy UI in **Server Settings â†’ UI Settings â
 ## Legacy installation methods
 
 <Accordion title="Method 1: Git clone (general installation)">
-To install ComfyUI-Manager in addition to an existing installation of ComfyUI:
+To install Hanzo Manager in addition to an existing installation of Hanzo Studio:
 
-1. Navigate to `ComfyUI/custom_nodes` directory in terminal
+1. Navigate to `Hanzo Studio/custom_nodes` directory in terminal
 2. Clone the repository:
    ```bash
-   git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
+   git clone https://github.com/ltdrdata/Hanzo Manager hanzo-studio-manager
    ```
 3. Install the manager dependencies:
    ```bash
-   cd comfyui-manager
+   cd hanzo-studio-manager
    pip install -r requirements.txt
    ```
-4. Restart ComfyUI
+4. Restart Hanzo Studio
 </Accordion>
 
 <Accordion title="Method 2: Portable version (Windows)">
 1. Install [Git for Windows](https://git-scm.com/download/win) (standalone version, select "use windows default console window")
-2. Download [install-manager-for-portable-version.bat](https://github.com/ltdrdata/ComfyUI-Manager/raw/main/scripts/install-manager-for-portable-version.bat) into your `ComfyUI_windows_portable` directory
+2. Download [install-manager-for-portable-version.bat](https://github.com/ltdrdata/Hanzo Manager/raw/main/scripts/install-manager-for-portable-version.bat) into your `Hanzo Studio_windows_portable` directory
 3. Double-click the batch file to install
 </Accordion>
 
-<Accordion title="Method 3: comfy-cli (recommended for new installations)">
-comfy-cli provides various features to manage ComfyUI from the CLI.
+<Accordion title="Method 3: hanzo-cli (recommended for new installations)">
+hanzo-cli provides various features to manage Hanzo Studio from the CLI.
 
 **Prerequisites**: Python 3, Git
 
@@ -110,7 +110,7 @@ comfy-cli provides various features to manage ComfyUI from the CLI.
 ```bash
 python -m venv venv
 venv\Scripts\activate
-pip install comfy-cli
+pip install hanzo-cli
 comfy install
 ```
 
@@ -118,28 +118,28 @@ comfy install
 ```bash
 python -m venv venv
 . venv/bin/activate
-pip install comfy-cli
+pip install hanzo-cli
 comfy install
 ```
 
-See also: [comfy-cli documentation](/comfy-cli/getting-started)
+See also: [hanzo-cli documentation](/hanzo-cli/getting-started)
 </Accordion>
 
 <Accordion title="Method 4: Linux + venv">
 **Prerequisites**: python-is-python3, python3-venv, git
 
-1. Download [install-comfyui-venv-linux.sh](https://github.com/comfy-org/ComfyUI-Manager/raw/main/scripts/install-comfyui-venv-linux.sh) into an empty install directory
+1. Download [install-hanzo-studio-venv-linux.sh](https://github.com/comfy-org/Hanzo Manager/raw/main/scripts/install-hanzo-studio-venv-linux.sh) into an empty install directory
 2. Run:
    ```bash
-   chmod +x install-comfyui-venv-linux.sh
-   ./install-comfyui-venv-linux.sh
+   chmod +x install-hanzo-studio-venv-linux.sh
+   ./install-hanzo-studio-venv-linux.sh
    ```
-3. Execute ComfyUI with `./run_gpu.sh` or `./run_cpu.sh`
+3. Execute Hanzo Studio with `./run_gpu.sh` or `./run_cpu.sh`
 </Accordion>
 
 <Warning>
 **Installation precautions:**
-- ComfyUI-Manager files must be accurately located in the path `ComfyUI/custom_nodes/comfyui-manager`
-- Do not decompress directly into `ComfyUI/custom_nodes` (files like `__init__.py` should not be in that directory)
-- Do not install in paths like `ComfyUI/custom_nodes/ComfyUI-Manager/ComfyUI-Manager` or `ComfyUI/custom_nodes/ComfyUI-Manager-main`
+- Hanzo Manager files must be accurately located in the path `Hanzo Studio/custom_nodes/hanzo-studio-manager`
+- Do not decompress directly into `Hanzo Studio/custom_nodes` (files like `__init__.py` should not be in that directory)
+- Do not install in paths like `Hanzo Studio/custom_nodes/Hanzo Manager/Hanzo Manager` or `Hanzo Studio/custom_nodes/Hanzo Manager-main`
 </Warning>

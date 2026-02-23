@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 sidebarTitle: Troubleshooting
-description: Resolve common ComfyUI-Manager issues
+description: Resolve common Hanzo Manager issues
 ---
 
 ## Common issues
@@ -10,17 +10,17 @@ description: Resolve common ComfyUI-Manager issues
 
 If your `git.exe` is installed in a specific location other than the system default:
 
-1. Install ComfyUI-Manager and run ComfyUI once
-2. Open `<USER_DIRECTORY>/default/ComfyUI-Manager/config.ini`
+1. Install Hanzo Manager and run Hanzo Studio once
+2. Open `<USER_DIRECTORY>/default/Hanzo Manager/config.ini`
 3. Specify the full path including the file name in `git_exe =`
 
 ```ini
 git_exe = C:\Program Files\Git\bin\git.exe
 ```
 
-### ComfyUI-Manager update fails
+### Hanzo Manager update fails
 
-If updating ComfyUI-Manager itself fails, go to the ComfyUI-Manager directory and run:
+If updating Hanzo Manager itself fails, go to the Hanzo Manager directory and run:
 
 ```bash
 git update-ref refs/remotes/origin/main a361cc1 && git fetch --all && git pull
@@ -28,7 +28,7 @@ git update-ref refs/remotes/origin/main a361cc1 && git fetch --all && git pull
 
 ### Windows: Overlapped Object error
 
-If you encounter `Overlapped Object has pending operation at deallocation on ComfyUI Manager load`:
+If you encounter `Overlapped Object has pending operation at deallocation on Hanzo Manager load`:
 
 Edit `config.ini` and add:
 
@@ -50,19 +50,19 @@ bypass_ssl = True
 
 ### Incorrect installation path
 
-ComfyUI-Manager files must be located in `ComfyUI/custom_nodes/comfyui-manager`.
+Hanzo Manager files must be located in `Hanzo Studio/custom_nodes/hanzo-studio-manager`.
 
 **Common mistakes to avoid:**
 
 | Issue | Problem |
 |-------|---------|
 | Files in wrong location | Manager files like `__init__.py` placed directly in `custom_nodes` directory |
-| Double nested folder | Installed as `custom_nodes/ComfyUI-Manager/ComfyUI-Manager` |
-| Wrong folder name | Installed as `custom_nodes/ComfyUI-Manager-main` |
+| Double nested folder | Installed as `custom_nodes/Hanzo Manager/Hanzo Manager` |
+| Wrong folder name | Installed as `custom_nodes/Hanzo Manager-main` |
 | Compressed format | Installing from a compressed file without proper extraction |
 
 <Warning>
-If installed incorrectly, ComfyUI-Manager may appear to work but won't be recognized for updates and may cause duplicate installations. Remove it and reinstall properly via `git clone`.
+If installed incorrectly, Hanzo Manager may appear to work but won't be recognized for updates and may cause duplicate installations. Remove it and reinstall properly via `git clone`.
 </Warning>
 
 ## Network issues
@@ -107,10 +107,10 @@ If you want to specify a different path instead of `~/.tmp/default`, run `python
 If you encounter the error `This action is not allowed with this security level configuration` when installing custom nodes via git URL or using the nightly version, you need to adjust the security level in your `config.ini` file.
 
 The `config.ini` file is located at:
-- **ComfyUI v0.3.76+**: `<USER_DIRECTORY>/__manager/config.ini`
-- **Older versions**: `<USER_DIRECTORY>/default/ComfyUI-Manager/config.ini`
+- **Hanzo Studio v0.3.76+**: `<USER_DIRECTORY>/__manager/config.ini`
+- **Older versions**: `<USER_DIRECTORY>/default/Hanzo Manager/config.ini`
 
-Where `<USER_DIRECTORY>` defaults to `ComfyUI/user`. See [Configuration](/manager/configuration) for more details.
+Where `<USER_DIRECTORY>` defaults to `Hanzo Studio/user`. See [Configuration](/manager/configuration) for more details.
 
 Configure security levels in `config.ini`:
 
@@ -131,7 +131,7 @@ security_level = normal
 |------------|----------|
 | **High** | Install via git url, pip install, installation of custom nodes not in default channel, fix custom nodes |
 | **Middle** | Uninstall/Update, installation of custom nodes in default channel, restore/remove snapshot, restart |
-| **Low** | Update ComfyUI |
+| **Low** | Update Hanzo Studio |
 
 <Tip>
 To install custom nodes via git URL or nightly versions, set `security_level = weak` in your `config.ini`.
@@ -141,6 +141,6 @@ To install custom nodes via git URL or nightly versions, set `security_level = w
 
 If you're still experiencing issues:
 
-1. Check the [ComfyUI-Manager GitHub issues](https://github.com/ltdrdata/ComfyUI-Manager/issues) for similar problems
+1. Check the [Hanzo Manager GitHub issues](https://github.com/ltdrdata/Hanzo Manager/issues) for similar problems
 2. Review the startup log messages for error details
-3. Join the [ComfyUI Discord](https://discord.com/invite/comfyorg) for community support
+3. Join the [Hanzo Studio Discord](https://discord.com/invite/hanzoai) for community support

@@ -15,16 +15,16 @@ import GetApiKey from '/snippets/get-api-key.mdx'
 
 # Comfy Cloud API
 
-The Comfy Cloud API provides programmatic access to run workflows on Comfy Cloud infrastructure. The API is compatible with local ComfyUI's API, making it easy to migrate existing integrations.
+The Comfy Cloud API provides programmatic access to run workflows on Comfy Cloud infrastructure. The API is compatible with local Hanzo Studio's API, making it easy to migrate existing integrations.
 
 <Note>
-  **Subscription Required:** Running workflows via the API requires an active Comfy Cloud subscription. See [pricing plans](https://www.comfy.org/cloud/pricing?utm_source=docs&utm_campaign=cloud-api) for details.
+  **Subscription Required:** Running workflows via the API requires an active Comfy Cloud subscription. See [pricing plans](https://hanzo.ai/cloud/pricing?utm_source=docs&utm_campaign=cloud-api) for details.
 </Note>
 
 ## Base URL
 
 ```
-https://cloud.comfy.org
+https://cloud.hanzo.ai
 ```
 
 ## Authentication
@@ -45,14 +45,14 @@ Pass your API key in the `X-API-Key` header with every request:
 
 <CodeGroup>
 ```bash curl
-curl -X GET "https://cloud.comfy.org/api/user" \
+curl -X GET "https://cloud.hanzo.ai/api/user" \
   -H "X-API-Key: $COMFY_CLOUD_API_KEY"
 ```
 
 ```typescript TypeScript
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
-const response = await fetch("https://cloud.comfy.org/api/user", {
+const response = await fetch("https://cloud.hanzo.ai/api/user", {
   headers: { "X-API-Key": API_KEY },
 });
 const user = await response.json();
@@ -66,7 +66,7 @@ API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 headers = {"X-API-Key": API_KEY}
 
 response = requests.get(
-    "https://cloud.comfy.org/api/user",
+    "https://cloud.hanzo.ai/api/user",
     headers=headers
 )
 ```
@@ -76,7 +76,7 @@ response = requests.get(
 
 ### Workflows
 
-ComfyUI workflows are JSON objects describing a graph of nodes. The API accepts workflows in the "API format" (node IDs as keys with class_type, inputs, etc.) as produced by the ComfyUI frontend's "Save (API Format)" option.
+Hanzo Studio workflows are JSON objects describing a graph of nodes. The API accepts workflows in the "API format" (node IDs as keys with class_type, inputs, etc.) as produced by the Hanzo Studio frontend's "Save (API Format)" option.
 
 ### Jobs
 
@@ -98,17 +98,17 @@ Here's a complete example showing how to submit a workflow, monitor its progress
 
 <CodeGroup>
 ```bash curl
-curl -X POST "https://cloud.comfy.org/api/prompt" \
+curl -X POST "https://cloud.hanzo.ai/api/prompt" \
   -H "X-API-Key: $COMFY_CLOUD_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"prompt": '"$(cat workflow_api.json)"'}'
 ```
 
 ```typescript TypeScript
-const BASE_URL = "https://cloud.comfy.org";
+const BASE_URL = "https://cloud.hanzo.ai";
 const API_KEY = process.env.COMFY_CLOUD_API_KEY!;
 
-// Load your workflow (exported from ComfyUI in API format)
+// Load your workflow (exported from Hanzo Studio in API format)
 const workflow = JSON.parse(await Deno.readTextFile("workflow_api.json"));
 
 // Submit the workflow
@@ -127,13 +127,13 @@ import os
 import requests
 import json
 
-BASE_URL = "https://cloud.comfy.org"
+BASE_URL = "https://cloud.hanzo.ai"
 API_KEY = os.environ["COMFY_CLOUD_API_KEY"]
 
 def get_headers():
     return {"X-API-Key": API_KEY, "Content-Type": "application/json"}
 
-# Load your workflow (exported from ComfyUI in API format)
+# Load your workflow (exported from Hanzo Studio in API format)
 with open("workflow_api.json") as f:
     workflow = json.load(f)
 
@@ -177,7 +177,7 @@ Once the job completes, download the generated files. The `outputs` object retur
   "9": {
     "images": [
       {
-        "filename": "ComfyUI_00001_.png",
+        "filename": "Hanzo Studio_00001_.png",
         "subfolder": "",
         "type": "output"
       }

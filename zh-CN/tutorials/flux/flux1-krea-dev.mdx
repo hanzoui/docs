@@ -1,5 +1,5 @@
 ---
-title: "Flux.1 Krea Dev ComfyUI 工作流教程"
+title: "Flux.1 Krea Dev Hanzo Studio 工作流教程"
 description: "Black Forest Labs 与 Krea 合作开发的最佳开源 FLUX 模型，专注于独特美学风格和自然细节，避免 AI 感，提供卓越的真实感和图像质量。"
 sidebarTitle: "Flux.1 Krea Dev"
 ---
@@ -20,20 +20,20 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 **模型许可**
 该模型采用 [flux-1-dev-non-commercial-license](https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/blob/main/LICENSE.md) 许可发布
 
-## Flux.1 Krea Dev ComfyUI 工作流
+## Flux.1 Krea Dev Hanzo Studio 工作流
 
 <UpdateReminder />
 
 #### 1. 工作流文件
 
-下载下面的图片或JSON，并拖入 ComfyUI 以加载对应工作流
-![Flux Krea Dev 工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/flux/krea/flux1_krea_dev.png)
+下载下面的图片或JSON，并拖入 Hanzo Studio 以加载对应工作流
+![Flux Krea Dev 工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/flux/krea/flux1_krea_dev.png)
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/flux1_krea_dev.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/flux1_krea_dev.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 格式工作流</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=flux1_krea_dev&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=flux1_krea_dev&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Comfy Cloud 上运行</p>
 </a>
 
@@ -41,7 +41,7 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 **Diffusion model** 下面两个模型选择其中一个版本即可
 
-- [flux1-krea-dev_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/FLUX.1-Krea-dev_ComfyUI/blob/main/split_files/diffusion_models/flux1-krea-dev_fp8_scaled.safetensors)
+- [flux1-krea-dev_fp8_scaled.safetensors](https://huggingface.co/hanzoui/FLUX.1-Krea-dev_Hanzo Studio/blob/main/split_files/diffusion_models/flux1-krea-dev_fp8_scaled.safetensors)
 
 下面这个版本是原始权重，如果你追求更高质量有足够的显存，可以尝试这个版本
 
@@ -53,16 +53,16 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 如果你使用过 Flux 相关的工作流，下面的模型是相同的，不需要重复下载
 
 **Text encoders**
-- [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true)
-- [t5xxl_fp16.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true) 当你的显存大于 32GB 时推荐使用。
-- [t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors)  For Low VRAM
+- [clip_l.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/clip_l.safetensors?download=true)
+- [t5xxl_fp16.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true) 当你的显存大于 32GB 时推荐使用。
+- [t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors)  For Low VRAM
 
 **VAE**
 - [ae.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors?download=true)
 
 文件保存位置：
 ```
-ComfyUI/
+Hanzo Studio/
 ├── models/
 │   ├── diffusion_models/
 │   │   └── flux1-krea-dev_fp8_scaled.safetensors 或 flux1-krea-dev.safetensors
@@ -82,7 +82,7 @@ ComfyUI/
 
 请参照下面的图片，确保各个模型文件都已经加载完成
 
-![ComfyUI Flux Krea Dev工作流](/images/tutorial/flux/flux_1_krea_dev_guide.jpg)
+![Hanzo Studio Flux Krea Dev工作流](/images/tutorial/flux/flux_1_krea_dev_guide.jpg)
 
 1. 确保在`Load Diffusion Model`节点加载了`flux1-krea-dev_fp8_scaled.safetensors` 或 `flux1-krea-dev.safetensors`
     - `flux1-krea-dev_fp8_scaled.safetensors` 推荐低显存用户使用

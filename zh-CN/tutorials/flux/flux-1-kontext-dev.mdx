@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI Flux Kontext Dev 原生工作流示例"
-description: "ComfyUI Flux Kontext Dev 原生工作流示例。"
+title: "Hanzo Studio Flux Kontext Dev 原生工作流示例"
+description: "Hanzo Studio Flux Kontext Dev 原生工作流示例。"
 sidebarTitle: "Flux.1 Kontext Dev"
 ---
 
@@ -10,7 +10,7 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 <iframe
   className="w-full aspect-video rounded-xl"
   src="//player.bilibili.com/player.html?isOutside=true&aid=114750419636159&bvid=BV14MKfzCELz&cid=30712923473&p=1&autoplay=0"
-  title="ComfyUI Selection Toolbox New Features"
+  title="Hanzo Studio Selection Toolbox New Features"
   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
@@ -33,7 +33,7 @@ FLUX.1 Kontext 是 Black Forest Labs 推出的突破性多模态图像编辑模�
 - **FLUX.1 Kontext [max]** - 实验版本，更强的提示遵循能力  
 - **FLUX.1 Kontext [dev]** - 开源版本（本教程使用），12B参数，主要用于研究
 
-目前在 ComfyUI 中，你可以使用所有的这些版本，其中 [Pro 及 Max 版本](/zh-CN/tutorials/partner-nodes/black-forest-labs/flux-1-kontext) 可以通过 API 节点来进行调用，而 Dev 版本开源版本请参考本篇指南中的说明。
+目前在 Hanzo Studio 中，你可以使用所有的这些版本，其中 [Pro 及 Max 版本](/zh-CN/tutorials/partner-nodes/black-forest-labs/flux-1-kontext) 可以通过 API 节点来进行调用，而 Dev 版本开源版本请参考本篇指南中的说明。
 
 
 <UpdateReminder/>
@@ -44,23 +44,23 @@ FLUX.1 Kontext 是 Black Forest Labs 推出的突破性多模态图像编辑模�
 
 **Diffusion Model**
 
-- [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors)
+- [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/hanzoui/flux1-kontext-dev_Hanzo Studio/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors)
 
 <Tip>
 如果你想要使用原始权重，可以访问 Black Forest Labs 的相关仓库获取原始模型权重进行使用。
 </Tip>
 
 **VAE**
-- [ae.safetensors](https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/blob/main/split_files/vae/ae.safetensors)
+- [ae.safetensors](https://huggingface.co/hanzoui/Lumina_Image_2.0_Repackaged/blob/main/split_files/vae/ae.safetensors)
 
 **Text Encoder**
-- [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors)
-- [t5xxl_fp16.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors) 或 [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors)
+- [clip_l.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/blob/main/clip_l.safetensors)
+- [t5xxl_fp16.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors) 或 [t5xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/hanzoai/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors)
 
 模型保存位置
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 diffusion_models/
 │   │   └── flux1-dev-kontext_fp8_scaled.safetensors
@@ -73,7 +73,7 @@ FLUX.1 Kontext 是 Black Forest Labs 推出的突破性多模态图像编辑模�
 
 ## Flux.1 Kontext Dev 工作流
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=flux_kontext_dev_basic&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=flux_kontext_dev_basic&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>Run on Comfy Cloud</p>
 </a>
 
@@ -81,13 +81,13 @@ FLUX.1 Kontext 是 Black Forest Labs 推出的突破性多模态图像编辑模�
 
 ### 1. 工作流及输入图片下载
 
-下载下面的文件，并拖入 ComfyUI 中加载对应工作流
+下载下面的文件，并拖入 Hanzo Studio 中加载对应工作流
 
-![ComfyUI Flux.1 Kontext Pro Image API 节点 工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/flux/kontext/dev/flux_1_kontext_dev_basic.png)
+![Hanzo Studio Flux.1 Kontext Pro Image API 节点 工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/flux/kontext/dev/flux_1_kontext_dev_basic.png)
 
 **输入图片**
 
-![ComfyUI Flux Kontext 原生工作流输入](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/flux/kontext/dev/rabbit.jpg)
+![Hanzo Studio Flux Kontext 原生工作流输入](https://raw.githubusercontent.com/hanzoui/example-workflows/main/flux/kontext/dev/rabbit.jpg)
 
 ### 2. 按步骤完成工作流的运行
 

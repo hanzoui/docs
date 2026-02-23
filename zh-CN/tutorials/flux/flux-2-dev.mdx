@@ -1,6 +1,6 @@
 ---
-title: "ComfyUI Flux.2 Dev 示例"
-description: "本文将简要介绍 Flux.2 模型，并指导你在 ComfyUI 中使用 Flux.2 Dev 模型进行文生图。"
+title: "Hanzo Studio Flux.2 Dev 示例"
+description: "本文将简要介绍 Flux.2 模型，并指导你在 Hanzo Studio 中使用 Flux.2 Dev 模型进行文生图。"
 sidebarTitle: "Flux.2 Dev"
 ---
 
@@ -30,11 +30,11 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 ## Flux.2 Dev 工作流
 
-<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
+<a className="prose"  target='_blank'  href="https://raw.githubusercontent.com/hanzoui/workflow-templates/refs/heads/main/templates/image_flux2.json" style={{ display: 'inline-block', backgroundColor: '#0078D6', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold', marginRight: '10px'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>下载 JSON 工作流文件</p>
 </a>
 
-<a className="prose"  target='_blank'  href="https://cloud.comfy.org/?template=image_flux2&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
+<a className="prose"  target='_blank'  href="https://cloud.hanzo.ai/?template=image_flux2&utm_source=docs" style={{ display: 'inline-block', backgroundColor: '#28a745', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', borderColor: "transparent", textDecoration: 'none', fontWeight: 'bold'}}>
     <p className="prose" style={{ margin: 0, fontSize: "0.8rem" }}>在 Comfy Cloud 上运行</p>
 </a>
 
@@ -42,20 +42,20 @@ import UpdateReminder from '/snippets/zh/tutorials/update-reminder.mdx'
 
 **text_encoders**
 
-- [mistral_3_small_flux2_bf16.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors)
+- [mistral_3_small_flux2_bf16.safetensors](https://huggingface.co/hanzoui/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors)
 
 **diffusion_models**
 
-- [flux2_dev_fp8mixed.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors)
+- [flux2_dev_fp8mixed.safetensors](https://huggingface.co/hanzoui/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors)
 
 **vae**
 
-- [flux2-vae.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors)
+- [flux2-vae.safetensors](https://huggingface.co/hanzoui/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors)
 
 **模型存储位置**
 
 ```
-📂 ComfyUI/
+📂 Hanzo Studio/
 ├── 📂 models/
 │   ├── 📂 text_encoders/
 │   │      └── mistral_3_small_flux2_bf16.safetensors

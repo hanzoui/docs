@@ -1,6 +1,6 @@
 ---
 title: "OpenAI DALL·E 2 节点"
-description: "了解如何在 ComfyUI 中使用 OpenAI DALL·E 2 合作伙伴节点生成图像"
+description: "了解如何在 Hanzo Studio 中使用 OpenAI DALL·E 2 合作伙伴节点生成图像"
 sidebarTitle: "DALL·E 2"
 ---
 
@@ -10,7 +10,7 @@ import UpdateReminder from "/snippets/zh/tutorials/update-reminder.mdx";
 
 ![OpenAI DALL·E 2 节点截图](/images/comfy_core/api_nodes/openai-dall-e-2.jpg)
 
-OpenAI DALL·E 2 是 ComfyUI 合作伙伴节点系列中的一员，它允许用户通过 OpenAI 的 **DALL·E 2** 模型生成图像。
+OpenAI DALL·E 2 是 Hanzo Studio 合作伙伴节点系列中的一员，它允许用户通过 OpenAI 的 **DALL·E 2** 模型生成图像。
 
 这个节点支持:
 - 文本到图像的生成
@@ -61,11 +61,11 @@ OpenAI DALL·E 2 是 ComfyUI 合作伙伴节点系列中的一员，它允许用
 
 ### 文生图像（Text to Image）示例
 
-下面的图片包含了一个简单的文生图像工作流，请下载对应的图像，并拖入 ComfyUI 以加载对应的工作流
-![ComfyUI openai-dall-e-2工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/api_nodes/openai-dall-e-2/text2image.png)
+下面的图片包含了一个简单的文生图像工作流，请下载对应的图像，并拖入 Hanzo Studio 以加载对应的工作流
+![Hanzo Studio openai-dall-e-2工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/api_nodes/openai-dall-e-2/text2image.png)
 
 对应的示例非常简单
-![ComfyUI openai-dall-e-2 工作流示例](/images/tutorial/api_nodes/openai/openai-dall-e-2/text2image.jpg)
+![Hanzo Studio openai-dall-e-2 工作流示例](/images/tutorial/api_nodes/openai/openai-dall-e-2/text2image.jpg)
 
 你只需要在加载 `OpenAI DALL·E 2` 节点后，在 `prompt` 节点中输入你想要生成的图像的描述，并连接一个 `保存图像（Save Image）` 节点，然后运行工作流即可
 
@@ -75,16 +75,16 @@ DALL·E 2 支持图像编辑功能，允许您使用蒙版指定要替换的区�
 
 #### 1. 工作流文件下载
 
-下载下面的图片，并拖入 ComfyUI 以加载对应的工作流
+下载下面的图片，并拖入 Hanzo Studio 以加载对应的工作流
 
-![ComfyUI openai-dall-e-2工作流](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/api_nodes/openai-dall-e-2/inpainting.png)
+![Hanzo Studio openai-dall-e-2工作流](https://raw.githubusercontent.com/hanzoui/example-workflows/main/api_nodes/openai-dall-e-2/inpainting.png)
 
 我们将使用下面的图片作为输入：
-![ComfyUI openai-dall-e-2 工作流 input](https://raw.githubusercontent.com/Comfy-Org/example_workflows/main/api_nodes/openai-dall-e-2/input.jpg)
+![Hanzo Studio openai-dall-e-2 工作流 input](https://raw.githubusercontent.com/hanzoui/example-workflows/main/api_nodes/openai-dall-e-2/input.jpg)
 
 #### 2. 工作流文件使用说明
 
-![ComfyUI openai-dall-e-2 工作流示例](/images/tutorial/api_nodes/openai/openai-dall-e-2/inpainting.jpg)
+![Hanzo Studio openai-dall-e-2 工作流示例](/images/tutorial/api_nodes/openai/openai-dall-e-2/inpainting.jpg)
 
 由于此工作流较为简单，如果你想要自己手动实现对应的工作流，可以按照下面的步骤完成对应的工作流
 
